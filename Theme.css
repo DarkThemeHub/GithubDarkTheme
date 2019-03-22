@@ -5174,6 +5174,11 @@ td.selected-line.blob-code {
     background: rgba(65, 131, 196, .8) !important;
 }
 
+:root {
+    scrollbar-color: rgba(175, 175, 175, .5) #1d1d1d !important;
+    scrollbar-width: thin !important;
+}
+
 
 /* GitHub Enterprise Only
    *                                 _____..---========+*+==========---.._____
