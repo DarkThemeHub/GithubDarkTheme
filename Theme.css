@@ -1,4 +1,4 @@
-body {
+﻿body {
     background-color: #222 !important;
     background-clip: border-box !important;
     background-origin: padding-box !important;
@@ -13,7 +13,7 @@ body {
 }
 
 .pinned-item-checkbox:checked+.pinned-item-name {
-    background-color: #333;
+    background-color: #333;asda
 }
 
 .discussion-header,
