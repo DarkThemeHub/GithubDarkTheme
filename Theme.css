@@ -379,13 +379,6 @@ div[id^="contribution-joined-github"] img {
     pointer-events: none !important;
 }
 
-.pr-toolbar.is-stuck+.pr-toolbar-shadow {
-    background: #25272a !important;
-    top: 0 !important;
-    height: 40px !important;
-    border-bottom: 1px solid #343434 !important;
-}
-
 .diffbar {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
@@ -7262,4 +7255,19 @@ textarea {
 #readme .Box-header,
 .commit-tease {
     background: #313131 !important;
+}
+
+.pr-toolbar {
+    background: #25272a !important;
+    margin: 0 !important;
+    border-bottom: 6px solid #222 !important;
+}
+
+.toolbar-shadow {
+    background: none !important;
+    height: 10px;
+}
+
+.pr-review-tools {
+    margin-top: 4px !important;
 }
