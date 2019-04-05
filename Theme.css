@@ -7271,3 +7271,7 @@ textarea {
 .pr-review-tools {
     margin-top: 4px !important;
 }
+
+.comment-body {
+    background: #25272a;
+}
