@@ -7275,3 +7275,8 @@ textarea {
 .comment-body {
     background: #25272a;
 }
+
+.related-issue-item.navigation-focus,
+.similar-issue-item.navigation-focus {
+    background-color: #39424a;
+}
