@@ -46,11 +46,6 @@ body {
     background: #222;
 }
 
-.pb-sm-2,
-.p-sm-2 {
-    background: #333;
-}
-
 .bg-blue-light {
     background-color: #333 !important;
 }
@@ -298,8 +293,7 @@ input[type="checkbox"]:focus,
 /* inputs */
 
 select,
-input:not(.btn-link),
-textarea {
+input:not(.btn-link) {
     -moz-appearance: none !important;
     background-color: #25272a !important;
     border-color: #343434 !important;
@@ -1824,8 +1818,7 @@ body .bg-white,
 }
 
 .sidebar-module,
-.form-control,
-input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
+.form-control {
     background-color: #25272a !important;
     border-color: #343434 !important;
 }
@@ -4391,7 +4384,6 @@ a.bg-pending {
 #download_button,
 .status-box.good a,
 .discussion-item-reopened .discussion-item-icon,
-.progress-bar .progress,
 .new-issues,
 .new-pulls,
 .mergeable-clean .merge-status-icon,
@@ -5701,7 +5693,6 @@ a.notifications-dropdown-see-all:hover {
 .block-diff-neutral,
 .discussion-item-reopened .discussion-item-icon,
 .discussion-item-review.is-approved.is-writer .discussion-item-icon,
-.progress-bar .progress,
 .bar-section-positive,
 .branch-action-state-clean .branch-action-icon,
 .completeness-indicator-success {
@@ -7279,4 +7270,58 @@ textarea {
 .related-issue-item.navigation-focus,
 .similar-issue-item.navigation-focus {
     background-color: #39424a;
+}
+
+button.new-project-column.mb-0.col-4.d-inline-block.py-6.v-align-top.btn-link.text-bold.text-gray.text-center.bg-white.rounded-2.border.border-dashed.js-project-dialog-button {
+    background: #25272a !important;
+}
+
+.project-note-form.mt-sm-1.p-2.Details-content--hidden {
+    background: #333;
+    margin-top: 0 !important;
+    padding-top: 7px !important;
+    padding-bottom: 15px !important;
+}
+
+p.js-filtered-column-card-count.mt-2.mb-0.f6.text-center.text-gray-light {
+    padding: 10px;
+    background: #25272a;
+    margin-top: 0 !important;
+}
+
+.project-column,
+.pb-sm-2,
+.p-sm-2 {
+    background: #25272a !important;
+}
+
+.issue-card.draggable {
+    margin-top: 10px !important;
+    background: #222 !important;
+}
+
+.Box-body {
+    background: #25272a !important;
+    border: none !important;
+}
+
+input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
+    background: #222 !important;
+}
+
+textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input {
+    background: #222 !important;
+}
+
+textarea#card_note_text {
+    -moz-appearance: none !important;
+    background-color: #222 !important;
+    border-color: #343434 !important;
+    color: #eee !important;
+}
+
+.bg-yellow-light,
+form.js-project-activity-form {
+    color: white !important;
+    background: #3f5982 !important;
 }
