@@ -7309,7 +7309,8 @@ input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
     background: #222 !important;
 }
 
-textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input {
+textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input,
+.form-group .form-control {
     background: #222 !important;
 }
 
