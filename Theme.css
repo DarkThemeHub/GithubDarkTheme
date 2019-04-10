@@ -7267,6 +7267,9 @@ textarea {
     background: #25272a;
 }
 
+.card-filter-autocomplete-dropdown .navigation-focus,
+.card-filter-autocomplete-dropdown [aria-selected=true] .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
+.jump-to-suggestions-results-container [aria-selected=true] .jump-to-suggestions-path,
 .related-issue-item.navigation-focus,
 .similar-issue-item.navigation-focus {
     background-color: #39424a;
@@ -7325,4 +7328,8 @@ textarea#card_note_text {
 form.js-project-activity-form {
     color: white !important;
     background: #3f5982 !important;
+}
+
+.card-filter-autocomplete-dropdown.bg-white.boxed-group-list.border.boxed-group-standalone.rounded-1.mt-1.position-absolute.overflow-auto.hide-sm.js-card-filter-suggester.js-navigation-container.js-active-navigation-container {
+    border: 1px solid #39424a !important;
 }
