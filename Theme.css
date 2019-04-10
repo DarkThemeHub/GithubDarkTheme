@@ -5065,10 +5065,11 @@ a.feed-icon,
 
 pre div[style^="background-color: rgb(248, 238, 199)"],
 .highlight td.blob-code-inner[style^="background-color: rgb(248, 238, 199)"],
+.blob-code-inner.highlighted,
 td.selected-line.blob-num,
 td.selected-line.blob-code {
-    background: rgba(85, 85, 85, .3) !important;
-    border-color: rgba(85, 85, 85, .3) !important;
+    background: rgb(40, 40, 40) !important;
+    border-color: rgb(40, 40, 40) !important;
 }
 
 
@@ -5082,7 +5083,7 @@ td.selected-line.blob-code {
 .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
 .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
 .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
-    background: rgba(78, 78, 78, .33) !important;
+    background: rgb(50, 50, 50) !important;
 }
 
 .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
