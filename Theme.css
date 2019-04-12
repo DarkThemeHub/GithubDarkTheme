@@ -2348,7 +2348,7 @@ ul.fieldpills li,
 /* contribution calendar - regular colors */
 
 .calendar-graph rect[fill="#ebedf0"],
-.contrib-legend li[style*="#eee"] {
+.contrib-legend li[style*="#ebedf0"] {
     background-color: #222 !important;
     fill: #222 !important;
 }
