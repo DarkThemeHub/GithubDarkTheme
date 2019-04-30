@@ -7308,8 +7308,7 @@ p.js-filtered-column-card-count.mt-2.mb-0.f6.text-center.text-gray-light {
     border: none !important;
 }
 
-textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input,
-{
+textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input {
     background: #222 !important;
 }
 
