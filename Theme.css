@@ -282,6 +282,7 @@ input.color-editor-input:focus,
 .form-control.focus,
 .form-select.focus,
 .form-select:focus,
+input.subnav-search-input:focus,
 input[type="checkbox"]:focus,
 .upload-enabled.focused {
     border-color: #4183C4 !important;
@@ -742,7 +743,7 @@ a.feed-icon,
 #message-list .pagination a,
 #message-list .pagination .disabled,
 .merge-status-item .merge-status-icon,
-.js-release-form .comment-form-head.tabnav,
+.js-release-form,
 .project-columns,
 .project-header,
 .user-profile-nav,
@@ -1820,7 +1821,7 @@ body .bg-white,
 .sidebar-module,
 .form-control {
     background-color: #25272a !important;
-    border-color: #343434 !important;
+    border-color: 1px solid #343434 !important;
 }
 
 .markdown-body table tr,
@@ -1948,7 +1949,6 @@ table.upgrades tr.current td,
 .discussion-topic-header,
 .timeline-commits-minimal .commit-icon .octicon,
 .timeline-commits .commit-icon .octicon,
-.upload-progress,
 .search-results-listing em,
 .discussion-bubble-inner,
 #wiki-history table td,
@@ -5007,7 +5007,7 @@ a.feed-icon,
     border-bottom: 1px solid #333 !important;
 }
 
-.js-release-form .drag-and-drop {
+.js-release-form {
     border-top: none !important;
 }
 
@@ -5917,7 +5917,6 @@ a.notifications-dropdown-see-all:hover {
 
 /* auto-generated rule for "border-top: 0" */
 
-.drag-and-drop,
 .menu-item:first-child,
 .border-top-0,
 .markdown-body .csv-data tr,
@@ -5965,7 +5964,6 @@ ul.comparison-list>li.title,
 .member-badge+.member-badge,
 .diffbar .table-of-contents li:first-child,
 .review-comment .comment-reactions,
-.uploaded-files.is-populated+.drop-target p,
 .uploaded-files>li:nth-child(2),
 .mini-repo-list>:first-child .mini-repo-list-item,
 .experiment-repo-nav .new-issue-form,
@@ -7265,6 +7263,7 @@ textarea {
 
 .comment-body {
     background: #25272a;
+    color: white;
 }
 
 .card-filter-autocomplete-dropdown .navigation-focus,
@@ -7303,17 +7302,14 @@ p.js-filtered-column-card-count.mt-2.mb-0.f6.text-center.text-gray-light {
     background: #222 !important;
 }
 
+.previewable-comment-form,
 .Box-body {
     background: #25272a !important;
     border: none !important;
 }
 
-input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
-    background: #222 !important;
-}
-
 textarea.form-control.input-block.js-quick-submit.js-size-to-fit.js-note-text.js-length-limited-input,
-.form-group .form-control {
+{
     background: #222 !important;
 }
 
@@ -7332,4 +7328,23 @@ form.js-project-activity-form {
 
 .card-filter-autocomplete-dropdown.bg-white.boxed-group-list.border.boxed-group-standalone.rounded-1.mt-1.position-absolute.overflow-auto.hide-sm.js-card-filter-suggester.js-navigation-container.js-active-navigation-container {
     border: 1px solid #39424a !important;
+}
+
+.form-group {
+    background: none;
+}
+
+input {
+    border: 1px solid #333 !important;
+}
+
+.border-lg-bottom,
+.border-lg-left,
+.border-lg-top,
+.border-lg-right {
+    border: none !important;
+}
+
+.container-preview .tabnav-tabs .selected {
+    background: none !important;
 }
