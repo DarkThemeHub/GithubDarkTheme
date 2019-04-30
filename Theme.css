@@ -7348,3 +7348,7 @@ input {
 .container-preview .tabnav-tabs .selected {
     background: none !important;
 }
+
+.header-nav-current-user .user-profile-link {
+    color: #4299fc;
+}
