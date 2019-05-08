@@ -7351,3 +7351,39 @@ input {
 .header-nav-current-user .user-profile-link {
     color: #4299fc;
 }
+
+body.dotcom,
+section {
+    background: #222 !important;
+}
+
+.btn-outline-mktg {
+    border: rgba(255, 255, 255, 0.5) 1px solid!important;
+}
+
+h2 a,
+h2 a :hover {
+    color: unset;
+}
+
+.directory-toc h3 a {
+    color: unset;
+}
+
+.nav-desktop-productDropdown,
+header #search-results-container {
+    background: #25272a !important;
+}
+
+.search-result.border-top.border-gray-light.py-3.px-2:hover {
+    background: #39424A !important;
+}
+
+header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-between.width-full,
+#doc3 {
+    background: #222;
+}
+
+.markdown-body .lead-mktg p {
+    color: white !important;
+}
