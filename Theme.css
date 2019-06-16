@@ -1689,7 +1689,7 @@ textarea,
 .Box-row,
 .ScreenshotCarousel {
     background: #25272a !important;
-    border-color: #343434 !important;
+    border-color: white !important
 }
 
 #readme .plain,
@@ -7409,4 +7409,8 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .project-issue-body-blur {
     background: linear-gradient(0deg, #ffffff42, hsla(0, 0%, 100%, 0));
+}
+
+.Popover-message {
+    border: 2px solid !important;
 }
