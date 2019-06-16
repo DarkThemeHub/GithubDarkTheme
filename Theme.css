@@ -7414,6 +7414,11 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 .Popover-message {
     border: 2px solid !important;
 }
+
+.Box:not([style*="background"]) {
+    border: none;
+}
+
 .preview-selected .tabnav--responsive {
     border: none !important;
 }
