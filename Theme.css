@@ -714,7 +714,6 @@ tr.commit,
 .gist-snippet-meta .gist-count-links>li>a:hover,
 .markdown-body img,
 .delete-owners-button:hover,
-.btn-link,
 .avatar-child,
 .session-authentication .header-logged-out,
 .session-authentication .auth-form-header,
@@ -3638,7 +3637,6 @@ a.Box-row-link,
     color: #fff !important;
 }
 
-button,
 .edit-repository-meta,
 .field label,
 .boxed-group-list li,
@@ -7407,4 +7405,8 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     background: rgb(255, 82, 0) !important;
     border: none !important;
     color: white !important;
+}
+
+.project-issue-body-blur {
+    background: linear-gradient(0deg, #ffffff42, hsla(0, 0%, 100%, 0));
 }
