@@ -7426,7 +7426,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     border-bottom-color: #4183C4;
 }
 
-
 .Box:not([style*="background"]) {
     border: none;
 }
@@ -7443,7 +7442,7 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     border: 1px solid !important;
 }
 
-.d-md-flex {
+.flex-justify-end {
     padding-bottom: 15px;
 }
 
