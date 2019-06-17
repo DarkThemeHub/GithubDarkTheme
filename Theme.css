@@ -1689,7 +1689,7 @@ textarea,
 .Box-row,
 .ScreenshotCarousel {
     background: #25272a !important;
-    border-color: white !important
+    border-color: #4183C4 !important
 }
 
 #readme .plain,
@@ -7412,8 +7412,20 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 }
 
 .Popover-message {
-    border: 2px solid !important;
+    border: 1px solid !important;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, .7) !important;
 }
+
+.Popover-message--bottom-right:after,
+.Popover-message--bottom-left:after {
+    border-top-color: #4183C4;
+}
+
+.Popover-message--top-right:after,
+.Popover-message--top-left:after {
+    border-bottom-color: #4183C4;
+}
+
 
 .Box:not([style*="background"]) {
     border: none;
@@ -7433,4 +7445,9 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .d-md-flex {
     padding-bottom: 15px;
+}
+
+.Label--gray {
+    background-color: transparent !important;
+    border: 1px solid #484848 !important;
 }
