@@ -7504,3 +7504,7 @@ a.btn,
     padding-bottom: 15px !important;
     border-bottom: 1px solid #343434 !important;
 }
+
+.pagehead h1 {
+    color: white !important;
+}
