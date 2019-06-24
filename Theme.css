@@ -1144,7 +1144,6 @@ dl.new-email-form,
 .branches .branch-summary,
 .branches .no-results-message,
 .branch-a-b-count .count-half:last-child,
-.tabnav-tab.selected,
 .panel-nav,
 .file,
 .full-commit .sha-block>a,
@@ -1776,7 +1775,6 @@ table.capped-list tr:nth-child(2n),
 .latest-commit .commit-author,
 .bubble,
 .tabs>a.selected,
-.comment-form-head .tabnav-tab.selected,
 .oauth-org-access-details .boxed-group-list>li.on,
 #fullscreen_overlay,
 .timeline-new-comment .discussion-topic-header,
@@ -1956,7 +1954,6 @@ table.capped-list th,
 .filter-bar,
 .audit-search-clear,
 .country-info,
-.tabnav-tab.selected,
 .file-diff-split .empty-cell,
 .composer-infobar,
 .completeness-indicator-blank,
@@ -7451,20 +7448,57 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     border: 1px solid #484848 !important;
 }
 
-.btn,
-a.btn {
-    background: #353535 !important;
+.btn:hover,
+a.btn:hover,
+.file-navigation .btn-sm:not(.btn-primary):hover {
+    background: rgb(85, 85, 85) !important;
+    color: white !important;
 }
+
+
+/* watch star fork */
 
 .pagehead-actions .btn-sm {
     background: #24292e !important;
 }
 
-.btn-danger {
-    background: #3e1a1a !important;
+.pagehead-actions .btn-sm:hover {
+    background: rgb(82, 96, 109) !important;
 }
 
-.Box-row:last-of-type {
+.subnav-search-context .btn {
+    background: #25272a !important;
+}
+
+table.files tr.navigation-focus td,
+.subnav-item:hover,
+.subnav-search-context .btn:hover,
+.subnav-item.selected,
+.subnav-item.selected:hover,
+.tabnav-tab:hover,
+.tabnav-tab.selected,
+.tabnav-pr .tabnav-tab.selected,
+.Box-row--focus-gray.navigation-focus,
+.js-details-container.navigation-focus,
+.js-details-container.navigation-focus:nth-child(2n) {
+    background: rgb(49, 51, 56) !important;
+    color: white !important;
+}
+
+.btn,
+a.btn,
+.file-navigation .btn-sm:not(.btn-primary) {
+    background: #353535 !important;
+}
+
+.timeline-comment-action:hover {
+    background: unset !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.Box-row:last-of-type:not(.js-issue-row) {
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
     padding-bottom: 15px !important;
