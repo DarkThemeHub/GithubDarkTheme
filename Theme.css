@@ -7516,19 +7516,19 @@ a.btn,
     background: #25272A !important;
 }
 
-.js-project-card-details .btn-link,
 .project-comment-body-hover .octicon-pencil,
 .project-comment-body-hover .octicon-smiley,
 .project-comment-title-hover .octicon-pencil,
-.project-comment-body-reaction .comment-action {
+.project-comment-body-reaction .comment-action,
+.octicon-x {
     color: #7E7F81 !important;
 }
 
-.js-project-card-details .btn-link:hover,
 .project-comment-body-hover .octicon-pencil:hover,
 .project-comment-body-hover .octicon-smiley:hover,
 .project-comment-title-hover .octicon-pencil:hover,
-.project-comment-body-reaction .comment-action:hover {
+.project-comment-body-reaction .comment-action:hover,
+.octicon-x:hover {
     color: white !important;
 }
 
