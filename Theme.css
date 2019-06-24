@@ -661,7 +661,6 @@ div.content-header .search-form,
 .gist-advanced-options .select-menu-button:after,
 #wrapper,
 li.commit,
-li.public,
 .gravatar img,
 .commit-comments-header-sha,
 pre.headers code,
@@ -7508,4 +7507,9 @@ a.btn,
 .pagehead h1,
 .pagehead h1 .octicon {
     color: white !important;
+}
+
+.pinned-issue-item,
+.pinned-item-list-item {
+    background: #25272A !important;
 }
