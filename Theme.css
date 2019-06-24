@@ -7515,3 +7515,23 @@ a.btn,
 .pinned-item-list-item {
     background: #25272A !important;
 }
+
+.project-comment-body-hover .octicon-pencil,
+.project-comment-body-hover .octicon-smiley,
+.project-comment-title-hover .octicon-pencil,
+.project-comment-body-reaction .comment-action,
+.octicon-x {
+    color: #7E7F81 !important;
+}
+
+.project-comment-body-hover .octicon-pencil:hover,
+.project-comment-body-hover .octicon-smiley:hover,
+.project-comment-title-hover .octicon-pencil:hover,
+.project-comment-body-reaction .comment-action:hover,
+.octicon-x:hover {
+    color: white !important;
+}
+
+.form-group textarea.form-control {
+    border: 1px solid #343434 !important;
+}
