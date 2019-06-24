@@ -7531,3 +7531,7 @@ a.btn,
 .project-comment-body-reaction .comment-action:hover {
     color: white !important;
 }
+
+.form-group textarea.form-control {
+    border: 1px solid #343434 !important;
+}
