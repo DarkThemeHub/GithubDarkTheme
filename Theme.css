@@ -7505,6 +7505,7 @@ a.btn,
     border-bottom: 1px solid #343434 !important;
 }
 
-.pagehead h1 {
+.pagehead h1,
+.pagehead h1 .octicon {
     color: white !important;
 }
