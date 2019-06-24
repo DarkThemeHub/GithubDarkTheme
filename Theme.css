@@ -7478,7 +7478,9 @@ table.files tr.navigation-focus td,
 .tabnav-tab:hover,
 .tabnav-tab.selected,
 .tabnav-pr .tabnav-tab.selected,
-.Box-row--focus-gray.navigation-focus {
+.Box-row--focus-gray.navigation-focus,
+.js-details-container.navigation-focus,
+.js-details-container.navigation-focus:nth-child(2n) {
     background: rgb(49, 51, 56) !important;
     color: white !important;
 }
