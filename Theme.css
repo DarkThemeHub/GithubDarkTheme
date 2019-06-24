@@ -7462,6 +7462,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 .Box-row:last-of-type {
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
-    padding-bottom: 1px !important;
+    padding-bottom: 15px !important;
     border-bottom: 1px solid #343434 !important;
 }
