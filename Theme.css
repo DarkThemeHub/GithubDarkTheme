@@ -7489,6 +7489,13 @@ a.btn,
     background: #353535 !important;
 }
 
+.timeline-comment-action:hover {
+    background: unset !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .Box-row:last-of-type:not(.js-issue-row) {
     border-bottom-left-radius: unset;
     border-bottom-right-radius: unset;
