@@ -7452,7 +7452,8 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 }
 
 .btn,
-a.btn {
+a.btn,
+.subnav-item {
     background: #353535 !important;
 }
 
