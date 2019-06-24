@@ -7450,3 +7450,18 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     background-color: transparent !important;
     border: 1px solid #484848 !important;
 }
+
+.btn {
+    border: 1px solid !important;
+}
+
+.btn-danger {
+    background: #3e1a1a !important;
+}
+
+.Box-row:last-of-type {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    padding-bottom: 1px !important;
+    border-bottom: 1px solid #343434 !important;
+}
