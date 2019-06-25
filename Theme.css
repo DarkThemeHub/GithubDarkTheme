@@ -7520,7 +7520,7 @@ a.btn,
 .project-comment-body-hover .octicon-smiley,
 .project-comment-title-hover .octicon-pencil,
 .project-comment-body-reaction .comment-action,
-.octicon-x {
+.project-pane-close .octicon-x {
     color: #7E7F81 !important;
 }
 
@@ -7528,7 +7528,7 @@ a.btn,
 .project-comment-body-hover .octicon-smiley:hover,
 .project-comment-title-hover .octicon-pencil:hover,
 .project-comment-body-reaction .comment-action:hover,
-.octicon-x:hover {
+.project-pane-close .octicon-x:hover {
     color: white !important;
 }
 
