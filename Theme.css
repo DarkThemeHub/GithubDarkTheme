@@ -7535,3 +7535,7 @@ a.btn,
 .form-group textarea.form-control {
     border: 1px solid #343434 !important;
 }
+
+.user-status-container-border-busy {
+    background-color: #bd4a29 !important;
+}
