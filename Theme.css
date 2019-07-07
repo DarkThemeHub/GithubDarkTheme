@@ -7485,7 +7485,8 @@ table.files tr.navigation-focus td,
 .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
 .select-menu-tabs .select-menu-tab-nav:hover,
 details-menu .select-menu-item[aria-checked=true],
-details-menu .select-menu-item:hover {
+details-menu .select-menu-item:hover,
+.tree-browser-result[aria-selected=true] {
     background: rgb(49, 51, 56) !important;
     color: white !important;
 }
