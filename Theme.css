@@ -7481,7 +7481,11 @@ table.files tr.navigation-focus td,
 .js-details-container.navigation-focus,
 .js-details-container.navigation-focus:nth-child(2n),
 .filter-item.selected,
-.filter-item:not(.selected):hover {
+.filter-item:not(.selected):hover,
+.select-menu-tabs .select-menu-tab-nav[aria-selected=true],
+.select-menu-tabs .select-menu-tab-nav:hover,
+details-menu .select-menu-item[aria-checked=true],
+details-menu .select-menu-item:hover {
     background: rgb(49, 51, 56) !important;
     color: white !important;
 }
