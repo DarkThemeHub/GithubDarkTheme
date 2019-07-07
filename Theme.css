@@ -2197,15 +2197,12 @@ table.instruction tr:nth-child(2n),
 .pull-head .diffstat,
 ul.suggestions,
 .discusion-topic-infobar,
-.commits-listing:before,
-.discussion-item-icon,
 .jstree-wholerow-hovered,
 .bubble-contents,
 .ellipsis-button,
 .filter-list li span.bar,
 .selectable_day.today,
 .billing-plans .current,
-.commits-listing:before,
 .billing-section .usage-bar,
 .issue-list em,
 .file-info-divider,
@@ -7538,4 +7535,9 @@ a.btn,
 
 .user-status-container-border-busy {
     background-color: #bd4a29 !important;
+}
+
+.commits-listing:before,
+.discussion-item-icon {
+    background: #666;
 }
