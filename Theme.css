@@ -1467,7 +1467,6 @@ ul.color-label-list .color,
 
 .discussion-timeline:before {
     margin-top: 2px !important;
-    background: #383838 !important;
     height: calc(100% - 259px) !important;
 }
 
@@ -7538,6 +7537,7 @@ a.btn,
 }
 
 .commits-listing:before,
+.discussion-timeline:before,
 .discussion-item-icon {
     background: #555;
 }
