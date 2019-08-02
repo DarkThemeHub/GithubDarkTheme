@@ -2336,8 +2336,8 @@ ul.fieldpills li,
 
 .calendar-graph rect[fill="#ebedf0"],
 .contrib-legend li[style*="#ebedf0"] {
-    background-color: #222 !important;
-    fill: #222 !important;
+    background-color: #2b2b2b !important;
+    fill: #2b2b2b !important;
 }
 
 .heat[data-heat="1"],
