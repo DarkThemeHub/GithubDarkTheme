@@ -14,7 +14,7 @@
     "@types/chrome": "0.0.60",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
-    "css-loader": "^0.28.11",
+    "css-loader": "^3.1.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
@@ -27,7 +27,8 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "tslint": "^5.18.0"
   }
 }
