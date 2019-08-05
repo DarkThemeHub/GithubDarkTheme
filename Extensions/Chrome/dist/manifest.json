@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "GithubDarkTheme",
+    "description": "Github Dark Theme deployed via Chrome Extension",
+    "version": "1.0.0",
+    "browser_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "js/eventPage.js"
+        ],
+        "persistent": false
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": []
+}
