@@ -7550,3 +7550,12 @@ a.btn,
 .btn .octicon {
     vertical-align: sub;
 }
+
+.subnav-link.selected,
+.subnav-link :hover {
+    color: white !important;
+}
+
+.subnav-link {
+    color: #cecece !important;
+}
