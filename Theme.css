@@ -7559,3 +7559,15 @@ a.btn,
 .subnav-link {
     color: #cecece !important;
 }
+
+div[style="background: linear-gradient(#ffffff, #fcfcfc);"] {
+    background: none !important;
+}
+
+div[style="background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));"] {
+    background: linear-gradient(to left, rgb(93, 106, 119), rgba(255, 255, 255, 0)) !important;
+}
+
+div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"] {
+    background: linear-gradient(to right, rgb(93, 106, 119), rgba(255, 255, 255, 0)) !important;
+}
