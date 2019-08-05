@@ -7546,3 +7546,7 @@ a.btn,
 .discussion-item-icon {
     background: #555;
 }
+
+.btn .octicon {
+    vertical-align: sub;
+}
