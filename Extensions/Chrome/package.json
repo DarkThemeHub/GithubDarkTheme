@@ -1,0 +1,33 @@
+{
+  "name": "github-darktheme-chromeextension",
+  "version": "1.0.0",
+  "description": "Github dark theme deployed via chrome extension",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js",
+    "watch": "webpack -w --config webpack.dev.js",
+    "lint": "tslint 'src/**/*.{ts, tsx}'"
+  },
+  "author": "Aaron Cooper",
+  "license": "",
+  "devDependencies": {
+    "@types/chrome": "0.0.60",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.0.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
