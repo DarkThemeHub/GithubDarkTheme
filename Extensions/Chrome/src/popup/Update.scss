@@ -1,0 +1,13 @@
+.content span{
+    margin-bottom: 5px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: nowrap;
+    button {
+        padding: 3px;
+        margin-right: 5px;
+        
+    }
+}
