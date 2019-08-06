@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Popup.scss';
+import { Update } from './Update';
 
 interface AppProps { }
 
@@ -17,8 +18,10 @@ export default class Popup extends React.Component<AppProps, AppState> {
 
     render() {
         return (
+
             <div className="popupContainer">
-                Hello, world!
+                <Update></Update>
+                <div>Hello, world!</div>
             </div>
         )
     }
