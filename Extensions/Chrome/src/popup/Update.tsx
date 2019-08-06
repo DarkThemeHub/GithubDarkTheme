@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Update.scss'
+import compareVersions from 'compare-versions';
 
 const API_ADDRESS = 'https://api.github.com/';
 
@@ -10,30 +11,33 @@ interface storageFormat {
     theme: string
 }
 export const Update: React.FunctionComponent<{}> = ({ }) => {
-
+    React.useEffect(() => {
+        console.log('render!');
+        if (latestVersion === undefined) {
+            getLatestReleaseDetails()
+        }
+    })
 
     const [lastUpdated, setLastUpdated] = React.useState<number>(undefined);
     const [lastVersionCheck, setLastVersionCheck] = React.useState<number>(undefined);
     const [latestVersion, setLatestVersion] = React.useState<string>(undefined);
-    let fromStorage: storageFormat;
-
-    let initialInstalledVersion: string;
-    chrome.storage.local.get('storageFile', (result) => {
-        const storageFile = result.storageFile as storageFormat;
-        console.log(storageFile);
-        console.log("retrieve storage attempted")
-        setInstalledVersion(storageFile.version);
-    });
-
+    const [updateAvailable, setUpdateAvailable] = React.useState<boolean>(undefined);
     const [installedVersion, setInstalledVersion] = React.useState<string>();
 
 
-    function GetLatestReleaseDetails() {
+    chrome.storage.local.get('storageFile', (result) => {
+        const storageFile = result.storageFile as storageFormat;
+        console.log(storageFile);
+        setInstalledVersion(storageFile.version);
+    });
+
+    function getLatestReleaseDetails() {
         return fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/releases/latest`)
             .then(response => response.json())
             .then(data => {
                 //console.log(data);
                 setLatestVersion(data.tag_name);
+                determineNeedsUpdate(data.tag_name, installedVersion);
             })
             .catch(function (error) {
                 // handle error
@@ -43,6 +47,22 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             });
 
     }
+
+    function determineNeedsUpdate(latestVersion: string, installedVersion: string) {
+        console.log('latest:' + latestVersion);
+        console.log('installed:' + installedVersion);
+        if (installedVersion === undefined) {
+            setUpdateAvailable(true);
+        }
+        else if (latestVersion === undefined) {
+            console.error("latest version is undefined but should have value")
+        } else {
+            console.log("start compare")
+            setUpdateAvailable(compareVersions.compare(latestVersion, installedVersion, '>'));
+            console.log("complete compare")
+        }
+    }
+
     function InstallLatestTheme() {
         fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/contents/Theme.css?ref=${latestVersion}`)
             .then(response => response.json())
@@ -53,7 +73,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                 }
                 chrome.storage.local.set({ "storageFile": toStorage });
                 setInstalledVersion(latestVersion);
-
+                setUpdateAvailable(false);
             })
             .catch(function (error) {
                 // handle error
@@ -62,7 +82,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     }
 
     function UpdateToLatestTheme() {
-        GetLatestReleaseDetails();
+        getLatestReleaseDetails();
         InstallLatestTheme();
     }
 
@@ -79,21 +99,13 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         });
     }
 
-    const Update = () => {
-        alert("Update triggered");
-
-        updateAvailableNotification();
-
-        GetLatestReleaseDetails();
-    }
-
     return <div>
         <div>Latest version: {latestVersion}</div>
         <div>Installed version: {installedVersion}</div>
         <div className="button-row">
             <button onClick={() => { }}>Release Notes</button>
             {
-                installedVersion !== latestVersion &&
+                updateAvailable &&
                 <button onClick={() => UpdateToLatestTheme()}>Update Theme</button>
             }
         </div>
