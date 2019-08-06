@@ -11,9 +11,9 @@ body {
     background-color: $background-color;
     border: 2px solid $primary-color;
     color: $primary-color;
-    display: flex;
+    display: grid;
     font-size: 20px;
-    height: 75px;
+    height: 200px;
     justify-content: center;
-    width: 150px;
+    width: 400px;
 }
