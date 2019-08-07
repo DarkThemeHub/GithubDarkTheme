@@ -4,9 +4,9 @@ Repository for GithubDarkTheme(); where users can submit issues.
 Watch this repository for release only to get notified every release. There is no auto update! you will need to manually update via theme link below. (potential browser extension maybe a plan for the future to integrate auto update)
 
 # Install Stylish browser extension.
-Chrome: https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe
+Chrome: https://chrome.google.com/webstore/search/stylus
 
-Firefox: https://addons.mozilla.org/en-GB/firefox/addon/stylish/?src=search
+Firefox: https://addons.mozilla.org/en-US/firefox/addon/styl-us/
 
 # Install the theme.
 Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
