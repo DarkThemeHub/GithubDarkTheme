@@ -38,3 +38,10 @@ button {
 .MuiSelect-selectMenu  {
     min-width: 150px !important;
 }
+.MuiListItem-button{
+    background: #333 !important;
+    color:white!important;
+}
+.MuiListItem-button:hover{
+    background: #555 !important;
+}
