@@ -18,7 +18,6 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     const [latestVersion, setLatestVersion] = React.useState<string>(undefined);
     const [newInstallAvailable, setNewInstallAvailable] = React.useState<boolean>(undefined);
     const [installedVersion, setInstalledVersion] = React.useState<string>();
-
     React.useEffect(() => {
         console.log('render!');
 
@@ -74,13 +73,13 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
 
     function InstallLatestTheme() {
         getLatestReleaseDetails();
-        fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/contents/Theme.css?ref=${latestVersion}`)
-            .then(response => response.json())
+        fetch("https://raw.githubusercontent.com/acoop133/GithubDarkTheme/" + { latestVersion } + "/Theme.css")
+            .then(response => response.text())
             .then(data => {
                 const toStorage: storageFormat = {
                     version: latestVersion,
                     lastGetLatestVersionCheckTime: lastVersionCheck,
-                    theme: data.content
+                    theme: data
                 }
                 chrome.storage.local.set({ "storageFile": toStorage });
                 setInstalledVersion(latestVersion);
@@ -112,8 +111,12 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     }
 
     return <div>
-        <div>Latest version: {latestVersion}</div>
+        <div>
+            Latest version: {latestVersion}
+            <span className="small-text">checked {(Date.now() - lastUpdated)} ago</span>
+        </div>
         <div>Installed version: {installedVersion}</div>
+
         <div className="button-row">
             <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/releases' }) }}>Release Notes</button>
             {
