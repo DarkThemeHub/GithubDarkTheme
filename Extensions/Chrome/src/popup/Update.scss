@@ -1,4 +1,11 @@
-.content span{
+.update-grid{
+    display: grid;
+    grid-template-columns: 180px 200px;
+}
+.grid-item {
+    padding:2px;
+}
+content span{
     margin-bottom: 5px;
 }
 
@@ -23,4 +30,11 @@ button {
     color:white;
     border: 1px solid rgb(110, 110, 110);
 
+}
+.MuiSelect-icon, .MuiSelect-select, .MuiInput-underline {
+    color: white !important;
+    border-bottom-color: white;
+}
+.MuiSelect-selectMenu  {
+    min-width: 150px !important;
 }
