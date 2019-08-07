@@ -3,7 +3,7 @@ Repository for GithubDarkTheme(); where users can submit issues.
 
 Watch this repository for release only to get notified every release. There is no auto update! you will need to manually update via theme link below. (potential browser extension maybe a plan for the future to integrate auto update)
 
-# Install Stylish browser extension.
+# Install Stylus browser extension.
 Chrome: https://chrome.google.com/webstore/search/stylus
 
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/styl-us/
