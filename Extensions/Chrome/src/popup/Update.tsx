@@ -20,7 +20,20 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     const [newInstallAvailable, setNewInstallAvailable] = React.useState<boolean>(undefined);
     const [installedVersion, setInstalledVersion] = React.useState<string>("");
     const [versions, setVersions] = React.useState<string[]>(undefined);
+    const [theme, setTheme] = React.useState<string>('');
 
+    chrome.tabs.insertCSS({ code: theme }, () => { console.log("css injected") });
+
+    function injectTheme(css: string) {
+
+        var data = {
+            any: css,
+            meaning: 'no DOM elements or classes/functions',
+        };
+
+        chrome.tabs.insertCSS({ code: css }, () => { console.log("css injected") });
+        document.dispatchEvent(new CustomEvent('injectCSS', { detail: data }));
+    }
     React.useEffect(() => {
         console.log('render!');
 
@@ -28,6 +41,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             const storageFile = result.storageFile as storageFormat;
             console.log(storageFile);
             setInstalledVersion(storageFile.version);
+            setTheme(storageFile.theme)
         });
         const nextCheckOffset = new Date();
         nextCheckOffset.setMinutes(20);
@@ -47,11 +61,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             .then(response => response.json())
             .then((data) => {
                 const dataTyped = data as any[];
-                console.log(dataTyped);
-                const options = dataTyped.map(d => {
-                    console.warn(d.name);
-                    return d.name;
-                });
+                const options = dataTyped.map(d => { return d.name; });
 
                 setVersions(options);
             })
@@ -67,7 +77,6 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         return fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/releases/latest`)
             .then(response => response.json())
             .then(data => {
-                //console.log(data);
                 setLatestVersion(data.tag_name);
                 determineNeedsUpdate();
             })
@@ -82,8 +91,6 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
 
     function determineNeedsUpdate() {
         console.log('determineNeedsUpdate!');
-        console.log('latest:' + latestVersion);
-        console.log('installed:' + installedVersion);
         if (installedVersion === "") {
             setNewInstallAvailable(true);
         }
@@ -97,8 +104,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     }
 
     async function InstallThemeVersion(version: string) {
-        console.log('InstallThemeVersion!');
-        console.log(version);
+        console.log(`InstallThemeVersion! ${version}`);
         await getLatestReleaseDetails();
         fetch(`https://raw.githubusercontent.com/acoop133/GithubDarkTheme/${version}/Theme.css`)
             .then(response => response.text())
@@ -109,6 +115,8 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                     theme: data
                 }
                 chrome.storage.local.set({ "storageFile": toStorage });
+                injectTheme(data);
+                setTheme(data);
                 setInstalledVersion(version);
                 setNewInstallAvailable(false);
             })

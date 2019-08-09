@@ -21,6 +21,10 @@
     "permissions": [
         "storage",
         "notifications",
-        "management"
+        "tabs",
+        "*://*.github.com/*",
+        "*://*.github.com/",
+        "*://github.com/",
+        "*://github.com/*"
     ]
 }
