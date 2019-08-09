@@ -96,11 +96,11 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         }
     }
 
-    function InstallThemeVersion(version: string) {
+    async function InstallThemeVersion(version: string) {
         console.log('InstallThemeVersion!');
         console.log(version);
-        getLatestReleaseDetails();
-        fetch("https://raw.githubusercontent.com/acoop133/GithubDarkTheme/" + { version } + "/Theme.css")
+        await getLatestReleaseDetails();
+        fetch(`https://raw.githubusercontent.com/acoop133/GithubDarkTheme/${version}/Theme.css`)
             .then(response => response.text())
             .then(data => {
                 const toStorage: storageFormat = {
@@ -138,34 +138,38 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         });
     }
     function onChange(event) {
-        InstallThemeVersion(event.target.value)
+        const versionSelected = event.target.value as string;
+        InstallThemeVersion(versionSelected);
     };
 
-    return <div className="update-grid">
-        <div className="grid-item" style={{ paddingRight: 20 }}>
-            <span style={{ float: "right" }}>Latest version:</span>
-        </div>
-        <div className="grid-item">
-            {latestVersion} <span className="small-text">checked {(Date.now() - lastUpdated)} ago</span>
-        </div>
-        <div className="grid-item" style={{ paddingRight: 20 }}>
-            <div style={{ alignItems: 'baseline', float: "right" }}>Installed version:</div>
-        </div>
-        <div className="grid-item">
-            <Select
-                value={installedVersion}
-                onChange={onChange}
-                displayEmpty
-            >
-                <MenuItem value="" disabled>Select a version to install</MenuItem>
-                {versions && versions.map(v => {
-                    return <MenuItem value={v}>{v}</MenuItem>
-                })}
-            </Select>
-            {installedVersion !== "" && <button onClick={() => uninstallTheme()}>Uninstall Theme</button>}
+    return <div>
+        <div className="update-grid">
+            <div className="grid-item" style={{ paddingRight: 20 }}>
+                <span style={{ float: "right" }}>Latest version:</span>
+            </div>
+            <div className="grid-item">
+                {latestVersion} <span className="small-text">checked {(Date.now() - lastUpdated)} ago</span>
+            </div>
+            <div className="grid-item" style={{ paddingRight: 20 }}>
+                <div style={{ alignItems: 'baseline', float: "right" }}>Installed version:</div>
+            </div>
+            <div className="grid-item">
+                <Select
+                    value={installedVersion}
+                    onChange={(e) => onChange(e)}
+                    displayEmpty
+                >
+                    <MenuItem value="" disabled>Select a version to install</MenuItem>
+                    {versions && versions.map(v => {
+                        return <MenuItem value={v}>{v}</MenuItem>
+                    })}
+                </Select>
+                {installedVersion !== "" && <button onClick={() => uninstallTheme()}>Uninstall Theme</button>}
+            </div>
         </div>
         <div className="button-row">
             <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/releases' }) }}>Release Notes</button>
+            <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/issues' }) }}>Report Issues</button>
         </div>
     </div >
 
