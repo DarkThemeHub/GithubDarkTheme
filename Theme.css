@@ -7542,9 +7542,10 @@ a.btn,
 }
 
 .commits-listing:before,
+.profile-timeline.discussion-timeline:before,
 .discussion-timeline:before,
 .discussion-item-icon {
-    background: #555;
+    background: #555 !important;
 }
 
 .btn .octicon {
