@@ -7576,6 +7576,7 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 .bg-blue-2{
     background: #3c444c !important;
 }
-.projects-comment-form .comment-form-head .toolbar-commenting{
+.projects-comment-form .comment-form-head .toolbar-commenting,
+.TimelineItem--break{
     background: none !important;
 }
