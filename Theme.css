@@ -7542,9 +7542,10 @@ a.btn,
 }
 
 .commits-listing:before,
+.profile-timeline.discussion-timeline:before,
 .discussion-timeline:before,
 .discussion-item-icon {
-    background: #555;
+    background: #555 !important;
 }
 
 .btn .octicon {
@@ -7570,4 +7571,11 @@ div[style="background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,25
 
 div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"] {
     background: linear-gradient(to right, rgb(93, 106, 119), rgba(255, 255, 255, 0)) !important;
+}
+
+.bg-blue-2{
+    background: #3c444c !important;
+}
+.projects-comment-form .comment-form-head .toolbar-commenting{
+    background: none !important;
 }
