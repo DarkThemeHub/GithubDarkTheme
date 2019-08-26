@@ -7572,3 +7572,7 @@ div[style="background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,25
 div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"] {
     background: linear-gradient(to right, rgb(93, 106, 119), rgba(255, 255, 255, 0)) !important;
 }
+
+.bg-blue-2{
+    background: rgb(49, 51, 56) !important;
+}
