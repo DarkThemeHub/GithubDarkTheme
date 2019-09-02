@@ -7580,3 +7580,11 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 .TimelineItem--break{
     background: none !important;
 }
+
+.TimelineItem-body .commit-message>code a {
+    color: unset !important;
+}
+
+.TimelineItem-body {
+    color: #b5b5b5 !important;
+}
