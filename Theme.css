@@ -7588,3 +7588,12 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 .TimelineItem-body {
     color: #b5b5b5 !important;
 }
+
+.TimelineItem-badge {
+    background-color: #555555 !important;
+    color: #bbbbbb !important;
+}
+
+.TimelineItem:before {
+    background-color: unset !important; 
+}
