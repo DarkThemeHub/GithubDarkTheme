@@ -7580,3 +7580,25 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 .TimelineItem--break{
     background: none !important;
 }
+
+.TimelineItem-body .commit-message>code a {
+    color: unset !important;
+}
+
+.TimelineItem-body {
+    color: #b5b5b5 !important;
+}
+
+.TimelineItem-badge {
+    background-color: #555555 !important;
+    color: #bbbbbb !important;
+}
+
+.TimelineItem:before {
+    background-color: unset !important; 
+}
+
+.tabnav-tab.selected, .tabnav-tab[aria-selected=true] {
+    color: white !important;
+    background: rgb(49, 51, 56) !important;
+}
