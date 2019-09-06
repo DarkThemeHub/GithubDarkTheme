@@ -28,7 +28,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             "*://github.com/*"]
     }
 
-    function injectTheme(css: string) {
+    function injectTheme() {
 
         chrome.tabs.query(query, tabs => {
 
@@ -37,6 +37,21 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                     code: `
                 var evt = document.createEvent('Event');
                 evt.initEvent('injectTheme', true, false);
+
+                // fire the event
+                document.dispatchEvent(evt);
+                ` })
+            });
+        })
+    }
+    function removeInjectedTheme() {
+        chrome.tabs.query(query, tabs => {
+
+            tabs.forEach(tab => {
+                chrome.tabs.executeScript(tab.id, {
+                    code: `
+                var evt = document.createEvent('Event');
+                evt.initEvent('removeTheme', true, false);
 
                 // fire the event
                 document.dispatchEvent(evt);
@@ -125,8 +140,8 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                     theme: data,
                 };
                 chrome.storage.local.set({ 'storageFile': toStorage });
-                injectTheme(data);
                 setTheme(data);
+                injectTheme();
                 setInstalledVersion(version);
                 setNewInstallAvailable(false);
             })
@@ -140,9 +155,11 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         console.log('uninstallTheme!');
         chrome.storage.local.clear(() => {
             setInstalledVersion('');
-            getLatestReleaseDetails();
+            setTheme('');
+            removeInjectedTheme();
         });
     };
+
     const updateAvailableNotification = () => {
         chrome.notifications.create({
             title: 'New Update Available',
