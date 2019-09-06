@@ -1,7 +1,12 @@
-
 inject();
 
 function inject() {
+
+    var loadedTheme = document.getElementById("githubdarktheme")
+    if (loadedTheme !== null && loadedTheme !== undefined) {
+
+        loadedTheme.remove();
+    }
 
     chrome.storage.local.get('storageFile', (result) => {
         const storageFile = result.storageFile;
@@ -11,13 +16,18 @@ function inject() {
         script.id = 'githubdarktheme'
         script.textContent = storageFile.theme;
 
-        (document.head || document.documentElement).appendChild(script);
+        (document.body || document.documentElement).appendChild(script);
     });
 
     //var data = () => { await getStyle(version) };
 
 
 }
+
+document.addEventListener('injectTheme', function (e) {
+    inject();
+});
+
 document.addEventListener('injectCSS', function (e) {
     var data = e.detail;
     console.log('received', data);
@@ -44,10 +54,3 @@ document.addEventListener('removeCSS', function (e) {
     var script = document.getElementById("githubdarktheme")
     script.remove();
 })
-
-async function getStyle(version) {
-    var k = `https://raw.githubusercontent.com/acoop133/GithubDarkTheme/` + version + `/Theme.css`;
-    var f = await fetch(`https://raw.githubusercontent.com/acoop133/GithubDarkTheme/` + version + `/Theme.css`).then(response => response.text());
-
-    return f;
-}
