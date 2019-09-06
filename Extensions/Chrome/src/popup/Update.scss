@@ -1,47 +1,47 @@
-.update-grid{
-    display: grid;
-    grid-template-columns: 180px 200px;
+.update-grid {
+  display: grid;
+  grid-template-columns: 180px 200px;
 }
 .grid-item {
-    padding:2px;
+  padding: 2px;
 }
-content span{
-    margin-bottom: 5px;
+content span {
+  margin-bottom: 5px;
 }
 
 .button-row {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-    button {
-        padding: 3px;
-        margin-right: 5px;
-        
-    }
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  button {
+    padding: 3px;
+    margin-right: 5px;
+  }
 }
 
-.small-text{
-    font-size: 12px;
-    color: lightgray;
+.small-text {
+  font-size: 12px;
+  color: lightgray;
 }
 
 button {
-    background: #555;
-    color:white;
-    border: 1px solid rgb(110, 110, 110);
-
+  background: #555;
+  color: white;
+  border: 1px solid rgb(110, 110, 110);
 }
-.MuiSelect-icon, .MuiSelect-select, .MuiInput-underline {
-    color: white !important;
-    border-bottom-color: white;
+.MuiSelect-icon,
+.MuiSelect-select,
+.MuiInput-underline {
+  color: white !important;
+  border-bottom-color: white;
 }
-.MuiSelect-selectMenu  {
-    min-width: 150px !important;
+.MuiSelect-selectMenu {
+  min-width: 150px !important;
 }
-.MuiListItem-button{
-    background: #333 !important;
-    color:white!important;
+.MuiListItem-button {
+  background: #333 !important;
+  color: white !important;
 }
-.MuiListItem-button:hover{
-    background: #555 !important;
+.MuiListItem-button:hover {
+  background: #555 !important;
 }
