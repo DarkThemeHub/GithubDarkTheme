@@ -1,15 +1,14 @@
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import { compare } from 'compare-versions';
 import * as React from 'react';
 import './Update.scss'
-import { compare } from 'compare-versions';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 const API_ADDRESS = 'https://api.github.com/';
 
-
 interface storageFormat {
-    version: string,
-    lastGetLatestVersionCheckTime: number | undefined,
-    theme: string | undefined
+    version: string;
+    lastGetLatestVersionCheckTime: number | undefined;
+    theme: string | undefined;
 }
 
 export const Update: React.FunctionComponent<{}> = ({ }) => {
@@ -18,11 +17,11 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     const [lastVersionCheck, setLastVersionCheck] = React.useState<number>(undefined);
     const [latestVersion, setLatestVersion] = React.useState<string>(undefined);
     const [newInstallAvailable, setNewInstallAvailable] = React.useState<boolean>(undefined);
-    const [installedVersion, setInstalledVersion] = React.useState<string>("");
+    const [installedVersion, setInstalledVersion] = React.useState<string>('');
     const [versions, setVersions] = React.useState<string[]>(undefined);
     const [theme, setTheme] = React.useState<string>('');
 
-    chrome.tabs.insertCSS({ code: theme }, () => { console.log("css injected") });
+    //chrome.tabs.insertCSS({ code: theme }, () => { console.log('css injected'); });
 
     function injectTheme(css: string) {
 
@@ -31,9 +30,10 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             meaning: 'no DOM elements or classes/functions',
         };
 
-        chrome.tabs.insertCSS({ code: css }, () => { console.log("css injected") });
-        document.dispatchEvent(new CustomEvent('injectCSS', { detail: data }));
+        //chrome.tabs.insertCSS({ code: css }, () => { console.log('css injected'); });
+        document.dispatchEvent(new Event('injectCSS'));
     }
+
     React.useEffect(() => {
         console.log('render!');
 
@@ -41,7 +41,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             const storageFile = result.storageFile as storageFormat;
             console.log(storageFile);
             setInstalledVersion(storageFile.version);
-            setTheme(storageFile.theme)
+            setTheme(storageFile.theme);
         });
         const nextCheckOffset = new Date();
         nextCheckOffset.setMinutes(20);
@@ -53,15 +53,15 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         }
         determineNeedsUpdate();
 
-    })
+    });
 
     function getAllReleaseTags() {
         console.log('getAllReleaseTags!');
-        return fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/tags`)
+        return fetch(API_ADDRESS + 'repos/acoop133/githubdarktheme/tags')
             .then(response => response.json())
             .then((data) => {
                 const dataTyped = data as any[];
-                const options = dataTyped.map(d => { return d.name; });
+                const options = dataTyped.map(d => d.name);
 
                 setVersions(options);
             })
@@ -71,10 +71,9 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             });
     }
 
-
     function getLatestReleaseDetails() {
         console.log('getLatestReleaseDetails!');
-        return fetch(API_ADDRESS + `repos/acoop133/githubdarktheme/releases/latest`)
+        return fetch(API_ADDRESS + 'repos/acoop133/githubdarktheme/releases/latest')
             .then(response => response.json())
             .then(data => {
                 setLatestVersion(data.tag_name);
@@ -91,15 +90,15 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
 
     function determineNeedsUpdate() {
         console.log('determineNeedsUpdate!');
-        if (installedVersion === "") {
+        if (installedVersion === '') {
             setNewInstallAvailable(true);
         }
         else if (latestVersion === undefined) {
-            console.error("latest version is undefined but should have value")
+            console.error('latest version is undefined but should have value');
         } else {
-            console.log("start compare")
+            console.log('start compare');
             setNewInstallAvailable(compare(latestVersion, installedVersion, '>'));
-            console.log("complete compare")
+            console.log('complete compare');
         }
     }
 
@@ -110,11 +109,11 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             .then(response => response.text())
             .then(data => {
                 const toStorage: storageFormat = {
-                    version: version,
+                    version,
                     lastGetLatestVersionCheckTime: lastVersionCheck,
-                    theme: data
-                }
-                chrome.storage.local.set({ "storageFile": toStorage });
+                    theme: data,
+                };
+                chrome.storage.local.set({ 'storageFile': toStorage });
                 injectTheme(data);
                 setTheme(data);
                 setInstalledVersion(version);
@@ -129,56 +128,56 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     const uninstallTheme = () => {
         console.log('uninstallTheme!');
         chrome.storage.local.clear(() => {
-            setInstalledVersion("");
+            setInstalledVersion('');
             getLatestReleaseDetails();
         });
-    }
+    };
     const updateAvailableNotification = () => {
         chrome.notifications.create({
-            title: "New Update Available",
+            title: 'New Update Available',
             buttons: [
-                { title: "Release Notes" },
-                { title: "Update now" },
-                { title: "Enable Auto Update" }],
-            message: "A new update for Github Darktheme is available",
+                { title: 'Release Notes' },
+                { title: 'Update now' },
+                { title: 'Enable Auto Update' }],
+            message: 'A new update for Github Darktheme is available',
             type: 'basic',
-            iconUrl: undefined
+            iconUrl: undefined,
         });
-    }
+    };
     function onChange(event) {
         const versionSelected = event.target.value as string;
         InstallThemeVersion(versionSelected);
-    };
+    }
 
     return <div>
         <div className="update-grid">
             <div className="grid-item" style={{ paddingRight: 20 }}>
-                <span style={{ float: "right" }}>Latest version:</span>
+                <span style={{ float: 'right' }}>Latest version:</span>
             </div>
             <div className="grid-item">
                 {latestVersion} <span className="small-text">checked {(Date.now() - lastUpdated)} ago</span>
             </div>
             <div className="grid-item" style={{ paddingRight: 20 }}>
-                <div style={{ alignItems: 'baseline', float: "right" }}>Installed version:</div>
+                <div style={{ alignItems: 'baseline', float: 'right' }}>Installed version:</div>
             </div>
             <div className="grid-item">
                 <Select
                     value={installedVersion}
                     onChange={(e) => onChange(e)}
-                    displayEmpty
+                    displayEmpty={true}
                 >
-                    <MenuItem value="" disabled>Select a version to install</MenuItem>
+                    <MenuItem value="" disabled={true}>Select a version to install</MenuItem>
                     {versions && versions.map(v => {
-                        return <MenuItem value={v}>{v}</MenuItem>
+                        return <MenuItem value={v}>{v}</MenuItem>;
                     })}
                 </Select>
-                {installedVersion !== "" && <button onClick={() => uninstallTheme()}>Uninstall Theme</button>}
+                {installedVersion !== '' && <button onClick={() => uninstallTheme()}>Uninstall Theme</button>}
             </div>
         </div>
         <div className="button-row">
-            <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/releases' }) }}>Release Notes</button>
-            <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/issues' }) }}>Report Issues</button>
+            <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/releases' }); }}>Release Notes</button>
+            <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/issues' }); }}>Report Issues</button>
         </div>
-    </div >
+    </div >;
 
-}
+};
