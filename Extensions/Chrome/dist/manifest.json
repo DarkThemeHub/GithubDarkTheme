@@ -20,11 +20,25 @@
     },
     "permissions": [
         "storage",
+        "activeTab",
         "notifications",
         "tabs",
         "*://*.github.com/*",
         "*://*.github.com/",
         "*://github.com/",
         "*://github.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.github.com/*",
+                "*://*.github.com/",
+                "*://github.com/",
+                "*://github.com/*"
+            ],
+            "js": [
+                "public/injector.js"
+            ]
+        }
     ]
 }
