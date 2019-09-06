@@ -26,12 +26,10 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             "*://*.github.com/",
             "*://github.com/",
             "*://github.com/*"]
-    }
+    };
 
     function injectTheme() {
-
         chrome.tabs.query(query, tabs => {
-
             tabs.forEach(tab => {
                 chrome.tabs.executeScript(tab.id, {
                     code: `
@@ -43,10 +41,10 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                 ` })
             });
         })
-    }
+    };
+
     function removeInjectedTheme() {
         chrome.tabs.query(query, tabs => {
-
             tabs.forEach(tab => {
                 chrome.tabs.executeScript(tab.id, {
                     code: `
@@ -58,7 +56,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                 ` })
             });
         })
-    }
+    };
 
     React.useEffect(() => {
         console.log('render!');
@@ -172,6 +170,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             iconUrl: undefined,
         });
     };
+
     function onChange(event) {
         const versionSelected = event.target.value as string;
         InstallThemeVersion(versionSelected);
@@ -183,7 +182,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                 <span style={{ float: 'right' }}>Latest version:</span>
             </div>
             <div className="grid-item">
-                {latestVersion} <span className="small-text">checked {(Date.now() - lastUpdated)} ago</span>
+                {latestVersion} <span className="small-text">checked {(Date.now() - lastVersionCheck)} ago</span>
             </div>
             <div className="grid-item" style={{ paddingRight: 20 }}>
                 <div style={{ alignItems: 'baseline', float: 'right' }}>Installed version:</div>
@@ -207,5 +206,4 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
             <button onClick={() => { chrome.tabs.create({ url: 'https://github.com/acoop133/GithubDarkTheme/issues' }); }}>Report Issues</button>
         </div>
     </div >;
-
 };
