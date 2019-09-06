@@ -69,7 +69,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         });
         const nextCheckOffset = new Date();
         nextCheckOffset.setMinutes(20);
-        nextCheckOffset.getTime;
+        nextCheckOffset.getTime();
 
         if (latestVersion === undefined || versions === undefined || Date.now() > (lastVersionCheck + nextCheckOffset.getTime())) {
             getLatestReleaseDetails();
