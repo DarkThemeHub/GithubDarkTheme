@@ -21,17 +21,28 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     const [versions, setVersions] = React.useState<string[]>(undefined);
     const [theme, setTheme] = React.useState<string>('');
 
-    //chrome.tabs.insertCSS({ code: theme }, () => { console.log('css injected'); });
+    const query: chrome.tabs.QueryInfo = {
+        url: ["*://*.github.com/*",
+            "*://*.github.com/",
+            "*://github.com/",
+            "*://github.com/*"]
+    }
 
     function injectTheme(css: string) {
 
-        var data = {
-            any: css,
-            meaning: 'no DOM elements or classes/functions',
-        };
+        chrome.tabs.query(query, tabs => {
 
-        //chrome.tabs.insertCSS({ code: css }, () => { console.log('css injected'); });
-        document.dispatchEvent(new Event('injectCSS'));
+            tabs.forEach(tab => {
+                chrome.tabs.executeScript(tab.id, {
+                    code: `
+                var evt = document.createEvent('Event');
+                evt.initEvent('injectTheme', true, false);
+
+                // fire the event
+                document.dispatchEvent(evt);
+                ` })
+            });
+        })
     }
 
     React.useEffect(() => {
