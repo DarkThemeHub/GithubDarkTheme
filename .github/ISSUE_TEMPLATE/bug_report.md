@@ -18,6 +18,3 @@ Add screenshot and illustrate the location of bug on the page.
 
 **Desktop (please complete the following information):**
  - Browser [e.g. chrome]
-
-**Smartphone (please complete the following information):**
- - Browser [e.g. chrome]
