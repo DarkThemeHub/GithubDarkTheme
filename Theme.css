@@ -7614,3 +7614,8 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 button.btn-link.link-gray.js-details-target {
     color: white !important;
 }
+
+div[style="background-color: #fcfdfd;"],
+.MarketplaceBackground-buffer {
+    background: #25272a !important;
+}
