@@ -7602,3 +7602,11 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
     color: white !important;
     background: rgb(49, 51, 56) !important;
 }
+
+.Box-row--yellow {
+    background-color: #995e26 !important;
+}
+
+button.btn-link.link-gray.js-details-target {
+    color: white !important;
+}
