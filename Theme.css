@@ -59,7 +59,7 @@ table.files td.icon .octicon-file-directory {
 }
 
 .pl-en {
-    color: #eaaa71!important;
+    color: #eaaa71 !important;
 }
 
 
@@ -954,10 +954,12 @@ details summary:hover {
         position: sticky !important;
         top: 0 !important;
     }
+
     .discussion-sidebar-sticky {
         position: static !important;
         width: auto !important;
     }
+
     .discussion-sidebar .is-placeholder {
         display: none !important;
     }
@@ -6450,731 +6452,731 @@ body.blog pre>code,
 
 .CodeMirror,
 .highlight {
-    background: #141414!important;
-    color: #ccc!important
+    background: #141414 !important;
+    color: #ccc !important
 }
 
 .blob-code {
-    color: #ccc!important
+    color: #ccc !important
 }
 
 .pl-c,
 .pl-c span {
-    color: #b9b9b9!important;
-    font-style: italic!important
+    color: #b9b9b9 !important;
+    font-style: italic !important
 }
 
 .pl-c1 {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-cce {
-    color: #cf6a4c!important;
-    font-weight: 400!important
+    color: #cf6a4c !important;
+    font-weight: 400 !important
 }
 
 .pl-cn {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-coc {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-cos {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .pl-e {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-ef {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-enc {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-enf {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-enm {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-ens {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-ent {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-entc {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-enti {
-    color: #ac885b!important;
-    font-weight: 700!important
+    color: #ac885b !important;
+    font-weight: 700 !important
 }
 
 .pl-entm {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-eoa {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-eoac {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-eoac .pl-pde {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-eoai {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-eoai .pl-pde {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-eoi {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-k {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-ko {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-kolp {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-kos {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-kou {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-mai .pl-sf {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-mb {
-    color: #8f9d6a!important;
-    font-weight: 700!important
+    color: #8f9d6a !important;
+    font-weight: 700 !important
 }
 
 .pl-mc {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-mh {
-    color: #cf6a4c!important;
-    font-weight: 400!important
+    color: #cf6a4c !important;
+    font-weight: 400 !important
 }
 
 .pl-mh .pl-pdh {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-mi {
-    color: #cda869!important;
-    font-style: italic!important
+    color: #cda869 !important;
+    font-style: italic !important
 }
 
 .pl-ml {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .pl-mm {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-mp {
-    color: #c5af75!important
+    color: #c5af75 !important
 }
 
 .pl-mp1 .pl-sf {
-    color: #dad085!important
+    color: #dad085 !important
 }
 
 .pl-mq {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-mr {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-ms {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-pdb {
-    color: #8f9d6a!important;
-    font-weight: 700!important
+    color: #8f9d6a !important;
+    font-weight: 700 !important
 }
 
 .pl-pdc {
-    color: #5f5a60!important;
-    font-style: italic!important
+    color: #5f5a60 !important;
+    font-style: italic !important
 }
 
 .pl-pdc1 {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-pde {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-pdi {
-    color: #cda869!important;
-    font-style: italic!important
+    color: #cda869 !important;
+    font-style: italic !important
 }
 
 .pl-pds {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .pl-pdv {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-pse {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-pse .pl-s2 {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-s {
-    color: #f9ee98!important
+    color: #f9ee98 !important
 }
 
 .pl-s1 {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .pl-s2 {
-    color: #ccc!important
+    color: #ccc !important
 }
 
 .pl-mp .pl-s3 {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-s3 {
-    color: #dad085!important
+    color: #dad085 !important
 }
 
 .pl-sc {
-    color: #dad085!important
+    color: #dad085 !important
 }
 
 .pl-scp {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-sf {
-    color: #dad085!important
+    color: #dad085 !important
 }
 
 .pl-smc {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-smp {
-    color: #ccc!important
+    color: #ccc !important
 }
 
 .pl-sok {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-sol {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .pl-som {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-sr {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-sra {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-src {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-sre {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-st {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .pl-stj {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-stp {
-    color: #9b859d!important
+    color: #9b859d !important
 }
 
 .pl-sv {
-    color: #9b859d!important
+    color: #9b859d !important
 }
 
 .pl-v {
-    color: #9b859d!important
+    color: #9b859d !important
 }
 
 .pl-vi {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .pl-vo {
-    color: #ac885b!important
+    color: #ac885b !important
 }
 
 .pl-vpf {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .pl-mi1 {
-    color: #55a532!important;
-    background: #020!important
+    color: #55a532 !important;
+    background: #020 !important
 }
 
 .pl-mdht {
-    color: #55a532!important;
-    background: #020!important
+    color: #55a532 !important;
+    background: #020 !important
 }
 
 .pl-md {
-    color: #bd2c00!important;
-    background: #200!important
+    color: #bd2c00 !important;
+    background: #200 !important
 }
 
 .pl-mdhf {
-    color: #bd2c00!important;
-    background: #200!important
+    color: #bd2c00 !important;
+    background: #200 !important
 }
 
 .pl-mdr {
-    color: #cf6a4c!important;
-    font-weight: 400!important
+    color: #cf6a4c !important;
+    font-weight: 400 !important
 }
 
 .pl-mdh {
-    color: #7587a6!important;
-    font-weight: 400!important
+    color: #7587a6 !important;
+    font-weight: 400 !important
 }
 
 .pl-mdi {
-    color: #7587a6!important;
-    font-weight: 400!important
+    color: #7587a6 !important;
+    font-weight: 400 !important
 }
 
 .pl-ib {
-    background-color: #f93!important
+    background-color: #f93 !important
 }
 
 .pl-id {
-    background-color: #a31515!important;
-    color: #fff!important
+    background-color: #a31515 !important;
+    color: #fff !important
 }
 
 .pl-ii,
 .pl-ii .pl-cce {
-    background-color: #df5000!important;
-    color: #fff!important
+    background-color: #df5000 !important;
+    color: #fff !important
 }
 
 .pl-iu {
-    background-color: #b4b7b4!important
+    background-color: #b4b7b4 !important
 }
 
 .pl-mo {
-    color: #969896!important
+    color: #969896 !important
 }
 
 .pl-mri {
-    color: teal!important
+    color: teal !important
 }
 
 .pl-ms1 {
-    background-color: #f5f5f5!important
+    background-color: #f5f5f5 !important
 }
 
 .pl-va {
-    color: teal!important
+    color: teal !important
 }
 
 .pl-vpu {
-    color: teal!important
+    color: teal !important
 }
 
 .pl-entl {
-    color: #ccc!important
+    color: #ccc !important
 }
 
 
 /*! CodeMirror: Twilight */
 
 .CodeMirror-gutters {
-    background: #222!important;
-    border-right: 1px solid #484848!important
+    background: #222 !important;
+    border-right: 1px solid #484848 !important
 }
 
 .CodeMirror-guttermarker {
-    color: #fff!important
+    color: #fff !important
 }
 
 .CodeMirror-guttermarker-subtle {
-    color: #aaa!important
+    color: #aaa !important
 }
 
 .CodeMirror-linenumber {
-    color: #aaa!important
+    color: #aaa !important
 }
 
 .CodeMirror-cursor {
-    border-left: 1px solid #fff!important
+    border-left: 1px solid #fff !important
 }
 
 .CodeMirror-activeline-background {
-    background: #27282e!important
+    background: #27282e !important
 }
 
 .CodeMirror-matchingbracket {
-    outline: 1px solid grey!important;
-    color: #fff!important
+    outline: 1px solid grey !important;
+    color: #fff !important
 }
 
 .cm-keyword {
-    color: #f9ee98!important
+    color: #f9ee98 !important
 }
 
 .cm-atom {
-    color: #fc0!important
+    color: #fc0 !important
 }
 
 .cm-number {
-    color: #ca7841!important
+    color: #ca7841 !important
 }
 
 .cm-def {
-    color: #8da6ce!important
+    color: #8da6ce !important
 }
 
 .cm-variable-2,
 span.cm-tag {
-    color: #607392!important
+    color: #607392 !important
 }
 
 .cm-variable-3,
 span.cm-def {
-    color: #607392!important
+    color: #607392 !important
 }
 
 .cm-operator {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .cm-comment {
-    color: #777!important;
-    font-style: italic!important;
-    font-weight: 400!important
+    color: #777 !important;
+    font-style: italic !important;
+    font-weight: 400 !important
 }
 
 .cm-string {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .cm-string-2 {
-    color: #bd6b18!important
+    color: #bd6b18 !important
 }
 
 .cm-meta {
-    background-color: #141414!important;
-    color: #f7f7f7!important
+    background-color: #141414 !important;
+    color: #f7f7f7 !important
 }
 
 .cm-builtin {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .cm-tag {
-    color: #997643!important
+    color: #997643 !important
 }
 
 .cm-attribute {
-    color: #d6bb6d!important
+    color: #d6bb6d !important
 }
 
 .cm-header {
-    color: #ff6400!important
+    color: #ff6400 !important
 }
 
 .cm-hr {
-    color: #aeaeae!important
+    color: #aeaeae !important
 }
 
 .cm-link {
-    color: #ad9361!important;
-    font-style: italic!important;
-    text-decoration: none!important
+    color: #ad9361 !important;
+    font-style: italic !important;
+    text-decoration: none !important
 }
 
 .cm-error {
-    border-bottom: 1px solid red!important
+    border-bottom: 1px solid red !important
 }
 
 
 /*! Jupyter: Twilight */
 
 #notebook .highlight table {
-    background: #141414!important;
-    color: #ccc!important
+    background: #141414 !important;
+    color: #ccc !important
 }
 
 .highlight .hll {
-    background-color: #ffc!important
+    background-color: #ffc !important
 }
 
 .highlight .c {
-    color: #5f5a60!important;
-    font-style: italic!important
+    color: #5f5a60 !important;
+    font-style: italic !important
 }
 
 .highlight .err {
-    border: #b22518!important
+    border: #b22518 !important
 }
 
 .highlight .k {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .highlight .cm {
-    color: #5f5a60!important;
-    font-style: italic!important
+    color: #5f5a60 !important;
+    font-style: italic !important
 }
 
 .highlight .cp {
-    color: #5f5a60!important
+    color: #5f5a60 !important
 }
 
 .highlight .c1 {
-    color: #5f5a60!important;
-    font-style: italic!important
+    color: #5f5a60 !important;
+    font-style: italic !important
 }
 
 .highlight .cs {
-    color: #5f5a60!important;
-    font-style: italic!important
+    color: #5f5a60 !important;
+    font-style: italic !important
 }
 
 .highlight .gd {
-    background: #420e09!important
+    background: #420e09 !important
 }
 
 .highlight .ge {
-    font-style: italic!important
+    font-style: italic !important
 }
 
 .highlight .gr {
-    background: #b22518!important
+    background: #b22518 !important
 }
 
 .highlight .gh {
-    color: navy!important;
-    font-weight: 700!important
+    color: navy !important;
+    font-weight: 700 !important
 }
 
 .highlight .gi {
-    background: #253b22!important
+    background: #253b22 !important
 }
 
 .highlight .gp {
-    font-weight: 700!important
+    font-weight: 700 !important
 }
 
 .highlight .gs {
-    font-weight: 700!important
+    font-weight: 700 !important
 }
 
 .highlight .gu {
-    color: purple!important;
-    font-weight: 700!important
+    color: purple !important;
+    font-weight: 700 !important
 }
 
 .highlight .kd {
-    color: #e9df8f!important
+    color: #e9df8f !important
 }
 
 .highlight .kp {
-    color: #9b703f!important
+    color: #9b703f !important
 }
 
 .highlight .na {
-    color: #f9ee98!important
+    color: #f9ee98 !important
 }
 
 .highlight .nb {
-    color: #cda869!important
+    color: #cda869 !important
 }
 
 .highlight .nc {
-    color: #9b859d!important;
-    font-weight: 700!important
+    color: #9b859d !important;
+    font-weight: 700 !important
 }
 
 .highlight .no {
-    color: #9b859d!important
+    color: #9b859d !important
 }
 
 .highlight .nd {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .highlight .ni {
-    color: #cf6a4c!important;
-    font-weight: 700!important
+    color: #cf6a4c !important;
+    font-weight: 700 !important
 }
 
 .highlight .nf {
-    color: #9b703f!important;
-    font-weight: 700!important
+    color: #9b703f !important;
+    font-weight: 700 !important
 }
 
 .highlight .nn {
-    color: #9b859d!important;
-    font-weight: 700!important
+    color: #9b859d !important;
+    font-weight: 700 !important
 }
 
 .highlight .nt {
-    color: #cda869!important;
-    font-weight: 700!important
+    color: #cda869 !important;
+    font-weight: 700 !important
 }
 
 .highlight .nv {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .highlight .ow {
-    color: #a2f!important;
-    font-weight: 700!important
+    color: #a2f !important;
+    font-weight: 700 !important
 }
 
 .highlight .w {
-    color: #141414!important
+    color: #141414 !important
 }
 
 .highlight .mf {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .highlight .mh {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .highlight .mi {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .highlight .mo {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .highlight .sb {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .sc {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .sd {
-    color: #8f9d6a!important;
-    font-style: italic!important
+    color: #8f9d6a !important;
+    font-style: italic !important
 }
 
 .highlight .s2 {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .se {
-    color: #f9ee98!important;
-    font-weight: 700!important
+    color: #f9ee98 !important;
+    font-weight: 700 !important
 }
 
 .highlight .sh {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .si {
-    color: #daefa3!important;
-    font-weight: 700!important
+    color: #daefa3 !important;
+    font-weight: 700 !important
 }
 
 .highlight .sx {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .sr {
-    color: #e9c062!important
+    color: #e9c062 !important
 }
 
 .highlight .s1 {
-    color: #8f9d6a!important
+    color: #8f9d6a !important
 }
 
 .highlight .ss {
-    color: #cf6a4c!important
+    color: #cf6a4c !important
 }
 
 .highlight .bp {
-    color: #0aa!important
+    color: #0aa !important
 }
 
 .highlight .vc {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .highlight .vg {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .highlight .vi {
-    color: #7587a6!important
+    color: #7587a6 !important
 }
 
 .highlight .il {
-    color: #099!important
+    color: #099 !important
 }
 
 * {
@@ -7342,7 +7344,7 @@ section {
 }
 
 .btn-outline-mktg {
-    border: rgba(255, 255, 255, 0.5) 1px solid!important;
+    border: rgba(255, 255, 255, 0.5) 1px solid !important;
 }
 
 h1 a,
@@ -7573,11 +7575,12 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
     background: linear-gradient(to right, rgb(93, 106, 119), rgba(255, 255, 255, 0)) !important;
 }
 
-.bg-blue-2{
+.bg-blue-2 {
     background: #3c444c !important;
 }
+
 .projects-comment-form .comment-form-head .toolbar-commenting,
-.TimelineItem--break{
+.TimelineItem--break {
     background: none !important;
 }
 
@@ -7595,10 +7598,24 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 }
 
 .TimelineItem:before {
-    background-color: unset !important; 
+    background-color: unset !important;
 }
 
-.tabnav-tab.selected, .tabnav-tab[aria-selected=true] {
+.tabnav-tab.selected,
+.tabnav-tab[aria-selected=true] {
     color: white !important;
     background: rgb(49, 51, 56) !important;
+}
+
+.Box-row--yellow {
+    background-color: #995e26 !important;
+}
+
+button.btn-link.link-gray.js-details-target {
+    color: white !important;
+}
+
+div[style="background-color: #fcfdfd;"],
+.MarketplaceBackground-buffer {
+    background: #25272a !important;
 }
