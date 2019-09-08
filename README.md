@@ -10,11 +10,6 @@ A chrome extension with auto update and version selection is in progress and wil
 
 Firefox will follow if i have the effort!
 
-# Install Stylus browser extension.
-Chrome: https://chrome.google.com/webstore/search/stylus
-
-Firefox: https://addons.mozilla.org/en-US/firefox/addon/styl-us/
-
 # Install the theme.
 Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
