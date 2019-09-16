@@ -3765,7 +3765,8 @@ table.capped-list .octicon,
 a.exploregrid-item,
 .markdown-body blockquote,
 .link-gray,
-a.link-gray {
+a.link-gray,
+.reaction-summary-item {
     color: #b5b5b5 !important;
 }
 
