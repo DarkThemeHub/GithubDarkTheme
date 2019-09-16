@@ -7620,3 +7620,7 @@ div[style="background-color: #fcfdfd;"],
 .comment-reactions .user-has-reacted:hover {
     color: #ffffff !important;
 }
+
+.form-checkbox {
+    color: white !important;
+}
