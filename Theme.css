@@ -388,14 +388,6 @@ div[id^="contribution-joined-github"] img {
     width: calc(100% - 94px) !important;
 }
 
-.comment-reactions .user-has-reacted {
-    color: #8195be !important;
-}
-
-.comment-reactions .user-has-reacted:hover {
-    color: #a1b5de !important;
-}
-
 
 /* HACK: Label colors */
 
@@ -3765,7 +3757,8 @@ table.capped-list .octicon,
 a.exploregrid-item,
 .markdown-body blockquote,
 .link-gray,
-a.link-gray {
+a.link-gray,
+.reaction-summary-item {
     color: #b5b5b5 !important;
 }
 
@@ -7618,4 +7611,12 @@ button.btn-link.link-gray.js-details-target {
 div[style="background-color: #fcfdfd;"],
 .MarketplaceBackground-buffer {
     background: #25272a !important;
+}
+
+.comment-reactions .user-has-reacted {
+    color: #a8c4fd !important;
+}
+
+.comment-reactions .user-has-reacted:hover {
+    color: #ffffff !important;
 }
