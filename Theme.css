@@ -7440,7 +7440,7 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .btn:hover,
 a.btn:hover,
-.file-navigation .btn-sm:not(.btn-primary):hover {
+.file-navigation .btn-sm:not(.btn-primary):not(.disabled):hover {
     background: rgb(85, 85, 85) !important;
     color: white !important;
 }
