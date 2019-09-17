@@ -15,7 +15,7 @@ Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
 
 # Join the DarkThemeHub Team
-DarkThemeHub's goal is to create an active dark theme community that creates and maintains quality dark themes for websites people use daily.
+DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites people use daily.
 
 Email [acoop133](https://github.com/acoop133) with your github link to apply.
 
