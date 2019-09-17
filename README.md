@@ -23,5 +23,6 @@ Requirements:
 * Can communicate in english well
 * Knows basics of css
 
+Email [acoop133](https://github.com/acoop133) with your github link to apply
 
 ![image](https://i.gyazo.com/21ad1e0850b0259867cc1803a5b68bdc.png)
