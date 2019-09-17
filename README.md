@@ -22,7 +22,7 @@ Email [acoop133](https://github.com/acoop133) with your github link to apply.
 Requirements:
 * History of quality contributions
 * Well mannered
-* Can communicate in english well
+* Can communicate well in english 
 * Knows basics of css and html
 
 
