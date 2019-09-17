@@ -17,12 +17,14 @@ Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that creates and maintains quality dark themes for websites people use daily.
 
+Email [acoop133](https://github.com/acoop133) with your github link to apply.
+
 Requirements:
 * History of quality contributions
 * Well mannered
 * Can communicate in english well
 * Knows basics of css
 
-Email [acoop133](https://github.com/acoop133) with your github link to apply
+
 
 ![image](https://i.gyazo.com/21ad1e0850b0259867cc1803a5b68bdc.png)
