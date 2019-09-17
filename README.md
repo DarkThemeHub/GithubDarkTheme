@@ -23,7 +23,7 @@ Requirements:
 * History of quality contributions
 * Well mannered
 * Can communicate in english well
-* Knows basics of css
+* Knows basics of css and html
 
 
 
