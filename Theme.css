@@ -4040,7 +4040,6 @@ a.darkertooltipped,
 .list-heading a,
 .close-button,
 .timeline-comment-action,
-a.timeline-comment-action,
 a.comment-type-icon,
 .timeline-comment-actions .octicon,
 .commit-title .commit-link tt,
@@ -7627,4 +7626,8 @@ div[style="background-color: #fcfdfd;"],
 
 .form-checkbox {
     color: white !important;
+}
+
+.timeline-comment-action {
+    color: rgb(187, 187, 187) !important;
 }
