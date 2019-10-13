@@ -7215,6 +7215,10 @@ span.cm-def {
     background-color: #333;
 }
 
+.pagination-loader-container {
+    background-image: none !important;
+}
+
 select,
 input:not(.btn-link),
 textarea {
