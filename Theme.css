@@ -4040,7 +4040,6 @@ a.darkertooltipped,
 .list-heading a,
 .close-button,
 .timeline-comment-action,
-a.timeline-comment-action,
 a.comment-type-icon,
 .timeline-comment-actions .octicon,
 .commit-title .commit-link tt,
@@ -7215,6 +7214,10 @@ span.cm-def {
     background-color: #333;
 }
 
+.pagination-loader-container {
+    background-image: none !important;
+}
+
 select,
 input:not(.btn-link),
 textarea {
@@ -7591,7 +7594,7 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 }
 
 .TimelineItem:before {
-    background-color: unset !important;
+    background-color: #555555 !important;
 }
 
 .tabnav-tab.selected,
@@ -7623,4 +7626,8 @@ div[style="background-color: #fcfdfd;"],
 
 .form-checkbox {
     color: white !important;
+}
+
+.timeline-comment-action {
+    color: rgb(187, 187, 187) !important;
 }
