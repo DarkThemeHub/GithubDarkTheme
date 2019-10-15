@@ -1799,7 +1799,8 @@ body .bg-white,
 #projects-results,
 .listgroup,
 .protected-branch-orgs-and-repo-admins,
-.listgroup-overflow {
+.listgroup-overflow,
+.org-sso-panel {
     background: #25272a !important;
 }
 
