@@ -7640,3 +7640,12 @@ div[style="background:#fafbfc;"] {
 header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-between.width-full {
     background: none !important
 }
+
+.nav-desktop-productDropdown,
+.nav-desktop-langDropdown {
+    background: #24272A !important;
+}
+
+details summary:hover {
+    background: none !important;
+}
