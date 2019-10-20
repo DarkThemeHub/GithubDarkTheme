@@ -7632,3 +7632,33 @@ div[style="background-color: #fcfdfd;"],
 .timeline-comment-action {
     color: rgb(187, 187, 187) !important;
 }
+
+div[style="background:#fafbfc;"] {
+    background: #24292E !important;
+}
+
+header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-between.width-full {
+    background: none !important
+}
+
+.nav-desktop-productDropdown,
+.nav-desktop-langDropdown {
+    background: #24272A !important;
+}
+
+details summary:hover {
+    background: none !important;
+}
+
+div.light-bg a,
+div.light-bg a h4 {
+    color: white !important;
+}
+
+div.light-bg a p {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dropdown-item:hover {
+    background: #39424A !important;
+}
