@@ -7653,3 +7653,12 @@ details summary:hover {
 details summary:hover {
     background: rgb(49, 51, 56) !important;
 }
+
+div.light-bg a,
+div.light-bg a h4 {
+    color: white !important;
+}
+
+div.light-bg a p {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
