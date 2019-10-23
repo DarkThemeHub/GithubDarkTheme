@@ -7694,3 +7694,18 @@ a.user-mention:hover,
 .sidebar-assignee .assignee:hover {
     text-decoration: underline !important;
 }
+
+.reponav-item,
+.reponav-item .octicon,
+a.reponav-item,
+a.tabnav-extra,
+.tabnav-extra {
+    color: #BBB !important;
+}
+
+.reponav-item:hover,
+a.reponav-item:hover,
+a.tabnav-extra:hover,
+.tabnav-extra:hover {
+    color: white !important;
+}
