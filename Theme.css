@@ -7670,3 +7670,27 @@ div.light-bg a p {
 .MarketplaceEdit-body .menu-item:hover {
     background: #39424A !important;
 }
+
+a[data-hovercard-type="user"],
+.timeline-comment-header .author,
+.gh-header-meta .author,
+a.user-mention,
+.user-mention,
+.sidebar-assignee .assignee,
+.timeline-comment-header .author:hover,
+a[data-hovercard-type="user"]:hover,
+.gh-header-meta .author:hover,
+a.user-mention:hover,
+.user-mention:hover,
+.sidebar-assignee .assignee:hover {
+    color: white !important;
+}
+
+.timeline-comment-header .author:hover,
+a[data-hovercard-type="user"]:hover,
+.gh-header-meta .author:hover,
+a.user-mention:hover,
+.user-mention:hover,
+.sidebar-assignee .assignee:hover {
+    text-decoration: underline !important;
+}
