@@ -7662,3 +7662,11 @@ div.light-bg a p {
 .dropdown-item:hover {
     background: #39424A !important;
 }
+
+.MarketplaceEdit-body .menu-item {
+    background: none !important;
+}
+
+.MarketplaceEdit-body .menu-item:hover {
+    background: #39424A !important;
+}
