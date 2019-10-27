@@ -7709,3 +7709,7 @@ a.tabnav-extra:hover,
 .tabnav-extra:hover {
     color: white !important;
 }
+
+.timeline-comment {
+    color: #BBB !important;
+}
