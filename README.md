@@ -11,7 +11,10 @@ A dedicated chrome extension with auto update is in progress and will be availab
 Firefox will follow if i have the effort!
 
 # Install the theme.
-Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
+
+Install directly from this repository by clicking on [this link](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/github.user.styl).
+
+Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
 
 # Join the DarkThemeHub Team
