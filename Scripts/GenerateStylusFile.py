@@ -10,7 +10,6 @@ header = open(baseDir + "Scripts/Header.txt", "r").read()
 preStyle = open(baseDir + "Scripts/PreStyle.txt", "r").read()
 themeCss = open(baseDir + "Theme.css", "r",
                 encoding="ASCII", errors="ignore").read()
-
 endStyle = "}"
 
 if os.path.exists(baseDir + "Generated"):
@@ -19,10 +18,8 @@ if os.path.exists(baseDir + "Generated"):
 else:
     os.makedirs(baseDir + "Generated")
 
-
 f = open(baseDir + "Generated/github.user.styl", "w+")
-outString = header + "\n" + preStyle + "\n" + \
-    themeCss + "\n" + endStyle
+outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 
 f.close
