@@ -1,0 +1,1 @@
+@-moz-document regexp("https://*.github.com/.*"), regexp("https://raw.githubusercontent.com/.*") {

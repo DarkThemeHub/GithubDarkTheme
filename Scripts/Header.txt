@@ -1,0 +1,10 @@
+/* ==UserStyle==
+@name         GithubDarkTheme();
+@namespace    github.com/DarkThemeHub/GithubDarkTheme
+@version      1.16.1
+@description  Dark theme for github.
+@author       DarkThemeHub
+@homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
+@supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/github.user.styl
+==/UserStyle== */
