@@ -1,8 +1,8 @@
 import os
 baseDir = os.path.dirname(os.path.dirname(__file__))
 
-header = open("header.txt", "r").read()
-preStyle = open("prestyle.txt", "r").read()
+header = open(baseDir + "\Scripts\header.txt", "r").read()
+preStyle = open(baseDir + "\Scripts\prestyle.txt", "r").read()
 themeCss = open(baseDir + "\\theme.css", "r",
                 encoding="ASCII", errors="ignore").read()
 endStyle = "}"
