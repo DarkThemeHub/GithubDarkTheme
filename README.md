@@ -1,17 +1,15 @@
+![image](https://img.shields.io/github/v/release/Darkthemehub/GithubDarktheme?style=flat-square)
 # GithubDarkTheme();
-Repository for GithubDarkTheme(); where users can submit issues.
+Submit your issues here or keep track of releases
 
-
-Watch this repository for release only to get notified every release. 
-There is no auto update! you will need to manually update via theme link below. 
 
 A dedicated chrome extension with auto update is in progress and will be available soon :) | ![image](https://user-images.githubusercontent.com/19627023/64456941-44b23d80-d0e9-11e9-9e1d-f865d0de68ef.png)
 ------------ | -------------
 
 Firefox will follow if i have the effort!
 
-# Install the theme.
-#### option 1 (recommended)
+# Install the theme
+#### option 1 (recommended) (also apparently has auto update check)
 [![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
 
 [![image](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
