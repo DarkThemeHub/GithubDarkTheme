@@ -19,12 +19,12 @@ jobs:
     - name: Generate-Stylus-File
       run: |
         python Scripts/GenerateStylusFile.py
-        git add .
-        git diff
-    - name: Git Auto Commit
-      uses: stefanzweifel/git-auto-commit-action@v2.3.0
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Commit generated stylus file" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        commit_message: Commit generated Stylus File
-        branch: ${{ github.head_ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
