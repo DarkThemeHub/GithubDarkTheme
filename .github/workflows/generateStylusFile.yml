@@ -24,6 +24,7 @@ jobs:
     - name: Generate-Stylus-File
       working-directory: ${{ github.workspace }}
       run: |
+        ls
         python ${{ github.workspace }}/scripts/GenerateStylusFile.py
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
