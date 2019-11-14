@@ -11,7 +11,13 @@ A dedicated chrome extension with auto update is in progress and will be availab
 Firefox will follow if i have the effort!
 
 # Install the theme.
-Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
+#### option 1 (recommended)
+[![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
+
+[![image](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
+
+#### option 2
+Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
 
 # Join the DarkThemeHub Team
