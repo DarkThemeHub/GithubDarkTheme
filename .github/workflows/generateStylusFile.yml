@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -22,6 +21,8 @@ jobs:
       run: |
         python Scripts/GenerateStylusFile.py
         git diff
+        cd Generated
+        ls
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
       with:
