@@ -1,12 +1,9 @@
-![image](https://img.shields.io/github/v/release/Darkthemehub/GithubDarktheme?style=flat-square)
+[![image](https://img.shields.io/github/v/release/Darkthemehub/GithubDarktheme?style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/releases/latest)
+[![image](https://img.shields.io/github/release-date/darkthemehub/githubdarktheme?color=%23DD7A00&label=Last%20updated&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/releases)
+[![image](https://img.shields.io/github/contributors/DarkThemehub/GithubDarktheme?style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/graphs/contributors)
+[![image](https://img.shields.io/github/size/Darkthemehub/GithubDarkTheme/Generated/github.user.styl?color=purple&label=Theme%20size&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/Generated/github.user.styl)
 # GithubDarkTheme();
 Submit your issues here or keep track of releases
-
-
-A dedicated chrome extension with auto update is in progress and will be available soon :) | ![image](https://user-images.githubusercontent.com/19627023/64456941-44b23d80-d0e9-11e9-9e1d-f865d0de68ef.png)
------------- | -------------
-
-Firefox will follow if i have the effort!
 
 # Install the theme
 #### option 1 (recommended) (also apparently has auto update check)
@@ -17,6 +14,11 @@ Firefox will follow if i have the effort!
 #### option 2
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
+#### Is there a dedicated plugin?
+A dedicated chrome extension with auto update was in progress and is now postponed for the time being :) | ![image](https://user-images.githubusercontent.com/19627023/64456941-44b23d80-d0e9-11e9-9e1d-f865d0de68ef.png)
+------------ | -------------
+
+Firefox will follow if i have the effort!
 
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites people use daily.
