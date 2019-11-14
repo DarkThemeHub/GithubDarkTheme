@@ -29,3 +29,8 @@ jobs:
         ls
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
+      with:
+        commit_message: Commit generated Stylus File
+        branch: ${{ github.head_ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
