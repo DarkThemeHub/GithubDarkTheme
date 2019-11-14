@@ -19,9 +19,8 @@ jobs:
     - name: Generate-Stylus-File
       run: |
         python Scripts/GenerateStylusFile.py
+        git add .
         git diff
-        cd Generated
-        ls
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
       with:
