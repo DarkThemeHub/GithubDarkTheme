@@ -8,15 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
-      matrix:
-        python-version: [3.7]
-
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.7
         fetch-depth: 2
     - name: Install dependencies
       run: |
@@ -24,6 +21,7 @@ jobs:
     - name: Generate-Stylus-File
       run: |
         python Scripts/GenerateStylusFile.py
+        git diff
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
       with:
