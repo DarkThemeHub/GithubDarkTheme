@@ -6,5 +6,5 @@
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
 @supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
-@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/github.user.styl
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
 ==/UserStyle== */
