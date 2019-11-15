@@ -5,7 +5,7 @@
 # GithubDarkTheme();
 Submit your issues here or keep track of releases
 
-# Install the theme (no auto update yet, will need to update manually)
+# Install the theme
 #### option 1 (recommended)
 [![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
 
@@ -14,8 +14,8 @@ Submit your issues here or keep track of releases
 #### option 2
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
-#### Is there a dedicated plugin?
-A dedicated chrome extension with auto update was in progress and is now postponed for the time being :) | ![image](https://user-images.githubusercontent.com/19627023/64456941-44b23d80-d0e9-11e9-9e1d-f865d0de68ef.png)
+#### there is no auto update?
+A dedicated chrome extension with auto update was in progress and is now postponed for the time being | ![image](https://user-images.githubusercontent.com/19627023/64456941-44b23d80-d0e9-11e9-9e1d-f865d0de68ef.png)
 ------------ | -------------
 
 Firefox will follow if i have the effort!
