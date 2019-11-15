@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.16.1
+@version      1.17.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -9,7 +9,7 @@
 @updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
 ==/UserStyle== */
 
-@-moz-document regexp("https://*.github.com/.*"), regexp("https://raw.githubusercontent.com/.*") {
+@-moz-document regexp("^https?://((gist|guides|help|raw|status|developer).)?github.com((?!generated_pages/preview).)*$") {
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
