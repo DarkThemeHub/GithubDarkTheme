@@ -5,8 +5,8 @@
 # GithubDarkTheme();
 Submit your issues here or keep track of releases
 
-# Install the theme
-#### option 1 (recommended) (also apparently has auto update check)
+# Install the theme (no auto update yet, will need to update manually)
+#### option 1 (recommended)
 [![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
 
 [![image](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
