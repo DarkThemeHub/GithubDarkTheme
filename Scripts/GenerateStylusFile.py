@@ -13,8 +13,8 @@ themeCss = open(baseDir + "Theme.css", "r",
 endStyle = "}"
 
 if os.path.exists(baseDir + "Generated"):
-    if os.path.exists(baseDir + "githyb.user.styl"):
-        os.remove(baseDir + "github.user.style")
+    if os.path.exists(baseDir + "github.user.styl"):
+        os.remove(baseDir + "github.user.styl")
 else:
     os.makedirs(baseDir + "Generated")
 
