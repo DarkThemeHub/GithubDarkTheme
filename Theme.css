@@ -7713,3 +7713,8 @@ a.tabnav-extra:hover,
 .timeline-comment {
     color: #BBB !important;
 }
+
+.file-commit-form--full{
+    background: none !important;
+}
+}
