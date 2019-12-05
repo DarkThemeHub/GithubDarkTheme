@@ -4,8 +4,7 @@ on:
   push:
     branches: master
     paths:
-      - 'Theme.css'
-      - 'Scripts/*'
+      - 'Scripts/Version.txt'
 jobs:
   build:
     runs-on: ubuntu-latest
