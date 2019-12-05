@@ -7721,3 +7721,7 @@ a.tabnav-extra:hover,
 .UnderlineNav-item[role=tab][aria-selected=true] {
     color: white !important;
 }
+
+form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
+    background: #24292e !important;
+}
