@@ -1,4 +1,4 @@
-name: GenerateStylusFile
+name: GenerateStylusTestFile
 
 on: [pull_request]
   
