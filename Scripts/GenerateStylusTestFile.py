@@ -24,12 +24,10 @@ headerFile = open(baseDir + "Scripts/Header.txt","w")
 headerFile.write(newHeader)
 headerFile.close()
 
-# empty generated Folder
-shutil.rmtree(baseDir + "Generated")
-os.makedirs(baseDir + "Generated")
+if not os.path.exists(baseDir + "Generated"):
+    os.makedirs(baseDir + "Generated")
 
-
-f = open(baseDir + "Generated/github.test.styl", "w+")
+f = open(baseDir + "Generated/github.test.styl", "w")
 outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
