@@ -20,7 +20,7 @@ endStyle = "}"
 
 # update version in header 
 newHeader = re.sub("[0-9]+.[0-9]+.[0-9]+", newVersion , header)
-newHeader = re.sub("GithubDarkTheme();", "Test-GithubDarkTheme();", newHeader)
+newHeader = re.sub(r"GithubDarkTheme\(\);", "Test-GithubDarkTheme();", newHeader)
 headerFile = open(baseDir + "Scripts/Header.txt","w")
 headerFile.write(newHeader)
 headerFile.close()
