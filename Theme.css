@@ -7717,4 +7717,7 @@ a.tabnav-extra:hover,
 .file-commit-form--full{
     background: none !important;
 }
+
+.UnderlineNav-item[role=tab][aria-selected=true] {
+    color: white !important;
 }
