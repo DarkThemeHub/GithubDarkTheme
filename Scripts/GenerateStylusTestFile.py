@@ -29,7 +29,7 @@ shutil.rmtree(baseDir + "Generated")
 os.makedirs(baseDir + "Generated")
 
 
-f = open(baseDir + "Generated/github.user.styl", "w+")
+f = open(baseDir + "Generated/github.test.styl", "w+")
 outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
