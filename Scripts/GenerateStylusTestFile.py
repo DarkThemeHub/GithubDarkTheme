@@ -19,15 +19,15 @@ themeCss = open(baseDir + "Theme.css", "r",
 endStyle = "}"
 
 # update version in header 
-newHeader = re.sub("[0-9]+.[0-9]+.[0-9]+",newVersion , header)
+newHeader = re.sub("[0-9]+.[0-9]+.[0-9]+", newVersion , header)
+newHeader = re.sub("GithubDarkTheme();", "Test-GithubDarkTheme();", newHeader)
 headerFile = open(baseDir + "Scripts/Header.txt","w")
 headerFile.write(newHeader)
 headerFile.close()
 
-if not os.path.exists(baseDir + "Generated"):
-    os.makedirs(baseDir + "Generated")
+os.makedirs(baseDir + "Generated", exist_ok=True)
 
-f = open(baseDir + "Generated/github.test.styl", "w")
+f = open(baseDir + "Generated/githubTest.user.styl", "w")
 outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close

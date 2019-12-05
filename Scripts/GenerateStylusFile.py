@@ -33,5 +33,3 @@ f = open(baseDir + "Generated/github.user.styl", "w")
 outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
-
-# remove test file generated for PR
