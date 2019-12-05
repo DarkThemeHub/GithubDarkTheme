@@ -14,15 +14,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-    - name: Generate-Stylus-File
+    - name: Generate test style
       run: |
         python Scripts/GenerateStylusTestFile.py
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Commit generated stylus file" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Upload Test Style Artifact
+      uses: actions/upload-artifact@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        name: TestStyle
+        path: Generated/github.test.styl
