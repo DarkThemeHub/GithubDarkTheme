@@ -8,7 +8,7 @@ if baseDir.startswith("/home/runner/work/GithubDarkTheme"):
 else:
     baseDir = baseDir + "/"
 
-
+themeName = open(baseDir + "Scripts/ThemeName.txt", "r").read().rstrip()
 newVersion = open(baseDir + "Scripts/Version.txt", "r").read().rstrip()
 headerFile = open(baseDir + "Scripts/Header.txt", "r")
 header = headerFile.read()
@@ -19,10 +19,8 @@ themeCss = open(baseDir + "Theme.css", "r",
 endStyle = "}"
 
 # update version in header 
-newHeader = re.sub("[0-9]+.[0-9]+.[0-9]+",newVersion , header)
-headerFile = open(baseDir + "Scripts/Header.txt","w")
-headerFile.write(newHeader)
-headerFile.close()
+newHeader = re.sub("<Version>", newVersion , header)
+newHeader = re.sub("<ThemeName>", themeName, newHeader)
 
 # empty generated Folder
 shutil.rmtree(baseDir + "Generated")
@@ -30,6 +28,6 @@ os.makedirs(baseDir + "Generated")
 
 
 f = open(baseDir + "Generated/github.user.styl", "w")
-outString = header + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
+outString = newHeader + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
