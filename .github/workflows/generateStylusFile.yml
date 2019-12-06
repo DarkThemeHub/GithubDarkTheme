@@ -1,12 +1,8 @@
 name: GenerateStylusFile
 
 on:
-  pull_request:
-    branches: 
-    - master
   push:
     branches: master
-    types: [merge,push]
     paths:
       - 'Theme.css'
       - 'Scripts/*'
@@ -14,6 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: "Run if merged"
+      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     - uses: actions/checkout@v1
     - name: Set up Python
       uses: actions/setup-python@v1
