@@ -1,6 +1,9 @@
 name: GenerateStylusFile
 
 on:
+  pull_request:
+    branches: 
+    - master
   push:
     branches: master
     types: [merge,push]
