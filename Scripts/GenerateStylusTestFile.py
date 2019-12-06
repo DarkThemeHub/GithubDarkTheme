@@ -20,14 +20,11 @@ endStyle = "}"
 
 # update version in header 
 newHeader = re.sub("<Version>", newVersion , header)
-newHeader = re.sub("<ThemeName>", themeName, newHeader)
+newHeader = re.sub("<ThemeName>", "Test-" + themeName, newHeader)
 
-# empty generated Folder
-shutil.rmtree(baseDir + "Generated")
-os.makedirs(baseDir + "Generated")
+os.makedirs(baseDir + "Generated", exist_ok=True)
 
-
-f = open(baseDir + "Generated/github.user.styl", "w")
+f = open(baseDir + "Generated/githubTest.user.styl", "w")
 outString = newHeader + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
