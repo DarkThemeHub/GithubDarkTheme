@@ -44,10 +44,13 @@ body {
 .graphs .selection .overlay {
     visibility: hidden !important;
 }
+.UnderlineNav-item {
+    color: #BBB !important
+}
 
 .UnderlineNav-item:focus,
 .UnderlineNav-item:hover {
-    color: #7f92a5;
+    color: white !important;
 }
 
 .d-flex {
@@ -307,6 +310,10 @@ input:not(.btn-link) {
     background-color: #25272a !important;
     border-color: #343434 !important;
     color: #eee !important;
+}
+
+input:not(.btn-link):focus {
+    border-color: #2188ff !important;
 }
 
 
@@ -7736,5 +7743,27 @@ a.tabnav-extra:hover,
 
 form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     background: #24292e !important;
+}
+
+.SideNav {
+    background-color: #333333;
+}
+
+.SideNav-item {
+    color: unset !important;
+}
+
+.SideNav-item:active,
+.SideNav-item:hover,
+.SideNav-item:focus {
+    background: #3d4348 !important;
+    color: white !important;
+}
+.SideNav-item[aria-current=page] {
+    background: #25272a !important;
+}
+
+.mb-4.px-4.bg-white.clearfix {
+    background: none !important;
 }
 }
