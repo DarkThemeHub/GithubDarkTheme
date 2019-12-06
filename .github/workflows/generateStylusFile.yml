@@ -3,7 +3,6 @@ name: GenerateStylusFile
 on:
   push:
     branches: master
-    types: [merge,push]
     paths:
       - 'Theme.css'
       - 'Scripts/*'
