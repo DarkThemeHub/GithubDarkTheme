@@ -297,6 +297,10 @@ input:not(.btn-link) {
     color: #eee !important;
 }
 
+input:not(.btn-link):focus {
+    border-color: #2188ff !important;
+}
+
 
 /* custom checkbox and radio styles. We need a full set of styles here as
      WebKit removes all of them when -webkit-appearance: none is set. */
