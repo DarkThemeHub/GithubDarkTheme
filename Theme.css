@@ -7725,3 +7725,20 @@ a.tabnav-extra:hover,
 form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     background: #24292e !important;
 }
+
+.SideNav {
+    background-color: #333333;
+}
+
+.SideNav-item {
+    color: unset !important;
+}
+
+.SideNav-item:active,
+.SideNav-item:hover {
+    background: #39424A !important;
+    color: white !important;
+}
+.SideNav-item[aria-current=page] {
+    background: #25272a !important;
+}
