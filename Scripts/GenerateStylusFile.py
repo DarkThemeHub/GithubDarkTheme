@@ -23,7 +23,7 @@ newHeader = re.sub("<Version>", newVersion , header)
 newHeader = re.sub("<ThemeName>", themeName, newHeader)
 
 # empty generated Folder
-shutil.rmtree(baseDir + "Generated")
+shutil.rmtree(baseDir + "Generated", ignore_errors=True)
 os.makedirs(baseDir + "Generated")
 
 
