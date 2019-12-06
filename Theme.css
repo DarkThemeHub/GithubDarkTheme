@@ -32,10 +32,13 @@ body {
 .graphs .selection .overlay {
     visibility: hidden !important;
 }
+.UnderlineNav-item {
+    color: #BBB !important
+}
 
 .UnderlineNav-item:focus,
 .UnderlineNav-item:hover {
-    color: #7f92a5;
+    color: white !important;
 }
 
 .d-flex {
