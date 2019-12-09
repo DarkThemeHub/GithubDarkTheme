@@ -469,8 +469,7 @@ img[src$="/notices/context_button.png"] {
 }
 
 #message-list .pagination a:hover,
-.link-mono:hover,
-.text-mono:hover {
+.link-mono:hover {
     text-decoration: underline !important;
 }
 
