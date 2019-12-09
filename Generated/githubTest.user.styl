@@ -1,3 +1,15 @@
+/* ==UserStyle==
+@name         Test-GithubDarkTheme();
+@namespace    github.com/DarkThemeHub/GithubDarkTheme
+@version      1.19.0
+@description  Dark theme for github.
+@author       DarkThemeHub
+@homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
+@supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
+==/UserStyle== */
+
+@-moz-document regexp("^(https?://)?(.*\\.)?(githubusercontent|github)\\..*") {
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -2490,7 +2502,7 @@ div#network.network>div>canvas {
 
 /* <g-emoji alias="heavy_check_mark"
     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
-    ios-version="6.0">✔️</g-emoji> */
+    ios-version="6.0"></g-emoji> */
 
 [alias="soon"],
 [alias="on"],
@@ -7738,26 +7750,16 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
 
 /* https://github.community/ */
 .lia-panel,
+.lia-panel .lia-panel-content,
 .lia-top-quilt>.lia-quilt-row-footer,
+.lia-component-forums-widget-board-browser-list .lia-browser-category-heading,
 .lia-component-quilt-community-hero,
 .lia-content .lia-component-quilt-header {
     background: unset !important;
 }
-.lia-panel .lia-panel-content,
-.MessageList>.t-data-grid {
-    background: #1d1d1d !important;
-}
-
-.lia-component-forums-widget-board-browser-list .lia-browser-category-heading>h2,
-.lia-component-forums-widget-board-browser-list .lia-browser-category-heading .category-title,
-.MessageList>.t-data-grid {
-    color: white !important;
-}
 
 .lia-component-forums-widget-board-browser-list .lia-browser-category-heading {
-    border-top: 20px solid !important;
-    border-color: #222222 !important;
-    background: #25272a !important;
+    color: white !important;
 }
 
 .lia-quilt-row-main .lia-panel-heading-bar,
@@ -7766,19 +7768,12 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     color: white !important;
 }
 
-.lia-content .lia-component-quilt-header .lia-quilt-row-main-header{
-    border-bottom: 1px solid #333 !important;
-    background: #25272a !important;
-}
-
 .lia-nav-list li>.lia-link-navigation {
     background: unset !important;
     color: white !important;
 }
 
-.lia-component-quilt-header a,
-.lia-faq-section-title-level-1>.lia-link-navigation,
-.lia-nav-list li>.lia-link-navigation {
+.lia-component-quilt-header a { 
     color: #4299fc !important;
 }
 
@@ -7791,8 +7786,7 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     filter: invert(1) !important;
 }
 
-.lia-autocomplete-container,
-.lia-menu-dropdown-items {
+.lia-autocomplete-container {
     background-color: #2b2b2b !important;
 }
 
@@ -7800,101 +7794,10 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     color: white !important;
 }
 
-.lia-autocomplete-footer:hover,
-.lia-autocomplete-content>ul>li.selected,
-.lia-menu-dropdown-items>li a:hover {
+.lia-autocomplete-footer:hover {
     background-color: #3a3a3a !important;
 }
-
 .lia-autocomplete-content .lia-component-forums-auto-complete-message-list-item, .lia-autocomplete-content .lia-autocomplete-message-list-item-link:hover {
     color: #92c5ff !important;
 }
-
-.lia-component-forums-widget-board-browser-list .lia-browser-category-heading .category-title,
-.lia-quilt-community-page .lia-component-forums-widget-recent-threads .lia-panel-heading-bar {
-    padding-left: 20px;
-}
-
-a.featured-event:hover{
-    background: none !important;
-    color: white !important;
-}
-
-.lia-quilt-row-sub-header {
-    background: none !important;
-}
-
-.final-crumb span {
-    color: white !important;
-}
-
-.lia-paging-full .lia-link-navigation, .lia-paging-full-pages .lia-link-navigation {
-    color: #b5b5b5 !important;
-}
-
-.lia-list-slim>thead>tr>th, .lia-list-wide>thead>tr>th,
-.lia-content .xsmall-text {
-    color: white !important;
-}
-
-.lia-paging-page-next>.lia-link-navigation:hover{
-    background: rgb(49, 51, 56) !important;
-    color: white !important;
-}
-
-.lia-panel-message {
-    background: #1d1d1d !important;
-}
-
-.lia-message-view-forum-message.lia-message-view-display .lia-quilt-row-footer {
-    background: #25272a !important;
-}
-
-.lia-thread-reply .lia-quilt-forum-message {
-    margin: none !important;
-}
-
-/* Kudo button */
-.lia-button-image-kudos .kudos-count-link {
-    color: white !important;
-}
-
-.lia-message-view-forum-message .lia-button-image-kudos-count .kudos-count-link,
-.lia-button-image-kudos .kudos-count-link.lia-link-disabled:hover {
-    background: none !important;
-}
-
-.lia-message-view-forum-message .kudos-link {
-    border: none !important;
-}
-
-.lia-button-image-kudos.lia-button {
-    background: #1d1d1d !important;
-}
-
-.lia-menu-dropdown-items>li a,
-menu-dropdown-items>li a:hover {
-    color: #4299fc !important;
-}
-
-.PageTitle span, 
-.lia-quilt-recent-posts-page .PageTitle span,
-.lia-quilt-notification-feed-page .PageTitle span,
-.lia-quilt-private-notes-page .PageTitle span {
-    color: white !important;
-}
-
-.lia-quilt-notification-feed-page>.lia-quilt-row-main>.lia-quilt-column-single>.lia-quilt-column-alley,
-.lia-notification-feed-item {
-    background: none !important;
-}
-
-.PrivateNotesPage .lia-top-quilt>.lia-quilt-row-main,
-.lia-panel-status-banner-note, 
-.lia-quilt-column-feedback .lia-component-common-widget-page-information {
-    background-color: #1d1d1d !important;
-}
-
-.lia-panel-status-banner-note .lia-text {
-    color: white !important;
 }
