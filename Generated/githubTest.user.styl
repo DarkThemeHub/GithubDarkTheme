@@ -1,3 +1,15 @@
+/* ==UserStyle==
+@name         Test-GithubDarkTheme();
+@namespace    github.com/DarkThemeHub/GithubDarkTheme
+@version      1.19.0
+@description  Dark theme for github.
+@author       DarkThemeHub
+@homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
+@supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
+==/UserStyle== */
+
+@-moz-document regexp("^(https?://)?(.*\\.)?(githubusercontent|github)\\..*") {
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -2490,7 +2502,7 @@ div#network.network>div>canvas {
 
 /* <g-emoji alias="heavy_check_mark"
     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
-    ios-version="6.0">✔️</g-emoji> */
+    ios-version="6.0"></g-emoji> */
 
 [alias="soon"],
 [alias="on"],
@@ -7897,4 +7909,5 @@ menu-dropdown-items>li a:hover {
 
 .lia-panel-status-banner-note .lia-text {
     color: white !important;
+}
 }
