@@ -22,7 +22,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
-        git commit -m "Commit changes" -a
+        git commit -m "Generate Test Style Files" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
