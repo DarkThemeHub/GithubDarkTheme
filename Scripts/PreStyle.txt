@@ -1,1 +1,1 @@
-@-moz-document regexp("^https?://((gist|guides|help|raw|status|developer).)?github.com((?!generated_pages/preview).)*$") {
+@-moz-document regexp("^(https?://)?(.*\\.)?(githubusercontent|github)\\..*") {

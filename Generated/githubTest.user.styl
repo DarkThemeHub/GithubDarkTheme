@@ -1,3 +1,15 @@
+/* ==UserStyle==
+@name         Test-GithubDarkTheme();
+@namespace    github.com/DarkThemeHub/GithubDarkTheme
+@version      1.19.0
+@description  Dark theme for github.
+@author       DarkThemeHub
+@homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
+@supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
+==/UserStyle== */
+
+@-moz-document regexp("^(https?://)?(.*\\.)?(githubusercontent|github)\\..*") {
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -469,7 +481,8 @@ img[src$="/notices/context_button.png"] {
 }
 
 #message-list .pagination a:hover,
-.link-mono:hover {
+.link-mono:hover,
+.text-mono:hover {
     text-decoration: underline !important;
 }
 
@@ -2490,7 +2503,7 @@ div#network.network>div>canvas {
 
 /* <g-emoji alias="heavy_check_mark"
     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
-    ios-version="6.0">✔️</g-emoji> */
+    ios-version="6.0"></g-emoji> */
 
 [alias="soon"],
 [alias="on"],
@@ -7752,4 +7765,6 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
 
 .mb-4.px-4.bg-white.clearfix {
     background: none !important;
+}
+
 }
