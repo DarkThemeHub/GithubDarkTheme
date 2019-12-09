@@ -481,8 +481,7 @@ img[src$="/notices/context_button.png"] {
 }
 
 #message-list .pagination a:hover,
-.link-mono:hover,
-.text-mono:hover {
+.link-mono:hover {
     text-decoration: underline !important;
 }
 
@@ -2566,24 +2565,6 @@ g-emoji[fallback-src$="1f43e.png"] {
     -webkit-filter: invert(83%) !important;
     filter: invert(83%) !important;
 }
-
-
-/* Exclude problematic non-emojis from Apple's emoji font on macOS */
-
-
-/* use tools/unicode-gen.js to generate. */
-
-@font-face {
-    font-family: "Apple Color Emoji";
-    src: local("Apple Color Emoji");
-    unicode-range: U+00000-000A8, U+000AA-000AD, U+000AF-02121, U+02123-025A9, U+025AB-025FB, U+025FD-025FD, U+025FF-0265F, U+02661-02662, U+02664-02713, U+02715-02715, U+02717-0302F, U+03031-10FFFF;
-}
-
-
-/* GeoJSON maps */
-
-
-/* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson */
 
 .leaflet-tile-container img {
     -webkit-filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
@@ -7767,4 +7748,56 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"]{
     background: none !important;
 }
 
+/* https://github.community/ */
+.lia-panel,
+.lia-panel .lia-panel-content,
+.lia-top-quilt>.lia-quilt-row-footer,
+.lia-component-forums-widget-board-browser-list .lia-browser-category-heading,
+.lia-component-quilt-community-hero,
+.lia-content .lia-component-quilt-header {
+    background: unset !important;
+}
+
+.lia-component-forums-widget-board-browser-list .lia-browser-category-heading {
+    color: white !important;
+}
+
+.lia-quilt-row-main .lia-panel-heading-bar,
+.lia-panel .lia-panel-heading-bar {
+    background: #25272a !important;
+    color: white !important;
+}
+
+.lia-nav-list li>.lia-link-navigation {
+    background: unset !important;
+    color: white !important;
+}
+
+.lia-component-quilt-header a { 
+    color: #4299fc !important;
+}
+
+#header-wrapper ul li a {
+    color: white !important;
+}
+
+#header-wrapper img,
+.lia-vitality-users-online:before {
+    filter: invert(1) !important;
+}
+
+.lia-autocomplete-container {
+    background-color: #2b2b2b !important;
+}
+
+.lia-autocomplete-footer a {
+    color: white !important;
+}
+
+.lia-autocomplete-footer:hover {
+    background-color: #3a3a3a !important;
+}
+.lia-autocomplete-content .lia-component-forums-auto-complete-message-list-item, .lia-autocomplete-content .lia-autocomplete-message-list-item-link:hover {
+    color: #92c5ff !important;
+}
 }
