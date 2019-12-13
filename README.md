@@ -23,7 +23,7 @@ Firefox will follow if i have the effort!
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites people use daily.
 
-Email [acoop133](https://github.com/acoop133) with your github link to apply.
+Message [@acoop133](https://twitter.com/acoop133) with your github link to apply.
 
 Requirements:
 * History of quality contributions
