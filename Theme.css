@@ -2428,7 +2428,7 @@ div#network.network > div > canvas {
 /* from https://github.com/Dunedan/mbp-2016-linux on Windows*/
 /* <g-emoji alias="heavy_check_mark"
     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
-    ios-version="6.0"></g-emoji> */
+    ios-version="6.0">✔️</g-emoji> */
 [alias="soon"],
 [alias="on"],
 [alias="end"],
@@ -4981,7 +4981,7 @@ td.selected-line.blob-code {
 }
 
 :root {
-    scrollbar-color: dark rgba(175, 175, 175, .5) #1d1d1d !important;
+    scrollbar-color: rgba(175, 175, 175, .5) #1d1d1d !important;
     scrollbar-width: thin !important;
 }
 
