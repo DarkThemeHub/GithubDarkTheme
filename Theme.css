@@ -7898,3 +7898,7 @@ menu-dropdown-items>li a:hover {
 .lia-panel-status-banner-note .lia-text {
     color: white !important;
 }
+
+.actions-hero-bg {
+    background: none !important;
+}
