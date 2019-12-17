@@ -6,7 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
     - name: Set up Python
       uses: actions/setup-python@v1
       with: 
@@ -27,4 +29,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.head_ref }}
+        branch: ${{ github.event.pull_request.head.ref }}
