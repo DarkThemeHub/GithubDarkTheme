@@ -5,6 +5,11 @@
 # GithubDarkTheme();
 Submit your issues here or keep track of releases
 
+### Table of content
+* [Install the theme](https://github.com/DarkThemeHub/GithubDarkTheme#install-the-theme)
+* [Contributing](https://github.com/DarkThemeHub/GithubDarkTheme#contributing)
+* [Join the DarkThemeHub Team](https://github.com/DarkThemeHub/GithubDarkTheme#join-the-darkthemehub-team)
+
 ## Install the theme
 #### option 1 (recommended due to privacy concerns with userstyles.org)
 [![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
