@@ -5,7 +5,7 @@
 # GithubDarkTheme();
 Submit your issues here or keep track of releases
 
-# Install the theme
+## Install the theme
 #### option 1 (recommended due to privacy concerns with userstyles.org)
 [![image](https://img.shields.io/badge/Install-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
 
@@ -20,7 +20,9 @@ A dedicated chrome extension with auto update was in progress and is now postpon
 
 Firefox will follow if i have the effort!
 
-# Contributing
+<hr>
+
+## Contributing
 ### Submitting an Issue
 * No matter how minimal the issue or nice to have is, SUBMIT IT! Lets make this theme shiney and bug free!
 * Please follow the issue template when submitting.
@@ -37,6 +39,8 @@ Firefox will follow if i have the effort!
 * Keep format fixes seperate from style changes when commiting so the reviewer can easily identify what has been changed to the theme.
 * Provide screenshots to capture whats changed so the reviewer can get an idea of what has been changed before looking through the commit.
 * Your contribution may not be accepted if the reviewer deems so. Keeping it minimal ensures you dont waste a lot of time! If you think your change could have a chance of being declined, submit an issue instead!
+
+<hr>
 
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites devs use daily.
