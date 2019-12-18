@@ -35,7 +35,7 @@ Firefox will follow if i have the effort!
 * Only file you need to modify is the Theme.css file.
 * Use Prettier as a css formatter with vscode.
    * Tab Width set to 4.
-* [Optional] Enable github action in forked repository to automaticly generate test files in the branch, which can be easily installed into stylus and speed up testing.
+* [Optional] Enable github action in forked repository to automaticly generate test files in the PR branch, which can be easily installed into stylus and speed up testing.
 
 #### Keep it simple and minimal: 
 * Changing a class style can cause unwanted changes in other places due to github's terrible css practices. Doing simple and minimal changes ensures changes can be easily tracked and identified when reviewing.
