@@ -39,7 +39,7 @@ Firefox will follow if i have the effort!
 * Your contribution may not be accepted if the reviewer deems so. Keeping it minimal ensures you dont waste a lot of time! If you think your change could have a chance of being declined, submit an issue instead!
 
 # Join the DarkThemeHub Team
-DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites people use daily.
+DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites devs use daily.
 
 Message [@acoop133](https://twitter.com/acoop133) with your github link to apply.
 
