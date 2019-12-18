@@ -4094,10 +4094,13 @@ a.text-red,
 .error,
 .release-label.draft,
 .octicon-trashcan,
-.js-form-action-text,
 .octicon-mute,
 .octicon-lock {
     color: #f44 !important;
+}
+
+.js-form-action-text {
+    color: #d23e3e !important;
 }
 
 
@@ -4510,6 +4513,27 @@ ul.view-modes-menu {
 .avatar-bubble:before,
 .discussion-bubble-content:before {
     border-color: transparent #333 transparent transparent !important;
+}
+
+
+/* pull request/issues filters, sort etc.. */
+.SelectMenu-header,
+.SelectMenu-footer,
+.SelectMenu-filter,
+.SelectMenu-item,
+.SelectMenu-tab,
+.SelectMenu-tabs,
+.SelectMenu-divider,
+.select-menu-no-results {
+    background: #25272a !important;
+}
+
+.SelectMenu-tab, .SelectMenu-item {
+    color: #fff !important;
+}
+
+.css-truncate-overflow.text-bold {
+    color: #a29f9f !important;
 }
 
 
@@ -7162,10 +7186,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .preview-selected .tabnav--responsive {
     border: none !important;
-}
-
-.js-preview-body {
-    color: #95989b;
 }
 
 .Box-row--hover-blue:hover {
