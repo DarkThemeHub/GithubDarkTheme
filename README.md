@@ -20,6 +20,24 @@ A dedicated chrome extension with auto update was in progress and is now postpon
 
 Firefox will follow if i have the effort!
 
+# Contributing
+### Submitting an Issue
+* No matter how minimal the issue or nice to have is, SUBMIT IT! Lets make this theme shiney and bug free!
+* Please follow the issue template when submitting.
+
+### Submitting a Pull Request
+#### Editing style: 
+* Only file you need to modify is the Theme.css file.
+* Use Prettier as a css formatter with vscode.
+   * Tab Width set to 4.
+* [Optional] Enable github action in forked repository to automaticly generate test files in the branch, which can be easily installed into stylus and speed up testing.
+
+#### Keep it simple and minimal: 
+* Changing a class style can cause unwanted changes in other places due to github's terrible css practices. Doing simple and minimal changes ensures changes can be easily tracked and identified when reviewing.
+* Keep format fixes seperate from style changes when commiting so the reviewer can easily identify what has been changed to the theme.
+* Provide screenshots to capture whats changed so the reviewer can get an idea of what has been changed before looking through the commit.
+* Your contribution may not be accepted if the reviewer deems so. Keeping it minimal ensures you dont waste a lot of time! If you think your change could have a chance of being declined, submit an issue instead!
+
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites people use daily.
 
