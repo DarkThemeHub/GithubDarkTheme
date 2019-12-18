@@ -3,8 +3,6 @@
 [![image](https://img.shields.io/github/contributors/DarkThemehub/GithubDarktheme?style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/graphs/contributors)
 [![image](https://img.shields.io/github/size/Darkthemehub/GithubDarkTheme/Generated/github.user.styl?color=purple&label=Theme%20size&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/Generated/github.user.styl)
 # GithubDarkTheme();
-Submit your issues here or keep track of releases
-
 ### Table of content
 * [Install the theme](https://github.com/DarkThemeHub/GithubDarkTheme#install-the-theme)
 * [Contributing](https://github.com/DarkThemeHub/GithubDarkTheme#contributing)
