@@ -3057,6 +3057,12 @@ a.gollum-minibutton:visited {
     box-shadow: -2px -2px 0 rgba(0, 0, 0, .4) !important;
 }
 
+.commit .commit-title .issue-link,
+.js-issue-link.tooltipped.tooltipped-ne {
+    color: #4299fc !important;
+}
+
+
 
 /* text color */
 /* Bright text */
@@ -4528,7 +4534,8 @@ ul.view-modes-menu {
     background: #25272a !important;
 }
 
-.SelectMenu-tab, .SelectMenu-item {
+.SelectMenu-tab,
+.SelectMenu-item {
     color: #fff !important;
 }
 
