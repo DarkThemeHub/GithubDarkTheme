@@ -7902,3 +7902,10 @@ menu-dropdown-items>li a:hover {
 .actions-hero-bg {
     background: none !important;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    color: white !important;
+}
