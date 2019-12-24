@@ -7915,3 +7915,7 @@ h4 {
 .tutorial-list>li {
     background-color: #222222 !important;
 }
+
+.tutorial-list>li:last-child:before {
+    background: transparent !important;
+}
