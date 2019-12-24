@@ -7909,3 +7909,9 @@ h3,
 h4 {
     color: white !important;
 }
+
+/* Github Pages */
+#create-repo-step, 
+.tutorial-list>li {
+    background-color: #222222 !important;
+}
