@@ -7835,21 +7835,22 @@ h4 {
 }
 
 .SelectMenu-item,
+.SelectMenu-tab,
 .SelectMenu-modal,
 .SelectMenu-action,
+.select-menu-tab-nav,
 .select-menu-item,
 .select-menu-modal,
 .select-menu-action,
+.select-menu-tabs a,
 a.select-menu-action,
 .select-menu-item.selected .description,
 .select-menu-no-results,
 .select-menu-item-text .description,
-.select-menu-item-text .description-inline,{
-    color: #b5b5b5 !important;
+.select-menu-item-text .description-inline {
+    color: #bbb !important;
 }
 
-.select-menu-tabs a,
-.select-menu-tabs .select-menu-tab-nav,
 .select-menu-item.disabled,
 .select-menu-item.disabled.selected,
 .select-menu-item.disabled .description,
@@ -7867,6 +7868,10 @@ a.select-menu-action,
 .select-menu-tab-nav:hover {
     background: rgb(49, 51, 56) !important;
     color: white !important;
+}
+
+.SelectMenu-tab {
+    box-shadow: none !important;
 }
 
 .select-menu-title,
