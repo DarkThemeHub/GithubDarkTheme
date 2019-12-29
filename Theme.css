@@ -502,13 +502,6 @@ input.js-site-search-focus {
     box-shadow: none !important;
 }
 
-.dropdown-menu,
-.word-upload-callout,
-.SelectMenu-modal,
-.select-menu-modal {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
-}
-
 .exploregrid-item {
     border-color: rgba(255, 255, 255, 0.075) !important;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.05) !important;
@@ -723,9 +716,6 @@ tr.commit,
 .description-inline,
 .result-group a,
 .border-wrap,
-.select-menu-item,
-.SelectMenu-item,
-.SelectMenu-list,
 a.feed-icon,
 .session-device,
 .boxed-group-list > li.session-device:hover,
@@ -1291,8 +1281,6 @@ input.subnav-search-input,
 .select-menu-header,
 .search-results,
 .select-menu-text-filter:first-child:last-child,
-.SelectMenu-modal,
-.select-menu-modal,
 #gist-form .file .meta,
 .file .meta,
 .file-box .meta,
@@ -1483,10 +1471,12 @@ ul.color-label-list .color,
 }
 
 .word-upload-callout:before,
-.word-upload-callout:after,
-.select-menu-modal-arrow:after,
-.dropdown-menu-s:before {
+.word-upload-callout:after{
     border-bottom-color: #343434 !important;
+}
+
+.word-upload-callout{
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
 .repo-filterer .repo-filter:hover,
@@ -1809,9 +1799,6 @@ body .bg-white,
 .code-list .divider .blob-code,
 .blob-num-expandable,
 .expandable-line-num .diff-expander:hover,
-.select-menu-filters,
-.SelectMenu-modal,
-.select-menu-modal,
 .pagination a,
 .blob-num[colspan],
 .build-status-item,
@@ -1848,8 +1835,6 @@ body .bg-white,
 .manage-repo-access-title,
 .select-menu-divider,
 .signed-commit-header,
-.select-menu-modal,
-.SelectMenu-modal,
 .reorderable-task-lists .markdown-body .task-list-item.hovered,
 .next-charge-box,
 .credit-card,
@@ -3686,10 +3671,6 @@ a.subnav-item,
 .manage-repo-access-not-active,
 .milestone-name,
 a.milestone-name,
-.SelectMenu-modal,
-.select-menu-modal,
-.select-menu-action,
-a.select-menu-action,
 .feature-callout,
 .repo-file-upload-file-wrap .remove-file:hover,
 button.tabnav-tab,
@@ -5856,9 +5837,6 @@ table.files tbody tr:first-child td,
 .comment-form-error,
 .comment-form-stale,
 .full-commit,
-.dropdown-menu,
-.SelectMenu-modal,
-.select-menu-modal,
 .RecentBranches,
 .github-jobs-promotion p,
 .project-updated-message,
@@ -5988,12 +5966,6 @@ p.explain,
 .repohead h1,
 .reponav-item,
 .steps .complete,
-.SelectMenu-modal,
-.select-menu-modal,
-.select-menu-item.selected .description,
-.select-menu-no-results,
-.select-menu-item-text .description,
-.select-menu-item-text .description-inline,
 .Subhead-description,
 .underline-nav-item,
 .marketing .pagehead p,
@@ -6190,12 +6162,6 @@ li.contribution .num,
 .simple-conversation-list > li .num,
 .deployment-status-label,
 .list-group-item .list-group-item-summary a.quiet,
-.select-menu-tabs a,
-.select-menu-tabs .select-menu-tab-nav,
-.select-menu-item.disabled,
-.select-menu-item.disabled.selected,
-.select-menu-item.disabled .description,
-.select-menu-item.disabled.selected .description,
 .credit-card.amex .title,
 .billing-addon-items .addon-cost,
 .payment-history .refunded .status,
@@ -7352,12 +7318,6 @@ table.files tr.navigation-focus td,
 .js-details-container.navigation-focus:nth-child(2n),
 .filter-item.selected,
 .filter-item:not(.selected):hover,
-.select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
-.select-menu-tabs .select-menu-tab-nav:hover,
-.select-menu-item[aria-checked="true"],
-.SelectMenu-item[aria-checked="true"],
-.select-menu-item:hover,
-.SelectMenu-item:hover,
 .tree-browser-result[aria-selected="true"] {
     background: rgb(49, 51, 56) !important;
     color: white !important;
@@ -7848,4 +7808,86 @@ h4 {
 
 .tutorial-list > li:last-child:before {
     background: transparent !important;
+}
+
+
+/* Github dropdown menu */
+.select-menu-item,
+.select-menu-list,
+.SelectMenu-item,
+.SelectMenu-list,
+.SelectMenu-divider {
+    background-color: unset !important;
+    background: none !important;
+}
+
+.select-menu-filters,
+.SelectMenu-modal,
+.select-menu-modal    {
+    background: #25272a !important;
+}
+
+.SelectMenu-modal,
+.select-menu-modal,
+.select-menu-header,
+.select-menu-text-filter:first-child:last-child {
+    border-color: #343434 !important;
+}
+
+.SelectMenu-item,
+.SelectMenu-modal,
+.SelectMenu-action,
+.select-menu-item,
+.select-menu-modal,
+.select-menu-action,
+a.select-menu-action,
+.select-menu-item.selected .description,
+.select-menu-no-results,
+.select-menu-item-text .description,
+.select-menu-item-text .description-inline,{
+    color: #b5b5b5 !important;
+}
+
+.select-menu-tabs a,
+.select-menu-tabs .select-menu-tab-nav,
+.select-menu-item.disabled,
+.select-menu-item.disabled.selected,
+.select-menu-item.disabled .description,
+.select-menu-item.disabled.selected .description{
+    color: #aaa !important;
+}
+
+.SelectMenu-item:hover,
+.SelectMenu-item[aria-checked="true"],
+.SelectMenu-tab[aria-selected=true],
+.SelectMenu-tab:hover,
+.select-menu-item:hover,
+.select-menu-item[aria-checked="true"],
+.select-menu-tab-nav[aria-selected="true"],
+.select-menu-tab-nav:hover {
+    background: rgb(49, 51, 56) !important;
+    color: white !important;
+}
+
+.select-menu-title,
+.SelectMenu-title,
+.SelectMenu-divider {
+    color: white !important;
+}
+
+.dropdown-menu,
+.SelectMenu-modal,
+.select-menu-modal {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dropdown-menu,
+.SelectMenu-modal,
+.select-menu-modal{
+    border-color: rgba(225, 225, 225, 0.2) !important;
+}
+
+.select-menu-modal-arrow:after,
+.dropdown-menu-s:before {
+    border-bottom-color: #343434 !important;
 }
