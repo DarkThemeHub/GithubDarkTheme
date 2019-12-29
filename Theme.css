@@ -7620,6 +7620,11 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"] {
     background: none !important;
 }
 
+/* help.github */
+code[class="hljs language-shell"] {
+    color: #f1bc87 !important;
+}
+
 /* https://github.community/ */
 .lia-panel,
 .lia-top-quilt > .lia-quilt-row-footer,
