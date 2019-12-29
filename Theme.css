@@ -7891,3 +7891,11 @@ a.select-menu-action,
 .dropdown-menu-s:before {
     border-bottom-color: #343434 !important;
 }
+
+.dropdown-caret {
+    border-top-style: solid !important;
+    border-top-width: 4px !important;
+    border-right: 4px solid transparent !important;
+    border-bottom: 0 solid transparent !important;
+    border-left: 4px solid transparent !important;
+}
