@@ -1471,11 +1471,11 @@ ul.color-label-list .color,
 }
 
 .word-upload-callout:before,
-.word-upload-callout:after{
+.word-upload-callout:after {
     border-bottom-color: #343434 !important;
 }
 
-.word-upload-callout{
+.word-upload-callout {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -7447,7 +7447,7 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 
 .TimelineItem > div[class*="bg-red"],
 .TimelineItem > div[class*="bg-red"] > svg {
-    background: #911  !important;
+    background: #911 !important;
     fill: white !important;
 }
 
@@ -7810,7 +7810,6 @@ h4 {
     background: transparent !important;
 }
 
-
 /* Github dropdown menu */
 .select-menu-item,
 .select-menu-list,
@@ -7823,7 +7822,7 @@ h4 {
 
 .select-menu-filters,
 .SelectMenu-modal,
-.select-menu-modal    {
+.select-menu-modal {
     background: #25272a !important;
 }
 
@@ -7854,13 +7853,13 @@ a.select-menu-action,
 .select-menu-item.disabled,
 .select-menu-item.disabled.selected,
 .select-menu-item.disabled .description,
-.select-menu-item.disabled.selected .description{
+.select-menu-item.disabled.selected .description {
     color: #aaa !important;
 }
 
 .SelectMenu-item:hover,
 .SelectMenu-item[aria-checked="true"],
-.SelectMenu-tab[aria-selected=true],
+.SelectMenu-tab[aria-selected="true"],
 .SelectMenu-tab:hover,
 .select-menu-item:hover,
 .select-menu-item[aria-checked="true"],
@@ -7894,7 +7893,7 @@ a.select-menu-action,
 
 .dropdown-menu,
 .SelectMenu-modal,
-.select-menu-modal{
+.select-menu-modal {
     border-color: rgba(225, 225, 225, 0.2) !important;
 }
 
