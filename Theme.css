@@ -7880,6 +7880,12 @@ a.select-menu-action,
     color: white !important;
 }
 
+.SelectMenu-header,
+.SelectMenu-divider,
+.select-menu-header {
+    border-bottom: 1px solid #34373c !important;
+}
+
 .dropdown-menu,
 .SelectMenu-modal,
 .select-menu-modal {
