@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Popup.scss';
-import { Update } from './Update';
+import { Update } from './Page';
 
 interface AppProps { }
 
