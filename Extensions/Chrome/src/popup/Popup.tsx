@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Popup.scss';
-import { Page } from './Page';
+import { PageContent } from './PageContent';
 import { getLocalStorageValue } from '../shared';
 
 export const API_ADDRESS: string = 'https://api.github.com/';
@@ -54,11 +54,12 @@ const Popup: React.FunctionComponent<{}> = () => {
   return (
     <div className="popupContainer">
       <h2>Github Darktheme</h2>
-
-      <Page
-        storage={storageObject}
-        disableThemeCallback={disableTheme}
-        enableThemeCallback={enableTheme} />
+      {storageObject &&
+        <PageContent
+          storage={storageObject}
+          disableThemeCallback={disableTheme}
+          enableThemeCallback={enableTheme} />
+      }
     </div>
   );
 
