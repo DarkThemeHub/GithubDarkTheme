@@ -1,5 +1,3 @@
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
 import { compare } from 'compare-versions';
 import * as React from 'react';
 import './Page.scss';
@@ -15,48 +13,55 @@ interface githubDarkThemeStorageV1Format {
     disabled: boolean;
 }
 
-export const Update: React.FunctionComponent<{}> = ({ }) => {
+export const Update: React.FunctionComponent<{}> = () => {
 
     const [lastUpdated, setLastUpdated] = React.useState<number>(undefined);
     const [lastVersionCheck, setLastVersionCheck] = React.useState<number>(undefined);
     const [latestVersion, setLatestVersion] = React.useState<string>(undefined);
-    const [installedVersion, setInstalledVersion] = React.useState<string>('');
-    const [versions, setVersions] = React.useState<string[]>(undefined);
+    const [installedVersion, setInstalledVersion] = React.useState<string>(undefined);
+    const [versions, setVersions] = React.useState<string[]>();
     const [themeDisabled, setThemeDisabled] = React.useState<boolean>(undefined);
+    const [storageCache, setStorageCache] = React.useState<githubDarkThemeStorageV1Format>(undefined);
+    const [runOnceRan, setRunOnceRan] = React.useState<boolean>(false)
+    
+    if(!runOnceRan) { 
+        RunOnce()
+    }
 
     React.useEffect(() => {
         console.log('render!');
 
-        if (themeDisabled != true) {
-            Promise.resolve(getStorageFile()).then((storageFile) => {
-                console.log(storageFile);
-                setInstalledVersion(storageFile.version);
-                setThemeDisabled(storageFile.disabled? false : true);
-            });
-        }
-        const nextCheckOffset = new Date();
-        nextCheckOffset.setMinutes(20);
-        nextCheckOffset.getTime;
-
-        if (lastVersionCheck === undefined || Date.now() > (lastVersionCheck + nextCheckOffset.getTime())) {
-            getLatestReleaseDetails();
-            if (needsInstallOrUpdate()) {
-                
-                installThemeVersion(latestVersion);
-            }
-            //getAllReleaseTags();
-        }
-
-
     });
 
-    //// fix this
-    function getStorageFile(): githubDarkThemeStorageV1Format {
-        var getResult: githubDarkThemeStorageV1Format;
-        chrome.storage.local.get("GithubDarkThemeStorageV1", (result) => {
-            getResult = result.GithubDarkThemeStorageV1 as githubDarkThemeStorageV1Format;
+    function RunOnce(){
+        Promise.resolve(getStorageFile())
+        .then(() => {
+            if (storageCache) {
+                setInstalledVersion(storageCache.version);
+                setThemeDisabled(storageCache.disabled ? false : true);
+            }
+        }).then(() => {
+            if (themeDisabled != true) {
+                const nextCheckOffset = new Date();
+                nextCheckOffset.setMinutes(20);
+
+                if (Date.now() > (lastVersionCheck + nextCheckOffset.getTime())) {
+                    if (needsInstallOrUpdate()) {
+
+                        installLatestThemeVersion();
+                    }
+                    //getAllReleaseTags();
+                }
+            }
         });
-        return getResult;
+        setRunOnceRan(true);
+    }
+
+    //// fix this
+    function getStorageFile() {
+        chrome.storage.local.get("GithubDarkThemeStorageV1", (result) => {
+            setStorageCache(result.GithubDarkThemeStorageV1 as githubDarkThemeStorageV1Format);
+        });
     };
 
     /*     function getAllReleaseTags() {
@@ -75,7 +80,7 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
                 });
         }
      */
-    function getLatestReleaseDetails() {
+    async function getLatestReleaseDetails() {
         console.log('getLatestReleaseDetails!');
         console.log(`repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`)
         fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`)
@@ -109,14 +114,14 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
         }
     }
 
-    async function installThemeVersion(version: string) {
-        console.log(`InstallThemeVersion! ${version}`);
+    async function installLatestThemeVersion() {
+        console.log(`InstallThemeVersion! ${latestVersion}`);
         await getLatestReleaseDetails();
-        fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${version}/Theme.css`)
+        fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${latestVersion}/Theme.css`)
             .then(response => response.text())
             .then(data => {
                 const toStorage: githubDarkThemeStorageV1Format = {
-                    version,
+                    version: latestVersion,
                     lastGetLatestVersionCheckTime: lastVersionCheck,
                     theme: data,
                     disabled: false
@@ -124,7 +129,8 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
 
                 chrome.storage.local.set({ "GithubDarkThemeStorageV1": toStorage }, () => {
                     injectTheme();
-                    setInstalledVersion(version);
+                    setInstalledVersion(latestVersion);
+                    setThemeDisabled(false);
                 });
 
             })
@@ -135,24 +141,24 @@ export const Update: React.FunctionComponent<{}> = ({ }) => {
     }
     const enableTheme = () => {
         console.log('enableTheme!');
-        Promise.resolve(getStorageFile()).then((storageFile) => {
-            storageFile.disabled = false;
-            chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageFile }, () => {
-                installThemeVersion(latestVersion);
-            });
-            setThemeDisabled(false);
+        Promise.resolve(getStorageFile()).then(() => {
+            var copy = { ...storageCache };
+            copy.disabled = false;
+            installLatestThemeVersion();            
         })
     }
 
     const disableTheme = () => {
         console.log('disableTheme!');
 
-        Promise.resolve(getStorageFile()).then((storageFile) => {
-            storageFile.disabled = true;
-            chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageFile }, () => {
+        Promise.resolve(getStorageFile()).then(() => {
+            var copy = { ...storageCache };
+            copy.disabled = true;
+            chrome.storage.local.set({ "GithubDarkThemeStorageV1": copy }, () => {
                 removeInjectedTheme();
+                setThemeDisabled(true);
             });
-            setThemeDisabled(true);
+            
         })
     };
 

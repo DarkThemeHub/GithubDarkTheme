@@ -11,26 +11,26 @@
     "author": "Aaron Cooper",
     "license": "",
     "devDependencies": {
-        "@types/chrome": "0.0.88",
-        "@types/react": "^16.8.24",
-        "@types/react-dom": "^16.8.5",
-        "@types/react-select": "^3.0.2",
-        "css-loader": "^3.1.0",
-        "node-sass": "^4.12.0",
-        "sass-loader": "^7.1.0",
-        "style-loader": "^0.23.1",
-        "ts-loader": "^6.0.4",
-        "tslint-config-airbnb": "^5.11.1",
-        "tslint-react": "^4.0.0",
-        "typescript": "^3.5.3",
-        "webpack": "^4.39.1",
-        "webpack-cli": "^3.3.6",
-        "webpack-merge": "^4.2.1"
+        "@types/chrome": "0.0.91",
+        "@types/react": "16.9.17",
+        "@types/react-dom": "16.9.4",
+        "@types/react-select": "3.0.8",
+        "css-loader": "3.4.1",
+        "node-sass": "4.13.0",
+        "sass-loader": "8.0.0",
+        "style-loader": "1.1.2",
+        "ts-loader": "6.2.1",
+        "tslint-config-airbnb": "5.11.2",
+        "tslint-react": "4.1.0",
+        "typescript": "3.7.4",
+        "webpack": "4.41.5",
+        "webpack-cli": "3.3.10",
+        "webpack-merge": "4.2.2"
     },
     "dependencies": {
-        "@material-ui/core": "^4.3.1",
-        "compare-versions": "^3.5.1",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "@material-ui/core": "4.8.2",
+        "compare-versions": "3.5.1",
+        "react": "16.12.0",
+        "react-dom": "16.12.0"
     }
 }
