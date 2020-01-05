@@ -1,18 +1,6 @@
 import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME, API_ADDRESS } from "./popup/Popup";
-import { injectTheme, removeInjectedTheme } from "./popup/injectorFunctions";
 import { compare } from "compare-versions";
 import { getLocalStorageValue } from "./shared";
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    // onMessage must return "true" if response is async.
-    let isResponseAsync = false;
-
-    if (request.popupMounted) {
-        console.log("eventPage notified that Popup.tsx has mounted.");
-    }
-
-    return isResponseAsync;
-});
 
 chrome.runtime.onInstalled.addListener(function () {
     console.log("Setting up first install");
@@ -26,45 +14,49 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // onMessage must return "true" if response is async.
     let isResponseAsync = false;
 
-    if (request.disable) {
+    if (request.popupMounted) {
+        console.log("eventPage notified that Popup.tsx has mounted.");
+    }
+    else if (!request.themeEnabled) {
         disableTheme();
     }
-    else if (request.enable) {
+    else if (request.themeEnabled) {
         enableTheme();
     }
 
     return isResponseAsync;
 });
+
 async function disableTheme() {
-    const storageObject = (await getLocalStorageValue("GithubDarkThemeStorageV1")) as githubDarkThemeStorageV1Format;
-    var copy = { ...storageObject };
-    copy.disabled = true;
-    chrome.storage.local.set({ "GithubDarkThemeStorageV1": copy }, () => {
+    const storageObject = await getLocalStorageValue();
+    storageObject.disabled = true;
+    chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageObject }, () => {
         removeInjectedTheme();
     });
+    console.log("background: disableTheme completed!")
 };
 
 
 async function enableTheme() {
-    const storageObject = (await getLocalStorageValue("GithubDarkThemeStorageV1")) as githubDarkThemeStorageV1Format;
-    var copy = { ...storageObject };
-    copy.disabled = false;
-    chrome.storage.local.set({ "GithubDarkThemeStorageV1": copy }, () => {
+    const storageObject = await getLocalStorageValue();
+    storageObject.disabled = false;
+    chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageObject }, () => {
         injectTheme();
     });
+    console.log("background: enableTheme completed!")
 };
 
 async function tryInstallOrUpdate() {
     console.log("getLatestRelease!");
-    const storageObject = (await getLocalStorageValue("GithubDarkThemeStorageV1")) as githubDarkThemeStorageV1Format;
 
     getLatestReleaseVersion().then(latestReleaseVersion => {
-        if (needsInstallOrUpdate(storageObject, latestReleaseVersion)) {
+        if (needsInstallOrUpdate(latestReleaseVersion)) {
             installTheme();
         }
     });
 
 }
+
 async function getLatestReleaseVersion(): Promise<string> {
     const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`);
     const releaseData = await response.json();
@@ -82,7 +74,7 @@ async function installTheme() {
         disabled: false
     };
 
-    chrome.storage.local.set({ GithubDarkThemeStorageV1: storageObject }, () => {
+    chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageObject }, () => {
         injectTheme();
     });
 }
@@ -93,8 +85,9 @@ async function getThemeCss(tagVersion: string): Promise<string> {
     return themeData;
 }
 
-function needsInstallOrUpdate(storageObject: githubDarkThemeStorageV1Format, latestReleaseVersion: string): boolean {
+async function needsInstallOrUpdate(latestReleaseVersion: string): Promise<boolean> {
     console.log('determineNeedsUpdate!');
+    const storageObject = (await getLocalStorageValue()) as githubDarkThemeStorageV1Format;
     if (storageObject.disabled === true) {
         return false;
     }
@@ -110,3 +103,43 @@ function needsInstallOrUpdate(storageObject: githubDarkThemeStorageV1Format, lat
         return compare(latestReleaseVersion, storageObject.installedVersion, '>');
     }
 }
+
+function injectTheme() {
+    chrome.tabs.query(urlRegexMatch, tabs => {
+        tabs.forEach(tab => {
+            chrome.tabs.executeScript(tab.id, {
+                code: `
+            var evt = document.createEvent('Event');
+            evt.initEvent('injectTheme', true, false);
+
+            // fire the event
+            document.dispatchEvent(evt);
+            ` })
+        });
+    })
+    console.log("Theme inject event sent");
+};
+
+function removeInjectedTheme() {
+    chrome.tabs.query(urlRegexMatch, tabs => {
+        tabs.forEach(tab => {
+            chrome.tabs.executeScript(tab.id, {
+                code: `
+            var evt = document.createEvent('Event');
+            evt.initEvent('removeTheme', true, false);
+
+            // fire the event
+            document.dispatchEvent(evt);
+            ` })
+        });
+    })
+    console.log("remove injected theme event sent");
+};
+
+const urlRegexMatch: chrome.tabs.QueryInfo = {
+    url: ["*://*.github.com/*",
+        "*://*.github.com/",
+        "*://github.com/",
+        "*://github.com/*"]
+};
+

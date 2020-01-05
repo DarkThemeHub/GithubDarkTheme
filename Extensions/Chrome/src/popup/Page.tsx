@@ -1,7 +1,6 @@
 import { compare } from 'compare-versions';
 import * as React from 'react';
 import './Page.scss';
-import { injectTheme, removeInjectedTheme } from './injectorFunctions';
 import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME } from './Popup';
 
 export interface PageProps {
@@ -30,7 +29,6 @@ export const Page: React.FunctionComponent<PageProps> = ({ storage, enableThemeC
                         :
                         <button onClick={() => disableThemeCallback()}>Disable Theme</button>
                 }
-
             </div>
         </div>
         <div className="button-row">
