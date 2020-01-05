@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './PageContent.scss';
 import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME } from './Popup';
+import { getDateTimeInSeconds } from '../shared';
 
 export interface PageProps {
     storage: githubDarkThemeStorageV1Format;
@@ -10,13 +11,13 @@ export interface PageProps {
 
 export const PageContent: React.FunctionComponent<PageProps> = ({ storage, enableThemeCallback, disableThemeCallback }) => {
 
-    const lastCheckedTimeString = secondsToFormattedString(Date.now() - storage.LastUpdateCheckedTime);
+    const lastCheckedTimeString = secondsToFormattedString(getDateTimeInSeconds() - storage.LastUpdateCheckedTime);
 
     function secondsToFormattedString(secondsInput: number) {
         const days = Math.floor(secondsInput / 86400);
         const hours = Math.floor((secondsInput % 86400) / 3600);
         const minutes = Math.floor(((secondsInput % 86400) % 3600) / 60);
-        const seconds = ((secondsInput % 86400) % 3600) % 60;
+        const seconds = Math.floor(((secondsInput % 86400) % 3600) % 60);
         var outputString = "";
         if (days > 0) {
             outputString += (days + " days ")

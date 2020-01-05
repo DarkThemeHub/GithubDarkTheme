@@ -12,3 +12,7 @@ export async function getLocalStorageValue(): Promise<githubDarkThemeStorageV1Fo
         }
     });
 }
+
+export function getDateTimeInSeconds(): number {
+    return Date.now() / 1000;
+}

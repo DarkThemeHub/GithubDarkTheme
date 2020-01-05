@@ -1,16 +1,14 @@
 {
     "manifest_version": 2,
     "name": "GithubDarkTheme",
-    "description": "Github Dark Theme deployed via Chrome Extension",
+    "description": "Github Dark Theme",
     "version": "1.0.0",
     "browser_action": {
         "default_icon": "icon16.png",
         "default_popup": "popup.html"
     },
     "background": {
-        "scripts": [
-            "js/eventPage.js"
-        ],
+        "scripts": ["js/eventPage.js"],
         "persistent": false
     },
     "icons": {
@@ -23,6 +21,7 @@
         "activeTab",
         "notifications",
         "tabs",
+        "alarms",
         "*://*.github.com/*",
         "*://*.github.com/",
         "*://github.com/",
@@ -37,9 +36,7 @@
                 "*://github.com/",
                 "*://github.com/*"
             ],
-            "js": [
-                "public/injector.js"
-            ]
+            "js": ["public/injector.js"]
         }
     ]
 }

@@ -1,14 +1,39 @@
 import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME, API_ADDRESS } from "./popup/Popup";
 import { compare } from "compare-versions";
-import { getLocalStorageValue } from "./shared";
+import { getLocalStorageValue, getDateTimeInSeconds } from "./shared";
 
 chrome.runtime.onInstalled.addListener(function () {
     console.log("Setting up first install");
+
     tryInstallOrUpdate();
 
     alert("Extension Installed");
 });
 
+chrome.runtime.onUpdateAvailable.addListener(function callback(details) {
+
+    chrome.runtime.reload();
+});
+
+chrome.runtime.onSuspend.addListener(function () {
+    disableTheme();
+    removeInjectedTheme();
+});
+
+chrome.runtime.onConnect.addListener(function () {
+    enableTheme();
+    injectTheme();
+});
+
+const ALARM_NAME = "GithubDarkThemeCheckForUpdate";
+const ALARM_DELAY_IN_MINUTES = 60 * 4;  // 6 times a day
+chrome.alarms.create(ALARM_NAME, { when: Date.now(), periodInMinutes: ALARM_DELAY_IN_MINUTES })
+
+chrome.alarms.onAlarm.addListener(function callback(alarm) {
+    if (alarm.name === ALARM_NAME) {
+        tryInstallOrUpdate();
+    }
+});
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // onMessage must return "true" if response is async.
@@ -36,7 +61,6 @@ async function disableTheme() {
     console.log("background: disableTheme completed!")
 };
 
-
 async function enableTheme() {
     const storageObject = await getLocalStorageValue();
     storageObject.disabled = false;
@@ -51,10 +75,9 @@ async function tryInstallOrUpdate() {
 
     getLatestReleaseVersion().then(latestReleaseVersion => {
         if (needsInstallOrUpdate(latestReleaseVersion)) {
-            installTheme();
+            installLatestVersionOfTheme();
         }
     });
-
 }
 
 async function getLatestReleaseVersion(): Promise<string> {
@@ -63,13 +86,13 @@ async function getLatestReleaseVersion(): Promise<string> {
     return releaseData.tag_name;
 };
 
-async function installTheme() {
+async function installLatestVersionOfTheme() {
     console.log(`repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`);
     const releaseData = await getLatestReleaseVersion();
     const themeData = await getThemeCss(releaseData);
     const storageObject = {
         installedVersion: releaseData,
-        LastUpdateCheckedTime: Date.now(),
+        LastUpdateCheckedTime: getDateTimeInSeconds(),
         theme: themeData,
         disabled: false
     };
