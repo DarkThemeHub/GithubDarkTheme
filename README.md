@@ -4,6 +4,9 @@
 [![image](https://img.shields.io/github/size/Darkthemehub/GithubDarkTheme/Generated/github.user.styl?color=purple&label=Theme%20size&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/Generated/github.user.styl)
 # GithubDarkTheme();
 Show your support and hit that Star :P
+
+Join the discord https://discord.gg/pSs9YYn
+
 ### Table of contents
 * [Install the theme](#install-the-theme)
 * [Contributing](#contributing)
