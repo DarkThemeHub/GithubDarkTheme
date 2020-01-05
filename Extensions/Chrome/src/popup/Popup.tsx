@@ -1,41 +1,57 @@
 import * as React from 'react';
 import './Popup.scss';
-import { Update } from './Page';
+import { Page } from './Page';
+import { compare } from 'compare-versions';
+import { injectTheme, removeInjectedTheme } from './injectorFunctions';
+import { getLocalStorageValue } from '../shared';
 
-interface AppProps { }
+export const API_ADDRESS: string = 'https://api.github.com/';
+const STORAGE_ID: string = 'GithubDarkThemeStorageV1';
+export const REPO_OWNER: string = 'DarkThemeHub';
+export const REPO_NAME: string = 'GithubDarkTheme';
 
-interface AppState { }
-
-
-export default class Popup extends React.Component<AppProps, AppState> {
-  constructor(props: AppProps, state: AppState) {
-    super(props, state);
-  }
-
-  componentDidMount() {
-    // Example of how to send a message to eventPage.ts.
-    chrome.runtime.sendMessage({ popupMounted: true });
-
-
-    /* var extensionName = '<the_extension_name>';
- 
-     chrome.management.getAll(function (extensions) {
-       var isInstalled = extensions.some(function (extensionInfo) {
-         return extensionInfo.name === extensionName;
-       });
-       if (isInstalled) {
-         alert("Stylus or Stylish extension was detected, make sure you are not using any github themes that may conflict with this.")
-       }
-     }); */
-  }
-
-  render() {
-    return (
-      <div className="popupContainer">
-        <h2>Github Darktheme</h2>
-
-        <Update />
-      </div>
-    );
-  }
+export interface githubDarkThemeStorageV1Format {
+  installedVersion: string;
+  LastUpdateCheckedTime: number;
+  theme: string;
+  disabled: boolean;
 }
+
+const Popup: React.FunctionComponent<{}> = () => {
+  var [storageObject, setStorageObject] = React.useState<githubDarkThemeStorageV1Format>(undefined);
+
+  chrome.runtime.sendMessage({ popupMounted: true });
+  if (storageObject === undefined) {
+    getLocalStorageValue("githubDarkThemeStorageV1Format").then(result => {
+      setStorageObject(result as githubDarkThemeStorageV1Format);
+      console.log("set storage cache");
+    })
+  }
+  React.useEffect(() => {
+    console.log("render!")
+  })
+
+  const enableTheme = () => {
+    console.log('enableTheme!');
+  }
+
+  const disableTheme = () => {
+    console.log('disableTheme!');
+
+  };
+
+
+  return (
+    <div className="popupContainer">
+      <h2>Github Darktheme</h2>
+
+      <Page
+        storage={storageObject}
+        disableThemeCallback={disableTheme}
+        enableThemeCallback={enableTheme} />
+    </div>
+  );
+
+}
+
+export default (Popup)

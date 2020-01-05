@@ -18,6 +18,7 @@ export function injectTheme() {
             ` })
         });
     })
+    console.log("Theme inject event sent");
 };
 
 export function removeInjectedTheme() {
@@ -33,4 +34,5 @@ export function removeInjectedTheme() {
             ` })
         });
     })
+    console.log("Theme remove injected theme event sent");
 };
