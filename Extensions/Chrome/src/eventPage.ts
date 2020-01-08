@@ -1,23 +1,18 @@
-import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME, API_ADDRESS } from "./popup/Popup";
+import { REPO_OWNER, REPO_NAME, API_ADDRESS } from "./popup/Popup";
 import { compare } from "compare-versions";
-import { getLocalStorageValue, getDateTimeInSeconds } from "./shared";
+import { getLocalStorageValue, getDateTimeInSeconds, githubDarkThemeStorageV1Format } from "./shared";
 
 chrome.runtime.onInstalled.addListener(function () {
     console.log("Setting up first install");
 
     tryInstallOrUpdate();
 
-    alert("Extension Installed");
+    //alert("Extension Installed");
 });
 
 chrome.runtime.onUpdateAvailable.addListener(function callback(details) {
 
     chrome.runtime.reload();
-});
-
-chrome.runtime.onSuspend.addListener(function () {
-    disableTheme();
-    removeInjectedTheme();
 });
 
 chrome.runtime.onConnect.addListener(function () {
@@ -81,9 +76,16 @@ async function tryInstallOrUpdate() {
 }
 
 async function getLatestReleaseVersion(): Promise<string> {
-    const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`);
-    const releaseData = await response.json();
-    return releaseData.tag_name;
+    const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases`);
+    const releaseData = await response.json() as any[];
+
+    for (let index = 0; index < releaseData.length; index++) {
+        const element = releaseData[index].tag_name.match("^[0-9]\.[0-9]\..*");
+        if (element !== undefined || element !== "") {
+            return element;
+        }
+    }
+    return undefined;
 };
 
 async function installLatestVersionOfTheme() {
