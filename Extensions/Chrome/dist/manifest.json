@@ -22,20 +22,12 @@
         "notifications",
         "tabs",
         "alarms",
-        "*://*.github.com/*",
-        "*://*.github.com/",
-        "*://github.com/",
-        "*://github.com/*"
+        "<all_urls>"
     ],
     "content_scripts": [
         {
             "run_at": "document_start",
-            "matches": [
-                "*://*.github.com/*",
-                "*://*.github.com/",
-                "*://github.com/",
-                "*://github.com/*"
-            ],
+            "matches": ["<all_urls>"],
             "js": ["public/injector.js"]
         }
     ]
