@@ -70,30 +70,32 @@ async function tryInstallOrUpdate() {
 
     getLatestReleaseVersion().then(latestReleaseVersion => {
         if (needsInstallOrUpdate(latestReleaseVersion)) {
-            installLatestVersionOfTheme();
+            installVersionOfTheme();
         }
     });
 }
+
+const semRegex = "^[0-9]*\.[0-9]*\..*"
 
 async function getLatestReleaseVersion(): Promise<string> {
     const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases`);
     const releaseData = await response.json() as any[];
 
     for (let index = 0; index < releaseData.length; index++) {
-        const element = releaseData[index].tag_name.match("^[0-9]\.[0-9]\..*");
-        if (element !== undefined || element !== "") {
-            return element;
+        const element = (releaseData[index].tag_name as string).match(semRegex);
+        if (element.length > 0) {
+            return releaseData[index].tag_name;
         }
     }
     return undefined;
 };
 
-async function installLatestVersionOfTheme() {
+async function installVersionOfTheme() {
     console.log(`repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`);
-    const releaseData = await getLatestReleaseVersion();
-    const themeData = await getThemeCss(releaseData);
+    const releaseVersion = await getLatestReleaseVersion();
+    const themeData = await getThemeCss(releaseVersion);
     const storageObject = {
-        installedVersion: releaseData,
+        installedVersion: releaseVersion,
         LastUpdateCheckedTime: getDateTimeInSeconds(),
         theme: themeData,
         disabled: false
