@@ -115,10 +115,13 @@ async function getThemeCss(tagVersion: string): Promise<string> {
 async function needsInstallOrUpdate(latestReleaseVersion: string): Promise<boolean> {
     console.log('determineNeedsUpdate!');
     const storageObject = (await getLocalStorageValue()) as githubDarkThemeStorageV1Format;
+    if (storageObject === undefined) {
+        return true
+    }
     if (storageObject.disabled === true) {
         return false;
     }
-    if (storageObject.installedVersion === '' || storageObject.installedVersion === undefined) {
+    if (storageObject.installedVersion === '' || storageObject.disabled === undefined) {
         return true;
     }
     else if (latestReleaseVersion === undefined) {
