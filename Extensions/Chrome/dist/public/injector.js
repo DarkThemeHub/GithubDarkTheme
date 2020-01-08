@@ -14,7 +14,7 @@ function inject() {
             script.id = "githubdarktheme";
             script.textContent = storageFile.theme;
 
-            (document.body || document.documentElement).appendChild(script);
+            document.documentElement.appendChild(script);
         }
     });
 }
