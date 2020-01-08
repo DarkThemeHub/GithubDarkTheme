@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './PageContent.scss';
-import { githubDarkThemeStorageV1Format, REPO_OWNER, REPO_NAME } from './Popup';
-import { getDateTimeInSeconds } from '../shared';
+import { REPO_OWNER, REPO_NAME } from './Popup';
+import { getDateTimeInSeconds, githubDarkThemeStorageV1Format } from '../shared';
 
 export interface PageProps {
     storage: githubDarkThemeStorageV1Format;

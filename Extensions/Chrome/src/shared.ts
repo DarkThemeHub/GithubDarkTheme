@@ -1,5 +1,3 @@
-import { githubDarkThemeStorageV1Format } from "./popup/Popup";
-
 export async function getLocalStorageValue(): Promise<githubDarkThemeStorageV1Format> {
     return new Promise((resolve, reject) => {
         try {
@@ -15,4 +13,12 @@ export async function getLocalStorageValue(): Promise<githubDarkThemeStorageV1Fo
 
 export function getDateTimeInSeconds(): number {
     return Date.now() / 1000;
+}
+
+export interface githubDarkThemeStorageV1Format {
+    installedVersion: string;
+    LastUpdateCheckedTime: number;
+    theme: string;
+    disabled: boolean;
+    urlMatchRegex: string[];
 }

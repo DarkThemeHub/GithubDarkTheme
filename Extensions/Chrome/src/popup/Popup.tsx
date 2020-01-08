@@ -1,22 +1,23 @@
 import * as React from 'react';
 import './Popup.scss';
 import { PageContent } from './PageContent';
-import { getLocalStorageValue } from '../shared';
+import { getLocalStorageValue, githubDarkThemeStorageV1Format } from '../shared';
 
 export const API_ADDRESS: string = 'https://api.github.com/';
 const STORAGE_ID: string = 'GithubDarkThemeStorageV1';
 export const REPO_OWNER: string = 'DarkThemeHub';
 export const REPO_NAME: string = 'GithubDarkTheme';
 
-export interface githubDarkThemeStorageV1Format {
-  installedVersion: string;
-  LastUpdateCheckedTime: number;
-  theme: string;
-  disabled: boolean;
-}
-
 const Popup: React.FunctionComponent<{}> = () => {
   var [storageObject, setStorageObject] = React.useState<githubDarkThemeStorageV1Format>(undefined);
+
+  React.useEffect(() => {
+    getLocalStorageValue().then(result => {
+      setStorageObject(result as githubDarkThemeStorageV1Format);
+      console.log("set storage cache");
+    })
+  }, [])
+
 
   chrome.runtime.sendMessage({ popupMounted: true });
   chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -27,18 +28,6 @@ const Popup: React.FunctionComponent<{}> = () => {
         setStorageObject(storageChange.newValue as githubDarkThemeStorageV1Format);
       }
     }
-  })
-
-  if (storageObject === undefined) {
-    getLocalStorageValue().then(result => {
-      setStorageObject(result as githubDarkThemeStorageV1Format);
-      console.log("set storage cache");
-    })
-  }
-
-  React.useEffect(() => {
-    console.log("render!")
-
   })
 
   const enableTheme = () => {
