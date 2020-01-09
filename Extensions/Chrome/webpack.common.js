@@ -3,8 +3,7 @@ const path = require("path");
 module.exports = {
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
-    eventPage: path.join(__dirname, "src/eventPage.ts"),
-    injector: path.join(__dirname, "src/injector.js")
+    eventPage: path.join(__dirname, "src/eventPage.ts")
   },
   output: {
     path: path.join(__dirname, "dist/js"),
