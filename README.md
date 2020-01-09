@@ -7,10 +7,7 @@ Show your support and hit that Star :P
 
 Join the discord https://discord.gg/pSs9YYn
 
-### Table of contents
-* [Install the theme](#install-the-theme)
-* [Contributing](#contributing)
-* [Join the DarkThemeHub Team](#join-the-darkthemehub-team)
+[How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
 <hr>
 
