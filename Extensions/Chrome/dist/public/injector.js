@@ -1,4 +1,17 @@
-inject();
+const matchResult = window.location.href.match("^https?:\/\/(.*.)?(githubusercontent|github).(?!io).*");
+
+if (matchResult.length !== null || matchResult.length > 0) {
+
+    document.addEventListener("injectTheme", function (e) {
+        inject();
+    });
+
+    document.addEventListener("removeTheme", function (e) {
+        remove()
+    });
+
+    inject();
+};
 
 function inject() {
     var loadedTheme = document.getElementById("githubdarktheme");
@@ -17,15 +30,11 @@ function inject() {
             document.documentElement.appendChild(script);
         }
     });
-}
+};
 
-document.addEventListener("injectTheme", function(e) {
-    inject();
-});
-
-document.addEventListener("removeTheme", function(e) {
+function remove() {
     var script = document.getElementById("githubdarktheme");
     if (script !== null) {
         script.remove();
-    }
-});
+    };
+};

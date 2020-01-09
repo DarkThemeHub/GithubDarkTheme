@@ -83,7 +83,7 @@ async function getLatestReleaseVersion(): Promise<string> {
 
     for (let index = 0; index < releaseData.length; index++) {
         const element = (releaseData[index].tag_name as string).match(semRegex);
-        if (element.length > 0) {
+        if (element.length !== null || element.length > 0) {
             return releaseData[index].tag_name;
         }
     }
