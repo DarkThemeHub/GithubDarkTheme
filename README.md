@@ -5,7 +5,7 @@
 # GithubDarkTheme();
 Show your support and hit that Star :P
 
-Join the discord https://discord.gg/pSs9YYn
+[Join the discord](https://discord.gg/pSs9YYn)
 
 [How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
