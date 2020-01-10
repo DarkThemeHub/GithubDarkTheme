@@ -75,15 +75,15 @@ async function tryInstallOrUpdate() {
     });
 }
 
-const semRegex = "^[0-9]*\.[0-9]*\..*"
+const semVersionRegex = "^[0-9]*\.[0-9]*\..*"
 
 async function getLatestReleaseVersion(): Promise<string> {
     const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases`);
     const releaseData = await response.json() as any[];
 
     for (let index = 0; index < releaseData.length; index++) {
-        const element = (releaseData[index].tag_name as string).match(semRegex);
-        if (element.length !== null || element.length > 0) {
+        const element = (releaseData[index].tag_name as string).match(semVersionRegex);
+        if (element !== null) {
             return releaseData[index].tag_name;
         }
     }
@@ -115,8 +115,8 @@ async function getThemeCss(tagVersion: string): Promise<string> {
 }
 async function getUrlRegex(tagVersion: string): Promise<string> {
     const response = await fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${tagVersion}/UrlRegex.txt`);
-    const themeData = await response.text();
-    return themeData;
+    const regexData = await response.text();
+    return regexData;
 }
 
 async function needsInstallOrUpdate(latestReleaseVersion: string): Promise<boolean> {
@@ -142,42 +142,52 @@ async function needsInstallOrUpdate(latestReleaseVersion: string): Promise<boole
 }
 
 async function injectTheme() {
-    const urlRegexMatch = await getUrlRegexMatch();
-    chrome.tabs.query(urlRegexMatch, tabs => {
-        tabs.forEach(tab => {
+    const urlRegex = (await getLocalStorageValue()).urlMatchRegex;
+    chrome.tabs.query({ url: [] }, tabs => {
+        const tabsFiltered = tabs.filter(tab => isUrlRegexMatch(urlRegex, tab.url));
+        tabsFiltered.forEach(tab => {
+
             chrome.tabs.executeScript(tab.id, {
                 code: `
-            var evt = document.createEvent('Event');
-            evt.initEvent('injectTheme', true, false);
+                        var evt = document.createEvent('Event');
+                        evt.initEvent('injectTheme', true, false);
 
-            // fire the event
-            document.dispatchEvent(evt);
-            ` })
+                        // fire the event
+                        document.dispatchEvent(evt);
+                        `
+            })
         });
     })
     console.log("Theme inject event sent");
 };
 
 async function removeInjectedTheme() {
-    const urlRegexMatch = await getUrlRegexMatch();
-    chrome.tabs.query(urlRegexMatch, tabs => {
-        tabs.forEach(tab => {
+    const urlRegex = (await getLocalStorageValue()).urlMatchRegex;
+    chrome.tabs.query({ url: [] }, tabs => {
+        const tabsFiltered = tabs.filter(tab => isUrlRegexMatch(urlRegex, tab.url));
+        tabsFiltered.forEach(tab => {
             chrome.tabs.executeScript(tab.id, {
                 code: `
-            var evt = document.createEvent('Event');
-            evt.initEvent('removeTheme', true, false);
+                        var evt = document.createEvent('Event');
+                        evt.initEvent('removeTheme', true, false);
 
-            // fire the event
-            document.dispatchEvent(evt);
-            ` })
+                        // fire the event
+                        document.dispatchEvent(evt);
+                        `
+            })
         });
     })
     console.log("remove injected theme event sent");
 };
 
-async function getUrlRegexMatch(): Promise<chrome.tabs.QueryInfo> {
-    const storageObject = await getLocalStorageValue();
+function isUrlRegexMatch(urlRegex: string[], urlToCheck: string) {
 
-    return { url: storageObject.urlMatchRegex }
+    var urlMatched = false;
+    for (let index = 0; index < urlRegex.length; index++) {
+        const match = urlToCheck.match(urlRegex[index]);
+        if (match !== null) {
+            urlMatched = true;
+        }
+    }
+    return urlMatched;
 }
-
