@@ -33,24 +33,25 @@ export const PageContent: React.FunctionComponent<PageProps> = ({ storage, enabl
         return outputString;
     }
 
+
     return <div>
         <div className="grid">
             <div className="grid-item" style={{ paddingRight: 20 }}>
                 <div >Installed version:</div>
             </div>
-            <div className="grid-item">{storage.installedVersion}</div>
+            <div className="grid-item">v{storage.installedVersion}</div>
         </div>
-        <span className="small-text">{`Checked for update ${lastCheckedTimeString} ago`}</span>
+        <div className="small-text">{`Checked for update ${lastCheckedTimeString} ago`}</div>
         <div className="button-row">
             <span style={{ float: "left" }}>
                 {storage.disabled ?
-                    <button onClick={() => enableThemeCallback()}>Enable Theme</button> :
-                    <button onClick={() => disableThemeCallback()}>Disable Theme</button>
+                    <button className="disabled" onClick={() => enableThemeCallback()}>Theme Disabled</button> :
+                    <button className="enabled" onClick={() => disableThemeCallback()}>Theme Enabled</button>
                 }
             </span>
             <span style={{ float: "right" }}>
-                <button onClick={() => { chrome.tabs.create({ url: `https://github.com/${REPO_OWNER}/${REPO_NAME}/releases` }); }}>Release Notes</button>
-                <button onClick={() => { chrome.tabs.create({ url: `https://github.com/${REPO_OWNER}/${REPO_NAME}/issues` }); }}>Report Issues</button>
+                <button onClick={() => chrome.tabs.create({ url: `https://github.com/${REPO_OWNER}/${REPO_NAME}/releases` })}>Release Notes</button>
+                <button onClick={() => chrome.tabs.create({ url: `https://github.com/${REPO_OWNER}/${REPO_NAME}/issues` })}>Report Issues</button>
             </span>
         </div>
     </div >

@@ -18,7 +18,6 @@ const Popup: React.FunctionComponent<{}> = () => {
     })
   }, [])
 
-
   chrome.runtime.sendMessage({ popupMounted: true });
   chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (var key in changes) {
@@ -42,16 +41,20 @@ const Popup: React.FunctionComponent<{}> = () => {
 
   return (
     <div className="popupContainer">
-      <h2>Github Darktheme</h2>
+      <div >
+        <h2 className="title" style={{ float: "left" }}>Github DarkTheme</h2>
+        <div className="titleVersion">v{chrome.runtime.getManifest().version}</div>
+        <br />
+        <a className="authorLink" onClick={() => chrome.tabs.create({ url: `https://github.com/DarkThemeHub/` })}>by DarkThemeHub</a>
+      </div>
       {storageObject &&
         <PageContent
           storage={storageObject}
           disableThemeCallback={disableTheme}
           enableThemeCallback={enableTheme} />
       }
-    </div>
+    </div >
   );
-
 }
 
 export default (Popup)

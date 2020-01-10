@@ -1,16 +1,34 @@
 $primary-font-color: rgb(255, 255, 255);
 $background-color: rgb(34, 34, 34);
 
-// Chrome applies an 8px margin by default (gross).
 body {
     margin: 0px;
     padding: 20px;
     background-color: $background-color;
 }
 
-h2 {
+.title {
     margin-top: 0px;
     margin-bottom: 7px;
+    padding-right: 5px;
+}
+
+.titleVersion {
+    color: orange;
+}
+
+a.authorLink {
+    float: left;
+    margin-top: -20px;
+    margin-left: 170px;
+    font-size: 15px;
+    color: orange;
+    text-decoration: none;
+}
+
+a.authorLink:hover {
+    color: white;
+    cursor: pointer;
 }
 
 .popupContainer {

@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "Github dark theme deployed via chrome extension",
     "scripts": {
-        "build": "webpack --config webpack.prod.js && ncp src/injector.js dist/js/injector.js --clobber true && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
-        "dev": "webpack --config webpack.dev.js && ncp src/injector.js dist/js/injector.js --clobber true && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
-        "watch": "webpack -w --config webpack.dev.js && ncp src/injector.js dist/js/injector.js --clobber true && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "build": "webpack --config webpack.prod.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "dev": "webpack --config webpack.dev.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "watch": "webpack -w --config webpack.dev.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
         "lint": "tslint 'src/**/*.{ts, tsx}'"
     },
     "author": "Aaron Cooper",

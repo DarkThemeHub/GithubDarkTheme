@@ -22,3 +22,9 @@ export interface githubDarkThemeStorageV1Format {
     disabled: boolean;
     urlMatchRegex: string[];
 }
+
+export async function getUrlRegexMatch(): Promise<chrome.tabs.QueryInfo> {
+    const storageObject = await getLocalStorageValue();
+
+    return { url: storageObject.urlMatchRegex }
+}

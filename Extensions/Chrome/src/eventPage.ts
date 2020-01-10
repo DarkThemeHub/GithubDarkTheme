@@ -30,7 +30,7 @@ chrome.alarms.onAlarm.addListener(function callback(alarm) {
     }
 });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // onMessage must return "true" if response is async.
     let isResponseAsync = false;
 
@@ -38,10 +38,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         console.log("eventPage notified that Popup.tsx has mounted.");
     }
     else if (!request.themeEnabled) {
-        disableTheme();
+        await disableTheme();
     }
     else if (request.themeEnabled) {
-        enableTheme();
+        await enableTheme();
     }
 
     return isResponseAsync;
@@ -70,7 +70,7 @@ async function tryInstallOrUpdate() {
 
     getLatestReleaseVersion().then(latestReleaseVersion => {
         if (needsInstallOrUpdate(latestReleaseVersion)) {
-            installVersionOfTheme();
+            installVersionOfTheme(latestReleaseVersion);
         }
     });
 }
@@ -90,16 +90,18 @@ async function getLatestReleaseVersion(): Promise<string> {
     return undefined;
 };
 
-async function installVersionOfTheme() {
+async function installVersionOfTheme(version: string) {
     console.log(`repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`);
-    const releaseVersion = await getLatestReleaseVersion();
-    const themeData = await getThemeCss(releaseVersion);
+
+    const themeData = await getThemeCss(version);
+    const urlRegex = (await getUrlRegex(version)).split(`\n`);
     const storageObject = {
-        installedVersion: releaseVersion,
+        installedVersion: version,
         LastUpdateCheckedTime: getDateTimeInSeconds(),
         theme: themeData,
-        disabled: false
-    };
+        disabled: false,
+        urlMatchRegex: urlRegex
+    } as githubDarkThemeStorageV1Format;
 
     chrome.storage.local.set({ "GithubDarkThemeStorageV1": storageObject }, () => {
         injectTheme();
@@ -108,6 +110,11 @@ async function installVersionOfTheme() {
 
 async function getThemeCss(tagVersion: string): Promise<string> {
     const response = await fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${tagVersion}/Theme.css`);
+    const themeData = await response.text();
+    return themeData;
+}
+async function getUrlRegex(tagVersion: string): Promise<string> {
+    const response = await fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${tagVersion}/UrlRegex.txt`);
     const themeData = await response.text();
     return themeData;
 }
@@ -134,7 +141,8 @@ async function needsInstallOrUpdate(latestReleaseVersion: string): Promise<boole
     }
 }
 
-function injectTheme() {
+async function injectTheme() {
+    const urlRegexMatch = await getUrlRegexMatch();
     chrome.tabs.query(urlRegexMatch, tabs => {
         tabs.forEach(tab => {
             chrome.tabs.executeScript(tab.id, {
@@ -150,7 +158,8 @@ function injectTheme() {
     console.log("Theme inject event sent");
 };
 
-function removeInjectedTheme() {
+async function removeInjectedTheme() {
+    const urlRegexMatch = await getUrlRegexMatch();
     chrome.tabs.query(urlRegexMatch, tabs => {
         tabs.forEach(tab => {
             chrome.tabs.executeScript(tab.id, {
@@ -166,10 +175,9 @@ function removeInjectedTheme() {
     console.log("remove injected theme event sent");
 };
 
-const urlRegexMatch: chrome.tabs.QueryInfo = {
-    url: ["*://*.github.com/*",
-        "*://*.github.com/",
-        "*://github.com/",
-        "*://github.com/*"]
-};
+async function getUrlRegexMatch(): Promise<chrome.tabs.QueryInfo> {
+    const storageObject = await getLocalStorageValue();
+
+    return { url: storageObject.urlMatchRegex }
+}
 

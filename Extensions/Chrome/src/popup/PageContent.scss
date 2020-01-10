@@ -21,6 +21,7 @@ content span {
 }
 
 .small-text {
+    margin-left: 2px;
     font-size: 12px;
     color: lightgray;
 }
@@ -29,6 +30,22 @@ button {
     background: #555;
     color: white;
     border: 1px solid rgb(110, 110, 110);
+}
+button:hover {
+    background: #777;
+    color: white;
+    border: 1px solid rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+button.disabled {
+    color: orangered;
+    width: 110px;
+}
+
+button.enabled {
+    color: greenyellow;
+    width: 110px;
 }
 
 .MuiSelect-icon,
