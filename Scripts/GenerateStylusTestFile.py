@@ -12,8 +12,9 @@ themeName = open(baseDir + "Scripts/ThemeName.txt", "r").read().rstrip()
 newVersion = open(baseDir + "Scripts/Version.txt", "r").read().rstrip()
 headerFile = open(baseDir + "Scripts/Header.txt", "r")
 header = headerFile.read()
+urlRegex = open(baseDir + "UrlRegex.txt", "r").read().rstrip()
+preStyle = "@-moz-document regexp(\"<URL_REGEX>\") {"
 
-preStyle = open(baseDir + "Scripts/PreStyle.txt", "r").read()
 themeCss = open(baseDir + "Theme.css", "r",
                 encoding="ASCII", errors="ignore").read()
 endStyle = "}"
@@ -21,10 +22,11 @@ endStyle = "}"
 # update version in header 
 newHeader = re.sub("<Version>", newVersion , header)
 newHeader = re.sub("<ThemeName>", "Test-" + themeName, newHeader)
+newPreStyle = re.sub("<URL_REGEX>", urlRegex, preStyle)
 
 os.makedirs(baseDir + "Generated", exist_ok=True)
 
 f = open(baseDir + "Generated/githubTest.user.styl", "w")
-outString = newHeader + "\n" + preStyle + "\n" + themeCss + "\n" + endStyle
+outString = newHeader + "\n" + newPreStyle + "\n" + themeCss + "\n" + endStyle
 f.writelines(outString)
 f.close
