@@ -20,6 +20,3 @@ Add screenshot and illustrate the location of bug on the page.
 Please paste the html here of the element, including the parent element housing it.
 
 NOTE: beta features are prone to change, and may not be worked on depending how much work is to be done.
-
-**Desktop (please complete the following information):**
- - Browser [e.g. chrome]
