@@ -1,1 +1,1 @@
-^https?:\/\/(.*.)?(githubusercontent|github).(?!io).*
+^https?:\/\/(.*.)?(githubusercontent|github)\.(?!io).*
