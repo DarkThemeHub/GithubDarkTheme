@@ -26,7 +26,7 @@ Show your support and hit that Star :P
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
 #### there is no auto update?
-Stylus unfortunately does not have an auto update function, so a dedicated GithubDarkTheme chrome extension with auto update is coming! | ![image](https://i.gyazo.com/e168783e69f1044db778a5b9dbae43e9.png)
+Stylus unfortunately does not have an auto update function, so a dedicated GithubDarkTheme chrome extension with auto update is coming! | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
 ------------ | -------------
 
 Firefox will follow if i have the effort!
