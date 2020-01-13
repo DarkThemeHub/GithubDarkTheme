@@ -9,7 +9,7 @@
 @updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
 ==/UserStyle== */
 
-@-moz-document regexp("^https?:\/\/(.*.)?(githubusercontent|github)\.(?!io).*") {
+@-moz-document regexp("^https?:\/\/(?!www\.google\.)(((?!desktop).*.)?(githubusercontent|github)\.(?!io|myshopify)).*") {
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -128,9 +128,6 @@ a.gollum-minibutton:visited:hover,
 .gist-quicksearch-result.navigation-focus,
 .gist-snippet .link-overlay .link,
 .suggester li.navigation-focus,
-.btn.btn-outline:hover,
-.btn.btn-outline:active,
-.btn.btn-outline.selected,
 .btn.btn-outline.zeroclipboard-is-hover,
 .btn.btn-outline.zeroclipboard-is-active,
 .select-menu-item:not(.select-menu-item-parent).navigation-focus,
@@ -7330,7 +7327,10 @@ table.files tr.navigation-focus td,
 .js-details-container.navigation-focus:nth-child(2n),
 .filter-item.selected,
 .filter-item:not(.selected):hover,
-.tree-browser-result[aria-selected="true"] {
+.tree-browser-result[aria-selected="true"],
+.btn.btn-outline:hover,
+.btn.btn-outline:active,
+.btn.btn-outline.selected {
     background: rgb(49, 51, 56) !important;
     color: white !important;
 }
@@ -7455,6 +7455,10 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 
 .TimelineItem:before {
     background-color: #555555 !important;
+}
+
+.TimelineItem-badge.bg-purple.text-white {
+    background: #6e5494 !important;
 }
 
 .TimelineItem > div[class*="bg-red"],
@@ -7741,11 +7745,24 @@ a.featured-event:hover {
     color: white !important;
 }
 
-.lia-panel-message {
+.lia-accepted-solution .lia-quilt-forum-message,
+.lia-quilt.lia-quilt-forum-message.lia-quilt-layout-one-column-message {
     background: #1d1d1d !important;
 }
 
-.lia-message-view-forum-message.lia-message-view-display .lia-quilt-row-footer {
+.lia-panel-message,
+.lia-message-view-display {
+    background: none !important;
+}
+
+.lia-forum-topic-page-reply-count,
+.lia-message-subject,
+.lia-component-author-rank {
+    color: white !important;
+}
+
+.lia-message-view-forum-message.lia-message-view-display .lia-quilt-row-footer,
+.lia-quilt-forum-message .lia-component-go-to-solution-link {
     background: #25272a !important;
 }
 
@@ -7754,7 +7771,10 @@ a.featured-event:hover {
 }
 
 /* Kudo button */
-.lia-button-image-kudos .kudos-count-link {
+.lia-button-image-kudos .kudos-count-link,
+.lia-message-view-forum-message
+    .lia-button-image-kudos-count
+    .kudos-count-link {
     color: white !important;
 }
 
@@ -7769,6 +7789,26 @@ a.featured-event:hover {
 
 .lia-button-image-kudos.lia-button {
     background: #1d1d1d !important;
+}
+
+.lia-message-view-forum-message .kudos-link {
+    filter: invert(1) !important;
+}
+
+font[color="#333333"] {
+    color: #9d9d9d !important;
+}
+
+.lia-message-view-forum-message .kudos-link {
+    padding: 3px 12px !important;
+    border: 1px solid #e1e4e8 !important;
+    background-image: linear-gradient(
+        90deg,
+        #ababab 0%,
+        #ababab 90%
+    ) !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
 }
 
 .lia-menu-dropdown-items > li a,
