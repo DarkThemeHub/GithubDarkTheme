@@ -1,1 +1,1 @@
-^https?:\/\/(.*.)?(githubusercontent|github)\.(?!io).*
+^https?:\/\/(?!www\.google\.)(((?!desktop).*.)?(githubusercontent|github)\.(?!io|myshopify)).*
