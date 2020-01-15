@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "GithubDarkTheme",
+    "name": "Github DarkTheme",
     "description": "Github Dark Theme",
     "version": "1.0.0",
     "browser_action": {
