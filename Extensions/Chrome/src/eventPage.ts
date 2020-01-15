@@ -2,6 +2,8 @@ import { REPO_OWNER, REPO_NAME, API_ADDRESS } from "./popup/Popup";
 import { compare } from "compare-versions";
 import { getLocalStorageValue, getDateTimeInSeconds, githubDarkThemeStorageV1Format } from "./shared";
 
+setAlarms();
+setExtensionUiCallbackListeners();
 chrome.runtime.onInstalled.addListener(function () {
     console.log("Setting up first install");
 
@@ -11,7 +13,6 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 chrome.runtime.onUpdateAvailable.addListener(function callback(details) {
-
     chrome.runtime.reload();
 });
 
@@ -20,32 +21,39 @@ chrome.runtime.onConnect.addListener(function () {
     injectTheme();
 });
 
-const ALARM_NAME = "GithubDarkThemeCheckForUpdate";
-const ALARM_DELAY_IN_MINUTES = 60 * 4;  // 6 times a day
-chrome.alarms.create(ALARM_NAME, { when: Date.now(), periodInMinutes: ALARM_DELAY_IN_MINUTES })
+function setExtensionUiCallbackListeners() {
+    chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
+        // onMessage must return "true" if response is async.
+        let isResponseAsync = false;
+        if (request.popupMounted) {
+            console.log("eventPage notified that Popup.tsx has mounted.");
+        }
+        if (request.disableTheme) {
+            await disableTheme();
+        }
 
-chrome.alarms.onAlarm.addListener(function callback(alarm) {
-    if (alarm.name === ALARM_NAME) {
-        tryInstallOrUpdate();
-    }
-});
+        if (request.enableTheme) {
+            await enableTheme();
+        }
 
-chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
-    // onMessage must return "true" if response is async.
-    let isResponseAsync = false;
+        if (request.forceCheckUpdate) {
+            await tryInstallOrUpdate();
+        }
 
-    if (request.popupMounted) {
-        console.log("eventPage notified that Popup.tsx has mounted.");
-    }
-    else if (!request.themeEnabled) {
-        await disableTheme();
-    }
-    else if (request.themeEnabled) {
-        await enableTheme();
-    }
+        return isResponseAsync;
+    });
+}
 
-    return isResponseAsync;
-});
+function setAlarms() {
+    const ALARM_NAME = "GithubDarkThemeCheckForUpdate";
+    const ALARM_DELAY_IN_MINUTES = 60 * 4; // 6 times a day
+    chrome.alarms.create(ALARM_NAME, { when: Date.now(), periodInMinutes: ALARM_DELAY_IN_MINUTES });
+    chrome.alarms.onAlarm.addListener(function callback(alarm) {
+        if (alarm.name === ALARM_NAME) {
+            tryInstallOrUpdate();
+        }
+    });
+}
 
 async function disableTheme() {
     const storageObject = await getLocalStorageValue();

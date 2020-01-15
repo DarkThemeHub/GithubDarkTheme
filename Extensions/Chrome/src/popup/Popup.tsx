@@ -10,7 +10,6 @@ export const REPO_NAME: string = 'GithubDarkTheme';
 
 const Popup: React.FunctionComponent<{}> = () => {
   var [storageObject, setStorageObject] = React.useState<githubDarkThemeStorageV1Format>(undefined);
-
   React.useEffect(() => {
     getLocalStorageValue().then(result => {
       setStorageObject(result as githubDarkThemeStorageV1Format);
@@ -31,12 +30,16 @@ const Popup: React.FunctionComponent<{}> = () => {
 
   const enableTheme = () => {
     console.log('enableTheme!');
-    chrome.runtime.sendMessage({ themeEnabled: true });
+    chrome.runtime.sendMessage({ enableTheme: true });
   }
 
   const disableTheme = () => {
     console.log('disableTheme!');
-    chrome.runtime.sendMessage({ themeEnabled: false });
+    chrome.runtime.sendMessage({ disableTheme: true });
+  };
+
+  const forceCheckUpdate = () => {
+    chrome.runtime.sendMessage({ forceCheckUpdate: true });
   };
 
   return (
@@ -51,7 +54,8 @@ const Popup: React.FunctionComponent<{}> = () => {
         <PageContent
           storage={storageObject}
           disableThemeCallback={disableTheme}
-          enableThemeCallback={enableTheme} />
+          enableThemeCallback={enableTheme}
+          forceCheckUpdateCallback={forceCheckUpdate} />
       }
     </div >
   );

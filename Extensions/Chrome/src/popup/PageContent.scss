@@ -67,3 +67,8 @@ button.enabled {
 .MuiListItem-button:hover {
     background: #555 !important;
 }
+
+.clickable:hover {
+    cursor: pointer;
+    color: #4299fc;
+}

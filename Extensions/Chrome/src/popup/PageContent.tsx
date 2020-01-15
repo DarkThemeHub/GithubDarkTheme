@@ -2,16 +2,21 @@ import * as React from 'react';
 import './PageContent.scss';
 import { REPO_OWNER, REPO_NAME } from './Popup';
 import { getDateTimeInSeconds, githubDarkThemeStorageV1Format } from '../shared';
-
 export interface PageProps {
     storage: githubDarkThemeStorageV1Format;
     enableThemeCallback: () => void;
     disableThemeCallback: () => void;
+    forceCheckUpdateCallback: () => void;
 }
 
-export const PageContent: React.FunctionComponent<PageProps> = ({ storage, enableThemeCallback, disableThemeCallback }) => {
-
+export const PageContent: React.FunctionComponent<PageProps> = ({ storage, enableThemeCallback, disableThemeCallback, forceCheckUpdateCallback }) => {
     const lastCheckedTimeString = secondsToFormattedString(getDateTimeInSeconds() - storage.LastUpdateCheckedTime);
+    const [time, setTime] = React.useState<number>(Date.now)
+    const [mouseOver, setMouseOver] = React.useState<Boolean>(false);
+    React.useEffect(() => {
+        setInterval(() => { setTime(Date.now) }, 1000)
+    }, []);
+
 
     function secondsToFormattedString(secondsInput: number) {
         const days = Math.floor(secondsInput / 86400);
@@ -41,7 +46,12 @@ export const PageContent: React.FunctionComponent<PageProps> = ({ storage, enabl
             </div>
             <div className="grid-item">v{storage.installedVersion}</div>
         </div>
-        <div className="small-text">{`Checked for update ${lastCheckedTimeString} ago`}</div>
+        <div onClick={forceCheckUpdateCallback}
+            onMouseOver={() => setMouseOver(true)}
+            onMouseOut={() => setMouseOver(false)}
+            className="small-text clickable" title={mouseOver && "Click to force update check"}>
+            {`Checked for update ${lastCheckedTimeString} ago`}
+        </div>
         <div className="button-row">
             <span style={{ float: "left" }}>
                 {storage.disabled ?
