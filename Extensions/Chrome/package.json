@@ -1,0 +1,37 @@
+{
+    "name": "github-darktheme-chromeextension",
+    "version": "1.0.0",
+    "description": "Github dark theme deployed via chrome extension",
+    "scripts": {
+        "build": "webpack --config webpack.prod.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "dev": "webpack --config webpack.dev.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "watch": "webpack -w --config webpack.dev.js && ncp manifest.json dist/manifest.json --clobber true && ncp src/extension-icons/ dist/ --clobber true && ncp src/html/popup.html dist/popup.html --clobber true",
+        "lint": "tslint 'src/**/*.{ts, tsx}'"
+    },
+    "author": "Aaron Cooper",
+    "license": "",
+    "devDependencies": {
+        "@types/chrome": "0.0.91",
+        "@types/react": "16.9.17",
+        "@types/react-dom": "16.9.4",
+        "@types/react-select": "3.0.8",
+        "css-loader": "3.4.1",
+        "node-sass": "4.13.0",
+        "sass-loader": "8.0.0",
+        "style-loader": "1.1.2",
+        "ts-loader": "6.2.1",
+        "tslint-config-airbnb": "5.11.2",
+        "tslint-react": "4.1.0",
+        "typescript": "3.7.4",
+        "webpack": "4.41.5",
+        "webpack-cli": "3.3.10",
+        "webpack-merge": "4.2.2"
+    },
+    "dependencies": {
+        "@material-ui/core": "4.8.2",
+        "compare-versions": "^3.5.1",
+        "ncp": "^2.0.0",
+        "react": "16.12.0",
+        "react-dom": "16.12.0"
+    }
+}
