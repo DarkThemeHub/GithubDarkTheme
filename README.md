@@ -39,7 +39,7 @@ DarkThemeHub's goal is to create an active dark theme community that create and 
 Message [@acoop133](https://twitter.com/acoop133) with your github link to apply.
 
 Requirements:
-* History of quality contributions
+* History of quality contributions (Not limited to this repository)
 * Well mannered
 * Can communicate well in english 
 * Knows basics of css and html
