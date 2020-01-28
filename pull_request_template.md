@@ -4,6 +4,5 @@
 * Fixes #456 for future dedicated extension
   * Additionally excluded blah blah
   * So this fix wont reflect on more blah blah
-* Give buttons on PR page correct hover color
 
 screenshot or gif here
