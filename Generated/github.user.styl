@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.22.0
+@version      1.23.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -63,7 +63,9 @@ body {
 
 a,
 table.files td.icon,
-table.files td.icon .octicon-file-directory {
+table.files td.icon .octicon-file-directory,
+.btn-link,
+.commit-link {
     color: #4299fc;
 }
 
@@ -7960,6 +7962,20 @@ a.select-menu-action,
     border-right: 4px solid transparent !important;
     border-bottom: 0 solid transparent !important;
     border-left: 4px solid transparent !important;
+}
+
+/* Notifications Page */
+.notifications-list-item.notification-unread {
+    background: #00264c !important;
+}
+
+.notifications-list-item:hover {
+    background-color: #313338 !important;
+}
+
+/* notification row type */
+span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
+    background: none !important;
 }
 
 }
