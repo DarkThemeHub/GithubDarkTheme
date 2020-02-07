@@ -1852,6 +1852,12 @@ a.card.bg-gray-light:hover,
     background: #25272a !important;
 }
 
+@media (min-width: 768px) {
+    .page-responsive .pagehead {
+        background: #333 !important;
+    }
+}
+
 /* Navigation focus */
 
 .list-group-item.navigation-focus,
