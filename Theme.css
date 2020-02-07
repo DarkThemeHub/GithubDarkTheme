@@ -6271,6 +6271,7 @@ p code,
 .markdown-body pre,
 .markdown-format .highlight pre,
 .markdown-body .highlight pre,
+.hook-delivery-container pre,
 body.blog pre,
 #facebox pre,
 .blob-expanded,
@@ -6279,13 +6280,10 @@ body.blog pre,
 #notebook .input_area,
 .blob-code-context,
 .markdown-format code,
-body.blog pre>code,
+body.blog pre > code,
 .api pre,
 .api code,
 .hook-delivery-details pre,
-
-/*! GitHub: Twilight */
-
 .CodeMirror,
 .highlight {
     background: #141414 !important;
