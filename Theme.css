@@ -873,10 +873,15 @@ details summary {
 
 /* Make it more apparent that <details> is clickable */
 
-details summary:hover {
-    background: #282828;
-    box-shadow: 0 0 0 2px #282828;
+.Details-content--closed.Box.mt-2.d-inline-flex.flex-column:hover,
+.discussion-item-header.pt-0 .Box.d-inline-flex.flex-column:hover {
+    box-shadow: 0 0 9px 4px #363f4a;
     cursor: pointer;
+}
+
+.Details-content--closed span,
+.discussion-item-header button {
+    color: white !important;
 }
 
 /* GitHub Bug: Center discussion close icon vertically */
@@ -1924,7 +1929,6 @@ table.capped-list th,
 .leaflet-control-zoom,
 .pagehead-tabs-item.selected,
 .reponav-item.selected,
-.ajax-pagination-form .ajax-pagination-btn:hover,
 .ajax-pagination-form .ajax-pagination-btn:focus,
 .manage-repo-access-not-active,
 .header-search-scope,
@@ -7049,9 +7053,9 @@ span.cm-def {
     background-color: #333;
 }
 
-.discussion-item-header:last-child,
-.pagination-loader-container {
-    background-color: #333;
+.pagination-loader-container,
+.discussion-item-header:last-child {
+    background-color: #25272a !important;
 }
 
 .pagination-loader-container {
@@ -7519,10 +7523,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     background: #24272a !important;
 }
 
-details summary:hover {
-    background: none !important;
-}
-
 div.light-bg a,
 div.light-bg a h4 {
     color: white !important;
@@ -7972,4 +7972,8 @@ a.select-menu-action,
 /* notification row type */
 span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
     background: none !important;
+}
+
+.Details-content--closed.Box.mt-2.d-inline-flex.flex-column {
+    margin-top: 0 !important;
 }
