@@ -8,7 +8,9 @@
         "default_popup": "popup.html"
     },
     "background": {
-        "scripts": ["js/eventPage.js"],
+        "scripts": [
+            "js/eventPage.js"
+        ],
         "persistent": false
     },
     "icons": {
@@ -18,7 +20,6 @@
     },
     "permissions": [
         "storage",
-        "activeTab",
         "notifications",
         "tabs",
         "alarms",
@@ -27,9 +28,13 @@
     "content_scripts": [
         {
             "run_at": "document_start",
-            "matches": ["<all_urls>"],
+            "matches": [
+                "<all_urls>"
+            ],
             "all_frames": true,
-            "js": ["js/injector.js"]
+            "js": [
+                "js/injector.js"
+            ]
         }
     ]
 }
