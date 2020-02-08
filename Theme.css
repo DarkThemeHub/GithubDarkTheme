@@ -362,13 +362,9 @@ div[id^="contribution-joined-github"] img {
 
 /* PR toolbar tweaks */
 
-.pr-toolbar.is-stuck {
-    pointer-events: none !important;
-}
-
 .diffbar {
     padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 40px !important;
 }
 
 .is-stuck .diffbar {
@@ -873,10 +869,15 @@ details summary {
 
 /* Make it more apparent that <details> is clickable */
 
-details summary:hover {
-    background: #282828;
-    box-shadow: 0 0 0 2px #282828;
+.Details-content--closed.Box.mt-2.d-inline-flex.flex-column:hover,
+.discussion-item-header.pt-0 .Box.d-inline-flex.flex-column:hover {
+    box-shadow: 0 0 9px 4px #363f4a;
     cursor: pointer;
+}
+
+.Details-content--closed span,
+.discussion-item-header button {
+    color: white !important;
 }
 
 /* GitHub Bug: Center discussion close icon vertically */
@@ -1852,6 +1853,12 @@ a.card.bg-gray-light:hover,
     background: #25272a !important;
 }
 
+@media (min-width: 768px) {
+    .page-responsive .pagehead {
+        background: #333 !important;
+    }
+}
+
 /* Navigation focus */
 
 .list-group-item.navigation-focus,
@@ -1918,7 +1925,6 @@ table.capped-list th,
 .leaflet-control-zoom,
 .pagehead-tabs-item.selected,
 .reponav-item.selected,
-.ajax-pagination-form .ajax-pagination-btn:hover,
 .ajax-pagination-form .ajax-pagination-btn:focus,
 .manage-repo-access-not-active,
 .header-search-scope,
@@ -6265,6 +6271,7 @@ p code,
 .markdown-body pre,
 .markdown-format .highlight pre,
 .markdown-body .highlight pre,
+.hook-delivery-container pre,
 body.blog pre,
 #facebox pre,
 .blob-expanded,
@@ -6273,13 +6280,10 @@ body.blog pre,
 #notebook .input_area,
 .blob-code-context,
 .markdown-format code,
-body.blog pre>code,
+body.blog pre > code,
 .api pre,
 .api code,
 .hook-delivery-details pre,
-
-/*! GitHub: Twilight */
-
 .CodeMirror,
 .highlight {
     background: #141414 !important;
@@ -7045,9 +7049,9 @@ span.cm-def {
     background-color: #333;
 }
 
-.discussion-item-header:last-child,
-.pagination-loader-container {
-    background-color: #333;
+.pagination-loader-container,
+.discussion-item-header:last-child {
+    background-color: #25272a !important;
 }
 
 .pagination-loader-container {
@@ -7231,6 +7235,10 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .markdown-body .lead-mktg p {
     color: white !important;
+}
+
+.markdown-body code {
+    color: #ffba64 !important;
 }
 
 .stale-files-tab {
@@ -7509,10 +7517,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 .nav-desktop-productDropdown,
 .nav-desktop-langDropdown {
     background: #24272a !important;
-}
-
-details summary:hover {
-    background: none !important;
 }
 
 div.light-bg a,
@@ -7964,4 +7968,8 @@ a.select-menu-action,
 /* notification row type */
 span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
     background: none !important;
+}
+
+.Details-content--closed.Box.mt-2.d-inline-flex.flex-column {
+    margin-top: 0 !important;
 }
