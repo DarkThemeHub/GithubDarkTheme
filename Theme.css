@@ -362,13 +362,9 @@ div[id^="contribution-joined-github"] img {
 
 /* PR toolbar tweaks */
 
-.pr-toolbar.is-stuck {
-    pointer-events: none !important;
-}
-
 .diffbar {
     padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 40px !important;
 }
 
 .is-stuck .diffbar {
