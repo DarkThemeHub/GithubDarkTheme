@@ -28,6 +28,7 @@ Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarkthe
 #### Why are you creating a dedicated extension?
 --> ["Stylish" browser extension steals all your internet history](https://robertheaton.com/2018/07/02/stylish-browser-extension-steals-your-internet-history/)
 
+Additionaly Stylus does not have auto update on styles, so you have to manually hit that update button.
 
 A free dedicated GithubDarkTheme chrome extension with auto update is coming! | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
 ------------ | -------------
