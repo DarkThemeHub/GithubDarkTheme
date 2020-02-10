@@ -12,7 +12,7 @@ Show your support and hit that Star :P
 <hr>
 
 ## Install the theme
-#### option 1 (recommended due to privacy concerns with userstyles.org)
+#### option 1
 
 ##### Step 1 (if not already installed browser extension)
 [![image](https://img.shields.io/badge/Install-Stylus%20Chrome%20Extension-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
