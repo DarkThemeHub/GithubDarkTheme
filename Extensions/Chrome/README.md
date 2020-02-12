@@ -14,7 +14,7 @@
 3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
 
 
-## Install without the above nonsense.
+## Install already unpacked extension.
 1. Simply unzip the content in a folder somewhere. [Download Link](https://github.com/DarkThemeHub/GithubDarkTheme/raw/master/Extensions/Chrome/GithubDarkTheme-ChromeExtension.zip)
 2. In Url of Chrome, enter `Chrome://Extensions`
 3. Turn on developer mode on top right
