@@ -1,7 +1,5 @@
 # Chrome Extension (built with TypeScript + React)
 
-> This project is a boilerplate project to allow you to quickly build chrome extensions using TypeScript and React.
-
 ## Building
 
 1.  Clone repo
@@ -14,3 +12,15 @@
 1.  Complete the steps to build the project above
 2.  Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
 3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
+
+
+## Install without the above nonsense.
+1. Simply unzip the content in a folder somewhere. [Download Link](https://github.com/DarkThemeHub/GithubDarkTheme/raw/master/Extensions/Chrome/GithubDarkTheme-ChromeExtension.zip)
+2. In Url of Chrome, enter `Chrome://Extensions`
+3. Turn on developer mode on top right
+4. Top left, click `load unpacked` and choose the directory you unzipped the contents in.
+5. Turn off developer mode
+5. Enjoy
+
+
+![image](https://user-images.githubusercontent.com/19627023/72227190-7bb1c780-3591-11ea-87db-e62050937744.png)
