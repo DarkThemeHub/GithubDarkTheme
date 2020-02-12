@@ -14,6 +14,20 @@
 3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
 
 
+## Why isnt it in the chrome extension store?
+Seems like chrome team thinks my extension has no icons, description and its suspicious. They would not further expand on it, instead just copy-paste me the same generic crap when i informed them its there and asking for a further explanation on whats suspicious.
+
+So the google extensions team go suck one with their copy paste crap. 🤷‍♂ 
+
+``` 
+Your item did not comply with the following section of our Program Policies:
+
+"Spam and Placement in the Store"
+•	Item has a blank description field, or missing icons or screenshots, and appears to be suspicious.
+```
+
+
+
 ## Install already unpacked extension.
 1. Simply unzip the content in a folder somewhere. [Download Link](https://github.com/DarkThemeHub/GithubDarkTheme/raw/master/Extensions/Chrome/GithubDarkTheme-ChromeExtension.zip)
 2. In Url of Chrome, enter `Chrome://Extensions`
