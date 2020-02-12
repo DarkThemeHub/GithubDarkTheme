@@ -29,7 +29,7 @@ Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarkthe
 
 
 ### option 3 ( Beta )
-Install the dedicated chrome extension! [Click Here](https://github.com/DarkThemeHub/GithubDarkTheme/tree/master/Extensions/Chrome) | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
+Install the dedicated chrome extension! [Click Here](https://github.com/DarkThemeHub/GithubDarkTheme/tree/master/Extensions/Chrome) | ![image](https://camo.githubusercontent.com/6eb5eb47abc1c6d81946b18633b2edbf4cc50e44/68747470733a2f2f692e6779617a6f2e636f6d2f33306361623663636638386334386234613830656630383965393266373763302e706e67)
 ------------ | -------------
 
 Firefox will follow if i have the effort!
