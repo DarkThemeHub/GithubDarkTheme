@@ -42,7 +42,7 @@ Firefox will follow if i have the effort!
 # Join the DarkThemeHub Team
 DarkThemeHub's goal is to create an active dark theme community that create and maintain quality dark themes for websites devs use daily.
 
-Join the discord and message @Snazzie.
+Join the discord and message Snazzie.
 
 Requirements:
 * History of quality contributions (Not limited to this repository)
