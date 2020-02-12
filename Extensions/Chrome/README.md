@@ -1,17 +1,9 @@
 # Chrome Extension (built with TypeScript + React)
 
-## Building
-
-1.  Clone repo
-2.  `npm i`
-3.  `npm run dev` to compile once or `npm run watch` to run the dev task in watch mode
-4.  `npm run build` to build a production (minified) version
-
-## Installation
-
-1.  Complete the steps to build the project above
-2.  Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
-3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
+#### Why did you create a dedicated extension?
+* Stylus does not have auto update on styles, so you have to manually hit that update button.
+* There are future plans on supporting different "flavours" of the theme, which having a dedicated extension makes it easy to switch.
+* This is the first stage to the more generic `DarkThemeHub` extension which will allow users to apply all the themes provided by `DarkThemeHub`
 
 <hr>
 
@@ -40,3 +32,19 @@ Your item did not comply with the following section of our Program Policies:
 
 
 ![image](https://user-images.githubusercontent.com/19627023/72227190-7bb1c780-3591-11ea-87db-e62050937744.png)
+
+## Building
+
+1.  Clone repo
+2.  `npm i`
+3.  `npm run dev` to compile once or `npm run watch` to run the dev task in watch mode
+4.  `npm run build` to build a production (minified) version
+
+## Installation
+
+1.  Complete the steps to build the project above
+2.  Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
+3.  With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this repo
+
+
+
