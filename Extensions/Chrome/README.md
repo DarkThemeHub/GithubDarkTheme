@@ -18,7 +18,7 @@
 ## Why isnt it in the chrome extension store?
 Seems like chrome team thinks my extension has no icons, description and its suspicious. They would not further expand on it, instead just copy-paste me the same generic crap when i informed them its there and asking for a further explanation on whats suspicious.
 
-So the google extensions team go suck one with their copy paste crap. 🤷‍♂ 
+So the google extensions team can go suck one with their copy paste crap. 🤷‍♂ 
 
 ``` 
 Your item did not comply with the following section of our Program Policies:
@@ -31,7 +31,7 @@ Your item did not comply with the following section of our Program Policies:
 <hr>
 
 ## Install already unpacked extension
-1. Simply unzip the content in a folder somewhere. [Download Link](https://github.com/DarkThemeHub/GithubDarkTheme/raw/master/Extensions/Chrome/GithubDarkTheme-ChromeExtension.zip)
+1. Simply unzip the content in a folder somewhere. Get the zip from releases.
 2. In Url of Chrome, enter `Chrome://Extensions`
 3. Turn on developer mode on top right
 4. Top left, click `load unpacked` and choose the directory you unzipped the contents in.
