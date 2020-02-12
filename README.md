@@ -22,7 +22,7 @@ Show your support and hit that Star :P
 ##### Step 2
 [![image](https://img.shields.io/badge/Install/Update%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
 
-#### option 2 (Not recommended)
+##### option 2 (Not recommended)
 ["Stylish" browser extension steals all your internet history](https://robertheaton.com/2018/07/02/stylish-browser-extension-steals-your-internet-history/)
 
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
