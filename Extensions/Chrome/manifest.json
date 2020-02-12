@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Github DarkTheme",
     "description": "This is the official extension that applies DarkThemeHub's Github Darktheme to supported github related pages. Source code is available in the repository ",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "browser_action": {
         "default_icon": "icon16.png",
         "default_popup": "popup.html"
