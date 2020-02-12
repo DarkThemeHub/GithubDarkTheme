@@ -1,6 +1,6 @@
 # Chrome Extension (built with TypeScript + React)
 
-![image](https://user-images.githubusercontent.com/19627023/72227190-7bb1c780-3591-11ea-87db-e62050937744.png)
+![image](https://camo.githubusercontent.com/6eb5eb47abc1c6d81946b18633b2edbf4cc50e44/68747470733a2f2f692e6779617a6f2e636f6d2f33306361623663636638386334386234613830656630383965393266373763302e706e67)
 <hr>
 
 ## Why did you create a dedicated extension?
