@@ -27,8 +27,10 @@ Show your support and hit that Star :P
 
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
-#### Why are you creating a dedicated extension?
-Stylus does not have auto update on styles, so you have to manually hit that update button.
+#### Why did you create a dedicated extension?
+* Stylus does not have auto update on styles, so you have to manually hit that update button.
+* There are future plans on supporting different "flavours" of the theme, which having a dedicated extension makes it easy to switch.
+* This is the first stage to the more generic `DarkThemeHub` extension which will allow users to apply all the themes provided by `DarkThemeHub`
 
 A free dedicated GithubDarkTheme chrome extension with auto update is here! [Click Here](https://github.com/DarkThemeHub/GithubDarkTheme/tree/master/Extensions/Chrome) | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
 ------------ | -------------
