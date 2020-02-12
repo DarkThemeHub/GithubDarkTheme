@@ -1,8 +1,9 @@
 # Chrome Extension (built with TypeScript + React)
 
 ![image](https://user-images.githubusercontent.com/19627023/72227190-7bb1c780-3591-11ea-87db-e62050937744.png)
+<hr>
 
-#### Why did you create a dedicated extension?
+## Why did you create a dedicated extension?
 * Stylus does not have auto update on styles, so you have to manually hit that update button.
 * There are future plans on supporting different "flavours" of the theme, which having a dedicated extension makes it easy to switch.
 * This is the first stage to the more generic `DarkThemeHub` extension which will allow users to apply all the themes provided by `DarkThemeHub`
@@ -32,6 +33,7 @@ Your item did not comply with the following section of our Program Policies:
 5. Turn off developer mode
 5. Enjoy
 
+<hr>
 
 ## Building
 
