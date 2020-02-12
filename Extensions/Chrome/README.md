@@ -10,7 +10,7 @@
 <hr>
 
 ## Why isnt it in the chrome extension store?
-Seems like chrome team thinks my extension has no icons, description and its suspicious. They would not further expand on it, instead just copy-paste me the same generic crap when i informed them its there and asking for a further explanation on whats suspicious.
+According to the chrome extension team thinks my extension has no icons, description and its suspicious. They would not further expand on it, instead just copy-paste me the same generic crap when i informed them its there and asking for a further explanation on whats suspicious.
 
 So the google extensions team can go suck one with their copy paste crap. 🤷‍♂ 
 
