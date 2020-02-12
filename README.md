@@ -30,7 +30,7 @@ Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarkthe
 #### Why are you creating a dedicated extension?
 Stylus does not have auto update on styles, so you have to manually hit that update button.
 
-A free dedicated GithubDarkTheme chrome extension with auto update is coming! See [PR](https://github.com/DarkThemeHub/GithubDarkTheme/pull/129) for details | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
+A free dedicated GithubDarkTheme chrome extension with auto update is here! [Click Here](https://github.com/DarkThemeHub/GithubDarkTheme/tree/master/Extensions/Chrome) | ![image](https://i.gyazo.com/2954cf0e7bc7db03202289e6ccb47427.png)
 ------------ | -------------
 
 Firefox will follow if i have the effort!
