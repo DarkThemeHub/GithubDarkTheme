@@ -1858,7 +1858,8 @@ a.card.bg-gray-light:hover,
 }
 
 @media all {
-    .page-responsive .pagehead {
+    .page-responsive .pagehead,
+    .reponav-wrapper {
         background: #333 !important;
     }
     .border-md-top {
