@@ -1829,6 +1829,10 @@ body .bg-white,
 .auth-form-header,
 .commit-form,
 .comment-form-head.tabnav,
+.page-responsive
+    .previewable-comment-form
+    .comment-form-head.tabnav
+    .toolbar-commenting,
 .migration-jumbotron,
 .migration-sub-header,
 .commit-tease,
@@ -1853,9 +1857,15 @@ a.card.bg-gray-light:hover,
     background: #25272a !important;
 }
 
-@media (min-width: 768px) {
+@media all {
     .page-responsive .pagehead {
         background: #333 !important;
+    }
+    .border-md-top {
+        border-top: none !important;
+    }
+    .tabnav--responsive .tabnav-tab {
+        background-color: #25272a !important;
     }
 }
 
