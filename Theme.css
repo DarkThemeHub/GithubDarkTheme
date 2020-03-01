@@ -1869,6 +1869,10 @@ a.card.bg-gray-light:hover,
     }
 }
 
+.toolbar-item:hover {
+    color: white !important;
+}
+
 .discussion-timeline-actions [type="submit"] {
     margin: 0px 8px 0px 0px !important;
 }
