@@ -1869,6 +1869,14 @@ a.card.bg-gray-light:hover,
     }
 }
 
+.discussion-timeline-actions [type="submit"] {
+    margin: 0px 8px 0px 0px !important;
+}
+
+.timeline-new-comment .form-actions div {
+    margin: 0 !important;
+}
+
 /* Navigation focus */
 
 .list-group-item.navigation-focus,
