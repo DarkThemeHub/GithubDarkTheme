@@ -2958,7 +2958,7 @@ article.full .alert,
 
 .timeline-comment.current-user,
 .timeline-comment.current-user:after {
-    border-color: #2c5f98 !important;
+    border-right-color: #2c5f98 !important;
 }
 
 .flash,
