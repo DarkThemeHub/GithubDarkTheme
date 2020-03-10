@@ -7128,6 +7128,7 @@ textarea {
 }
 
 #readme .Box-header,
+.Box-header--blue,
 .commit-tease {
     background: #313131 !important;
 }
