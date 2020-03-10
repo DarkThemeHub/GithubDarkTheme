@@ -49,6 +49,10 @@ body {
     background: #222;
 }
 
+.btn-octicon:hover {
+    color: white !important;
+}
+
 a,
 table.files td.icon,
 td.icon,
@@ -7394,9 +7398,11 @@ a.btn:hover,
 table.files tr.navigation-focus td {
     background: rgb(49, 51, 56) !important;
 }
+
 table.files tr.navigation-focus td[class="age"] {
     color: white !important;
 }
+
 .btn,
 a.btn,
 .file-navigation .btn-sm:not(.btn-primary) {
