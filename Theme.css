@@ -78,6 +78,10 @@ a.topic-tag,
     color: #4299fc !important;
 }
 
+.blob-num-expandable .directional-expander {
+    color: #ccc !important;
+}
+
 .pl-smi,
 .blob-code,
 .blob-code-inner {
