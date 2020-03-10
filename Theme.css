@@ -76,6 +76,10 @@ table.files td.icon .octicon-file-directory {
     color: white !important;
 }
 
+.select-menu-button:hover {
+    color: white !important;
+}
+
 a.topic-tag,
 .topic-tag {
     color: #b7cce4 !important;
@@ -7964,8 +7968,6 @@ a.select-menu-action,
     box-shadow: none !important;
 }
 
-.select-menu-title,
-.SelectMenu-title,
 .SelectMenu-divider {
     color: white !important;
 }
