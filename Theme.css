@@ -72,6 +72,10 @@ table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
     text-decoration: underline !important;
 }
 
+.project-header .project-header-link:hover {
+    color: white !important;
+}
+
 a.topic-tag,
 .topic-tag {
     color: #4299fc !important;
@@ -6112,7 +6116,6 @@ li.contribution .num,
 .manage-repo-access-lead,
 .manage-memberships-tabs-item,
 .pages-composer p,
-.project-header-link,
 .projects-reset-query,
 .pinned-repo-item .pinned-repository-handle,
 .diffstat-summary,
