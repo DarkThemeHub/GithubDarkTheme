@@ -59,7 +59,8 @@ table.files td.icon .octicon-file-directory,
 .commit-link,
 .link-gray:hover,
 .link-gray-dark:hover,
-.link-hover-blue:hover {
+.link-hover-blue:hover,
+.muted-link:hover {
     color: #4299fc;
 }
 
