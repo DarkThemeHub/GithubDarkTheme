@@ -2939,12 +2939,9 @@ article.full .alert,
     border-top: 1px solid #246 !important;
 }
 
-.timeline-comment.current-user:before {
-    border-right-color: #246 !important;
-}
-
+.timeline-comment.current-user,
 .timeline-comment.current-user:after {
-    border-right-color: #182030 !important;
+    border-color: #2c5f98 !important;
 }
 
 .flash,
