@@ -56,8 +56,11 @@ table.files td.icon .octicon-file-directory {
     color: #4299fc;
 }
 
+table.files td.icon,
+table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
 .commit-ref,
+.js-add-project-description,
 .link-gray:hover,
 .link-gray-dark:hover,
 .link-hover-blue:hover {
@@ -6267,7 +6270,6 @@ ul.comparison-list > li.title,
 .numbers-summary .octicon,
 table.files td .simplified-path,
 table.files td.message,
-table.files td.message a,
 table.files td.age,
 .settings-email
     .email-actions
@@ -6282,6 +6284,14 @@ table.files td.age,
 .home-hero-signup .form-control-note,
 .icon-cta > .octicon {
     color: #aaa !important;
+}
+
+.navigation-focus a.link-gray {
+    color: white !important;
+}
+
+table.files td.message a {
+    color: #aaa;
 }
 
 /* auto-generated rule for "color: rgba(27,31,35,0.85)" */
@@ -7361,7 +7371,6 @@ a.btn:hover,
     background: #25272a !important;
 }
 
-table.files tr.navigation-focus td,
 .subnav-item:hover,
 .subnav-search-context .btn:hover,
 .subnav-item.selected,
@@ -7382,6 +7391,12 @@ table.files tr.navigation-focus td,
     color: white !important;
 }
 
+table.files tr.navigation-focus td {
+    background: rgb(49, 51, 56) !important;
+}
+table.files tr.navigation-focus td[class="age"] {
+    color: white !important;
+}
 .btn,
 a.btn,
 .file-navigation .btn-sm:not(.btn-primary) {
@@ -7968,6 +7983,7 @@ a.select-menu-action,
     box-shadow: none !important;
 }
 
+.SelectMenu-title,
 .SelectMenu-divider {
     color: white !important;
 }
