@@ -61,7 +61,7 @@ table.files td.icon .octicon-file-directory,
 .link-gray-dark:hover,
 .link-hover-blue:hover,
 .muted-link:hover {
-    color: #4299fc;
+    color: #4299fc !important;
 }
 
 .btn-link:hover,
@@ -70,7 +70,7 @@ table.files td.icon .octicon-file-directory,
 .link-gray-dark:hover,
 .link-hover-blue:hover,
 .project-header .project-header-link:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 a.topic-tag,
