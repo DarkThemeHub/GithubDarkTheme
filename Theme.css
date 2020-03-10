@@ -8026,3 +8026,31 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .tabnav-tab[aria-current] {
     background-color: unset !important;
 }
+
+table.files td.icon,
+table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
+.commit-link,
+.commit-ref,
+.link-gray:hover,
+.link-gray-dark:hover,
+.link-hover-blue:hover {
+    color: #4299fc !important;
+}
+
+.btn-link:hover,
+.commit-link:hover,
+.link-gray:hover,
+.link-gray-dark:hover,
+.link-hover-blue:hover,
+.project-header .project-header-link:hover {
+    text-decoration: underline !important;
+}
+
+.project-header .project-header-link:hover {
+    color: white !important;
+}
+
+a.topic-tag,
+.topic-tag {
+    color: #4299fc !important;
+}
