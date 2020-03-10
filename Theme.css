@@ -49,6 +49,10 @@ body {
     background: #222;
 }
 
+a {
+    color: #4299fc;
+}
+
 table.files td.icon,
 table.files td.icon .octicon-file-directory,
 .btn-link,
