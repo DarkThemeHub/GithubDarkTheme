@@ -73,6 +73,11 @@ table.files td.icon .octicon-file-directory,
     text-decoration: underline;
 }
 
+a.topic-tag,
+.topic-tag {
+    color: #4299fc !important;
+}
+
 .pl-smi,
 .blob-code,
 .blob-code-inner {
@@ -2876,7 +2881,6 @@ article.full .alert a,
 .timeline-comment-label.collaborator-comment,
 .hook-delivery-guid .octicon,
 .hook-delivery-guid a,
-a.topic-tag,
 .RecentBranches,
 .RecentBranches-item-link {
     color: #9daccc !important;
@@ -2913,7 +2917,7 @@ article.full .alert,
 .topic-tag,
 .RecentBranches,
 .js-tag-input-tag {
-    border: 1px solid #246 !important;
+    border: 1px solid #2c5f98 !important;
 }
 
 .repo-file-upload-progress,
