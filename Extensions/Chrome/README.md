@@ -26,7 +26,7 @@ Your item did not comply with the following section of our Program Policies:
 <hr>
 
 ## Install already unpacked extension
-1. Simply unzip the content in a folder somewhere. Get the zip from releases.
+1. Get the zip from releases. Simply unzip the content in a folder somewhere. 
 2. In Url of Chrome, enter `Chrome://Extensions`
 3. Turn on developer mode on top right
 4. Top left, click `load unpacked` and choose the directory you unzipped the contents in.
