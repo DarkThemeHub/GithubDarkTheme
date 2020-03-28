@@ -83,7 +83,7 @@ async function tryInstallOrUpdate() {
     });
 }
 
-const semVersionRegex = "^[0-9]*\.[0-9]*\..*"
+const semVersionRegex = new RegExp(/^([0-9]*\.[0-9]*\..*)/)
 
 async function getLatestReleaseVersion(): Promise<string> {
     const response = await fetch(API_ADDRESS + `repos/${REPO_OWNER}/${REPO_NAME}/releases`);
