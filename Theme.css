@@ -1816,7 +1816,7 @@ body .bg-white,
 .sidebar-module,
 .form-control {
     background-color: #25272a !important;
-    border-color: 1px solid #343434 !important;
+    border: 1px solid #343434 !important;
 }
 
 .markdown-body table tr,
