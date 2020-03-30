@@ -4298,8 +4298,9 @@ a.text-red,
 
 /* yellow text */
 
+/* search suggestions highlight matching characters */
+.jump-to-suggestion-name mark,
 /* .bg-pending might be a GitHub bug as it sets the fg */
-
 .text-pending,
 a.text-pending,
 .text-renamed,
