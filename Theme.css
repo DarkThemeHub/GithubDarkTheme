@@ -1816,7 +1816,7 @@ body .bg-white,
 .sidebar-module,
 .form-control {
     background-color: #25272a !important;
-    border-color: 1px solid #343434 !important;
+    border: 1px solid #343434 !important;
 }
 
 .markdown-body table tr,
@@ -4298,8 +4298,9 @@ a.text-red,
 
 /* yellow text */
 
+/* search suggestions highlight matching characters */
+.jump-to-suggestion-name mark,
 /* .bg-pending might be a GitHub bug as it sets the fg */
-
 .text-pending,
 a.text-pending,
 .text-renamed,
