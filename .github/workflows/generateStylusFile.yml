@@ -1,11 +1,9 @@
 name: GenerateStylusFile
 
 on:
-  push:
+  release:
     branches: master
-    paths:
-      - 'Theme.css'
-      - 'Scripts/*'
+    types: [published, unpublished, deleted]
 jobs:
   build:
     runs-on: ubuntu-latest
