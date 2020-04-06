@@ -4,7 +4,7 @@
 <hr>
 
 ## Why did you create a dedicated extension?
-* Stylus does not have auto update on styles, so you have to manually hit that update button.
+* <s>Stylus does not have auto update on styles, so you have to manually hit that update button.</s>
 * There are future plans on supporting different "flavours" of the theme, which having a dedicated extension makes it easy to switch.
 * This is the first stage to the more generic `DarkThemeHub` extension which will allow users to apply all the themes provided by `DarkThemeHub`
 
