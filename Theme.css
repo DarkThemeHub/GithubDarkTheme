@@ -16,6 +16,23 @@ body {
     background-color: #333;
 }
 
+.updates.font-regular {
+    background: #24292e !important;
+    color: white !important;
+}
+
+.components-section.font-regular,
+.components-uptime-link.history-footer-link,
+.component-container.border-color {
+    background: #24292e !important;
+    color: white !important;
+}
+
+.tooltip-base.tool.tooltipstered {
+    color: black !important;
+    background: white !important;
+}
+
 .discussion-header,
 .discussion-block-title,
 .discussion-labels,
@@ -41,6 +58,7 @@ body {
     color: white !important;
 }
 
+.legend-item.light.legend-item-date-range,
 .d-flex {
     color: white !important;
 }
