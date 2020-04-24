@@ -16,23 +16,6 @@ body {
     background-color: #333;
 }
 
-.updates.font-regular {
-    background: #24292e !important;
-    color: white !important;
-}
-
-.components-section.font-regular,
-.components-uptime-link.history-footer-link,
-.component-container.border-color {
-    background: #24292e !important;
-    color: white !important;
-}
-
-.tooltip-base.tool.tooltipstered {
-    color: black !important;
-    background: white !important;
-}
-
 .discussion-header,
 .discussion-block-title,
 .discussion-labels,
@@ -8069,4 +8052,78 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 
 .tabnav-tab[aria-current] {
     background-color: unset !important;
+}
+
+/* githubstatus.com */
+
+.components-section.font-regular {
+    padding: 20px !important;
+}
+
+.illo-desktop-header {
+    filter: invert(0.9);
+}
+
+.incident-container .incident-title::before {
+    background-color: #dbab09;
+    background: #dbab09
+        url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99999 2.3C10.14 2.3 12.7 4.86 12.7 8C12.7 11.14 10.14 13.7 6.99999 13.7C3.85999 13.7 1.29999 11.14 1.29999 8C1.29999 4.86 3.85999 2.3 6.99999 2.3ZM7 1C3.14 1 0 4.14 0 8C0 11.86 3.14 15 7 15C10.86 15 14 11.86 14 8C14 4.14 10.86 1 7 1ZM8 4H6V9H8V4ZM8 10H6V12H8V10Z' fill='%236a737d'/%3E%3C/svg%3e")
+        no-repeat center center;
+    border: 2px solid #dbab09;
+}
+
+.incident-container::before {
+    background-color: #555555 !important;
+}
+
+.status-day > .date::before {
+    background: #555555
+        url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13 2H12V3.5C12 3.78 11.78 4 11.5 4H9.5C9.22 4 9 3.78 9 3.5V2H6V3.5C6 3.78 5.78 4 5.5 4H3.5C3.22 4 3 3.78 3 3.5V2H2C1.45 2 1 2.45 1 3V14C1 14.55 1.45 15 2 15H13C13.55 15 14 14.55 14 14V3C14 2.45 13.55 2 13 2ZM13 14H2V5H13V14ZM5 3H4V1H5V3ZM11 3H10V1H11V3ZM6 7H5V6H6V7ZM8 7H7V6H8V7ZM10 7H9V6H10V7ZM12 7H11V6H12V7ZM4 9H3V8H4V9ZM6 9H5V8H6V9ZM8 9H7V8H8V9ZM10 9H9V8H10V9ZM12 9H11V8H12V9ZM4 11H3V10H4V11ZM6 11H5V10H6V11ZM8 11H7V10H8V11ZM10 11H9V10H10V11ZM12 11H11V10H12V11ZM4 13H3V12H4V13ZM6 13H5V12H6V13ZM8 13H7V12H8V13ZM10 13H9V12H10V13Z' fill='%23fff'/%3E%3C/svg%3e")
+        no-repeat center center;
+}
+
+.status-day::before,
+.incident-list::before {
+    background-color: #555;
+}
+
+.page-footer {
+    border-top: 3px solid #555 !important;
+}
+
+.layout-content.status.status-api
+    .section
+    .example-container
+    .example-opener
+    .color-secondary,
+.grouped-items-selector,
+.layout-content.status.status-full-history .history-nav a.current,
+#uptime-tooltip .tooltip-box {
+    background-color: #444;
+}
+
+.shared-partial.uptime-90-days-wrapper svg rect:hover {
+    fill: #fff;
+}
+
+.updates.font-regular {
+    background: #24292e !important;
+    color: white !important;
+}
+
+.components-section.font-regular,
+.components-uptime-link.history-footer-link,
+.component-container.border-color {
+    background: #24292e !important;
+    color: white !important;
+}
+
+.tooltip-base.tool.tooltipstered {
+    color: black !important;
+    background: white !important;
+}
+
+.legend-item.light.legend-item-date-range,
+.message.incident-body.color-primary {
+    color: white;
 }
