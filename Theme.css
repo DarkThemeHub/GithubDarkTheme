@@ -8126,3 +8126,11 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .message.incident-body.color-primary {
     color: white;
 }
+
+.layout-content.status
+    .shared-partial.uptime-90-days-wrapper
+    .legend
+    .legend-item.light {
+    color: #ffffff;
+    opacity: 0.5;
+}
