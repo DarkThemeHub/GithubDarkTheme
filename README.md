@@ -5,7 +5,7 @@
 # GithubDarkTheme
 Show your support and hit that Star :P
 
-[Join the discord to stay up to date with releases and submit other suggestions](https://discord.gg/pSs9YYn)
+[Join the discord](https://discord.gg/pSs9YYn) to stay up to date with releases and submit other suggestions
 
 [How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
