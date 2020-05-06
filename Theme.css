@@ -1,3 +1,7 @@
+html {
+	background-color: #222;
+}
+
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -14,6 +18,12 @@ body {
 
 .pinned-item-checkbox:checked + .pinned-item-name {
     background-color: #333;
+}
+
+.SelectMenu-blankslate,
+.SelectMenu-loading,
+.SelectMenu-message {
+ background-color:#25272a !important;
 }
 
 .discussion-header,
