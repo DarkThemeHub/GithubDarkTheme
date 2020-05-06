@@ -9,7 +9,11 @@
 @updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
 ==/UserStyle== */
 
-@-moz-document regexp("^https?:\/\/(?!www\.google\.com)(((?!desktop).*\.)?(githubusercontent|githubstatus|github)\.(?!io|myshopify|blog)).*") {
+@-moz-document regexp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|githubstatus|github)\.(?!io|myshopify|blog)).*") {
+html {
+	background-color: #222;
+}
+
 body {
     background-color: #222 !important;
     background-clip: border-box !important;
@@ -26,6 +30,12 @@ body {
 
 .pinned-item-checkbox:checked + .pinned-item-name {
     background-color: #333;
+}
+
+.SelectMenu-blankslate,
+.SelectMenu-loading,
+.SelectMenu-message {
+ background-color:#25272a !important;
 }
 
 .discussion-header,
