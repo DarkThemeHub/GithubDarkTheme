@@ -20,6 +20,12 @@ body {
     background-color: #333;
 }
 
+.SelectMenu-blankslate,
+.SelectMenu-loading,
+.SelectMenu-message {
+ background-color:#25272a !important;
+}
+
 .discussion-header,
 .discussion-block-title,
 .discussion-labels,
