@@ -9,6 +9,7 @@ Show your support and hit that Star :P
 
 [How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
+[Regex Test](https://regex101.com/r/sEZPE5/5)
 <hr>
 
 ## Install the theme
