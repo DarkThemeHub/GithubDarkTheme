@@ -5,7 +5,7 @@
 
 ### Submitting a Pull Request
 #### Editing style: 
-* Only file you need to modify is the Theme.css file.
+* Only file you need to modify is the Theme.scss file.
 * Use Prettier as a css formatter with vscode.
    * Tab Width set to 4.
 * [Optional] Enable github action in forked repository to automaticly generate test files in the PR branch, which can be easily installed into stylus and speed up testing.
