@@ -19,7 +19,7 @@ Support us by hitting that Star and showing your friends :P
 
 [![image](https://img.shields.io/badge/Install-Stylus%20Firefox%20Extension-116b59.svg?longCache=true&amp;style=for-the-badge)](https://addons.mozilla.org/en-GB/firefox/addon/styl-us/)
 
-##### Step 2
+##### Step 2 ( Warning: Editing the theme file will disable auto update )
 [![image](https://img.shields.io/badge/Install/Update%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
 
 #### Link to theme on UserStyles ( Do not install from UserStyles! UserStyles proccessor breaks this theme's regex )
