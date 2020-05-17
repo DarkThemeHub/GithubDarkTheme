@@ -6,6 +6,7 @@
 ### Submitting a Pull Request
 #### Editing style: 
 * Only file you need to modify is the Theme.scss file.
+* Run `npm Start` to automatically generate Theme.css on Theme.scss changed.
 * Use Prettier as a css formatter with vscode.
    * Tab Width set to 4.
 * [Optional] Enable github action in forked repository to automaticly generate test files in the PR branch, which can be easily installed into stylus and speed up testing.
