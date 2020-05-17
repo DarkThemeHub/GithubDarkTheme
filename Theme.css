@@ -1,5 +1,5 @@
 html {
-	background-color: #222;
+    background-color: #222;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 .SelectMenu-blankslate,
 .SelectMenu-loading,
 .SelectMenu-message {
- background-color:#25272a !important;
+    background-color: #25272a !important;
 }
 
 .discussion-header,
@@ -114,6 +114,14 @@ a.topic-tag,
 
 .pl-en {
     color: #eaaa71 !important;
+}
+
+.request-info > strong {
+    color: white !important;
+}
+
+#user-activity-overview > .activity-overview-box {
+    border: none !important;
 }
 
 /* custom code font */
@@ -520,6 +528,10 @@ img[src$="/notices/context_button.png"] {
 .merge-pr-more-commits,
 .profile-timeline-month-heading {
     padding: 2px 5px !important;
+}
+
+.profile-timeline-month-heading {
+    position: relative !important;
 }
 
 input.tree-finder-input,
@@ -1484,10 +1496,12 @@ ul.color-label-list .color,
 .discussion-timeline:before {
     margin-top: 2px !important;
     height: calc(100% - 259px) !important;
+    z-index: unset !important;
 }
 
 .profile-timeline.discussion-timeline:before {
     height: 100% !important;
+    background-color: #555 !important;
 }
 
 .listings div.listing {
@@ -1964,7 +1978,6 @@ table.files tr.navigation-focus td,
 div.label-select-menu .select-menu-item.navigation-focus,
 div.label-select-menu .select-menu-item.navigation-focus.selected,
 .js-current .standalone a,
-.menu-item:hover,
 .Box-row--focus-gray.navigation-focus {
     background: #242424 !important;
 }
@@ -2548,6 +2561,10 @@ div#network.network > div > canvas {
     -webkit-filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
     filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
     background: transparent !important;
+}
+
+.emoji[alt=":heavy_check_mark:"] {
+    filter: brightness(1.2) !important;
 }
 
 /* Invert problematic emoji fallback images used on Windows */
@@ -4814,7 +4831,6 @@ table.files {
 .branch-infobar,
 .pagehead.repohead h1 .repo-label span,
 .coupons .coupon-form-body .coupon-icon,
-.menu,
 .merge-pr-more-commits,
 .api pre {
     border: 1px solid #484848 !important;
@@ -7326,6 +7342,17 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     background: linear-gradient(0deg, #ffffff42, hsla(0, 0%, 100%, 0));
 }
 
+.UnderlineNav.width-full.user-profile-nav.js-sticky.top-0.is-stuck,
+.user-profile-sticky-bar::after {
+    border-color: #222 !important;
+    border-width: 5px !important;
+    border-bottom-style: solid !important;
+}
+
+.user-profile-sticky-bar::after {
+    height: 52px !important;
+}
+
 .Popover-message {
     border: 1px solid !important;
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.7) !important;
@@ -7610,7 +7637,9 @@ div.light-bg a p {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.menu-item:hover,
+.menu[aria-label="Repository settings"] > .selected {
     background: #39424a !important;
 }
 
@@ -8070,8 +8099,8 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 }
 
 .illo-desktop-header {
-	filter: invert(0.9);
-	z-index: unset; 
+    filter: invert(0.9);
+    z-index: unset;
 }
 
 .incident-container .incident-title::before {
