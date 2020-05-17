@@ -522,6 +522,10 @@ img[src$="/notices/context_button.png"] {
     padding: 2px 5px !important;
 }
 
+.profile-timeline-month-heading {
+    position: relative !important;
+}
+
 input.tree-finder-input,
 input.tree-finder-input:focus,
 input.js-site-search-focus {
@@ -1484,10 +1488,12 @@ ul.color-label-list .color,
 .discussion-timeline:before {
     margin-top: 2px !important;
     height: calc(100% - 259px) !important;
+    z-index: unset !important;
 }
 
 .profile-timeline.discussion-timeline:before {
     height: 100% !important;
+    background-color: #555 !important;
 }
 
 .listings div.listing {
