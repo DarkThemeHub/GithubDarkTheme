@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "scss": "node-sass --include-path scss Theme.scss ScssOutput/Theme.css",
+        "start": "nodemon -e scss Theme.scss -x \"npm run scss\""
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "nodemon": "^2.0.3",
+        "node-sass": "^4.14.1"
+    }
+}
