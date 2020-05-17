@@ -1974,7 +1974,6 @@ table.files tr.navigation-focus td,
 div.label-select-menu .select-menu-item.navigation-focus,
 div.label-select-menu .select-menu-item.navigation-focus.selected,
 .js-current .standalone a,
-.menu-item:hover,
 .Box-row--focus-gray.navigation-focus {
     background: #242424 !important;
 }
@@ -4824,7 +4823,6 @@ table.files {
 .branch-infobar,
 .pagehead.repohead h1 .repo-label span,
 .coupons .coupon-form-body .coupon-icon,
-.menu,
 .merge-pr-more-commits,
 .api pre {
     border: 1px solid #484848 !important;
@@ -7620,7 +7618,9 @@ div.light-bg a p {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.menu-item:hover,
+.menu[aria-label="Repository settings"] > .selected {
     background: #39424a !important;
 }
 
