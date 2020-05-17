@@ -120,6 +120,10 @@ a.topic-tag,
     color: white !important;
 }
 
+#user-activity-overview > .activity-overview-box {
+    border: none !important;
+}
+
 /* custom code font */
 
 pre,
