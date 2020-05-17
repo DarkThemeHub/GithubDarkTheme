@@ -7334,6 +7334,17 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     background: linear-gradient(0deg, #ffffff42, hsla(0, 0%, 100%, 0));
 }
 
+.UnderlineNav.width-full.user-profile-nav.js-sticky.top-0.is-stuck,
+.user-profile-sticky-bar::after {
+    border-color: #222 !important;
+    border-width: 5px !important;
+    border-bottom-style: solid !important;
+}
+
+.user-profile-sticky-bar::after {
+    height: 52px !important;
+}
+
 .Popover-message {
     border: 1px solid !important;
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.7) !important;
