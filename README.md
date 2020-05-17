@@ -13,7 +13,6 @@ Support us by hitting that Star and showing your friends :P
 <hr>
 
 ## Install the theme
-#### Option 1
 
 ##### Step 1 (if not already installed browser extension)
 [![image](https://img.shields.io/badge/Install-Stylus%20Chrome%20Extension-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
