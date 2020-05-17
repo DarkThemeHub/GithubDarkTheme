@@ -2559,6 +2559,10 @@ div#network.network > div > canvas {
     background: transparent !important;
 }
 
+.emoji[alt=":heavy_check_mark:"] {
+    filter: brightness(1.2) !important;
+}
+
 /* Invert problematic emoji fallback images used on Windows */
 
 /* use tools/unicode-gen.js to generate */
