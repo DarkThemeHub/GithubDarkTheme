@@ -116,6 +116,10 @@ a.topic-tag,
     color: #eaaa71 !important;
 }
 
+.request-info > strong {
+    color: white !important;
+}
+
 /* custom code font */
 
 pre,
