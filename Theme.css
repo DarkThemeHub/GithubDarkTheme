@@ -1,5 +1,5 @@
 html {
-	background-color: #222;
+    background-color: #222;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 .SelectMenu-blankslate,
 .SelectMenu-loading,
 .SelectMenu-message {
- background-color:#25272a !important;
+    background-color: #25272a !important;
 }
 
 .discussion-header,
@@ -8080,8 +8080,8 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 }
 
 .illo-desktop-header {
-	filter: invert(0.9);
-	z-index: unset; 
+    filter: invert(0.9);
+    z-index: unset;
 }
 
 .incident-container .incident-title::before {
