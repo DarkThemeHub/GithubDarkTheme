@@ -22,7 +22,7 @@ Support us by hitting that Star and showing your friends :P
 ##### Step 2 ( Warning: Editing the theme file will disable auto update )
 [![image](https://img.shields.io/badge/Install/Update%20directly%20with-Stylus-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl)
 
-#### Link to theme on UserStyles ( Do not install from UserStyles! UserStyles proccessor breaks this theme's regex and will not auto update when updates are available)
+#### Link to theme on UserStyles ( Do not install from UserStyles! UserStyles proccessor breaks this theme's regex and will not auto update when updates are available )
 Userstyles.org Link to Theme: https://userstyles.org/styles/168350/githubdarktheme
 
 <hr>
