@@ -1859,6 +1859,11 @@ body .bg-white,
     border: 1px solid #343434 !important;
 }
 
+.form-control.input-sm
+    .header-search-input.jump-to-field.js-jump-to-field.js-site-search-focus.js-site-search-field {
+    color: white !important;
+}
+
 .markdown-body table tr,
 .blob-num-context,
 #user-content-toc td {
