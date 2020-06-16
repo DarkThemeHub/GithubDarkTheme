@@ -1636,6 +1636,10 @@ body .bg-white,
   background-color: #25272a !important;
   border: 1px solid #343434 !important; }
 
+.js-site-search-field:focus,
+.jump-to-dropdown-visible:focus {
+  color: white !important; }
+
 .markdown-body table tr,
 .blob-num-context,
 #user-content-toc td {
