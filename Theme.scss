@@ -28,10 +28,6 @@ body {
     background-position: left top !important;
 }
 
-.user-status-message-wrapper div {
-    color: white;
-}
-
 .pinned-item-checkbox:checked + .pinned-item-name {
     background-color: #333;
 }
@@ -7524,6 +7520,10 @@ a.btn,
 
 .user-status-message-wrapper div :hover {
     color: #0000EE !important;
+}
+
+.user-status-header g-emoji {
+     font-size: 1.23em;
 }
 
 .commits-listing:before,
