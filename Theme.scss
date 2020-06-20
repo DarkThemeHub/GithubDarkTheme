@@ -819,6 +819,11 @@ a.feed-icon,
     background-color: unset !important;
 }
 
+.js-selected-navigation-item.menu-item,
+.menu-item {
+    color: white !important;
+}
+
 /* remove background gradient */
 
 .big-notice,
@@ -1031,10 +1036,6 @@ details summary {
 .reponav-item .Counter {
     border-radius: 2px !important;
     padding: 2px 5px 3px !important;
-}
-
-.topic-tag {
-    padding: 0.2em 0.9em !important;
 }
 
 /* invisible border */
@@ -7515,6 +7516,14 @@ a.btn,
 
 .user-status-container-border-busy {
     background-color: #bd4a29 !important;
+}
+
+.user-status-message-wrapper div {
+    color: black !important;
+}
+
+.user-status-message-wrapper div :hover {
+    color: #0000EE !important;
 }
 
 .commits-listing:before,
