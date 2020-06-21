@@ -4924,7 +4924,8 @@ a.notifications-dropdown-see-all:hover {
 
 .awesome-autocomplete .aa-query strong,
 .awesome-autocomplete .aa-query-default em,
-.awesome-autocomplete .tt-suggestion .octicon {
+.awesome-autocomplete .tt-suggestion .octicon,
+.issue-link.js-issue-link.tooltipped.tooltipped-ne {
   color: #4183c4 !important; }
 
 .awesome-autocomplete .tt-suggestion .octicon-star {
