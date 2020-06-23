@@ -2606,6 +2606,9 @@ article.full .alert a,
 .RecentBranches-item-link {
   color: #9daccc !important; }
 
+.review-comment .pending-batched-suggestion-label {
+  background-color: #3a3301 !important; }
+
 .RecentBranches-item {
   color: #6d7c9c !important; }
 
@@ -6563,11 +6566,8 @@ a.btn,
 .user-status-container-border-busy {
   background-color: #bd4a29 !important; }
 
-.user-status-message-wrapper div {
-  color: black !important; }
-
-.user-status-message-wrapper div :hover {
-  color: #0000EE !important; }
+.user-status-circle-badge {
+  background-color: #353535 !important; }
 
 .user-status-header g-emoji {
   font-size: 1.23em; }
