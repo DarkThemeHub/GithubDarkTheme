@@ -4924,9 +4924,12 @@ a.notifications-dropdown-see-all:hover {
 
 .awesome-autocomplete .aa-query strong,
 .awesome-autocomplete .aa-query-default em,
-.awesome-autocomplete .tt-suggestion .octicon,
-.issue-link.js-issue-link.tooltipped.tooltipped-ne {
+.awesome-autocomplete .tt-suggestion .octicon {
   color: #4183c4 !important; }
+
+.issue-link.js-issue-link.tooltipped.tooltipped-ne,
+.issue-link.js-issue-link {
+  color: #4299fc !important; }
 
 .awesome-autocomplete .tt-suggestion .octicon-star {
   fill: #c0c0c0 !important; }
