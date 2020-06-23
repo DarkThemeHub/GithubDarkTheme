@@ -1,6 +1,7 @@
 $BackgroundColor-1: #222;
 $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
+$Blue-1: #4299fc;
 $MainContentBackgroundColor: $BackgroundColor-3;
 
 $IconHoverColor: white;
@@ -8,8 +9,8 @@ $NormalTextColor-1: white;
 $NavTextHoverColor-1: white;
 $NavTextColor: #bbb;
 $DescriptionTextColor-1: #bbb;
-$LinkColor: #4299fc;
-$BorderColor-1: #4299fc;
+$LinkColor: $Blue-1;
+$BorderColor-1: $Blue-1;
 $UserNameColor: white;
 
 $InputBackgroundColor: #25272a;
@@ -26,10 +27,6 @@ body {
     background-repeat: repeat !important;
     background-size: auto !important;
     background-position: left top !important;
-}
-
-.user-status-message-wrapper div {
-    color: white;
 }
 
 .pinned-item-checkbox:checked + .pinned-item-name {
@@ -89,7 +86,6 @@ table.files td.icon .octicon-file-directory {
 table.files td.icon,
 table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
-.commit-ref,
 .js-add-project-description,
 .link-gray:hover,
 .link-gray-dark:hover,
@@ -819,6 +815,16 @@ a.feed-icon,
     background-color: unset !important;
 }
 
+.markdown-body table th {
+    background: #25272a !important;
+    color: unset !important;
+}
+
+.js-selected-navigation-item.menu-item,
+.menu-item {
+    color: white !important;
+}
+
 /* remove background gradient */
 
 .big-notice,
@@ -1031,10 +1037,6 @@ details summary {
 .reponav-item .Counter {
     border-radius: 2px !important;
     padding: 2px 5px 3px !important;
-}
-
-.topic-tag {
-    padding: 0.2em 0.9em !important;
 }
 
 /* invisible border */
@@ -1939,6 +1941,11 @@ a.card.bg-gray-light:hover,
 .listgroup-header,
 .merge-status-item {
     background: $MainContentBackgroundColor !important;
+}
+
+.pagination .gap,
+.pagination a:not(.next_page):not(.previous_page) {
+    color: white !important;
 }
 
 @media all {
@@ -2951,9 +2958,17 @@ article.full .alert a,
     color: #9daccc !important;
 }
 
-.RecentBranches-item,
-.commit-ref .user {
+.review-comment .pending-batched-suggestion-label {
+	background-color: #3a3301 !important;
+}
+
+.RecentBranches-item {
     color: #6d7c9c !important;
+}
+
+.commit-ref .user,
+.commit-ref {
+	color: $Blue-1 !important;
 }
 
 .timeline-comment.current-user,
@@ -4044,7 +4059,6 @@ a.text-gray-light {
 .site-footer .octicon-mark-github,
 .select-menu-header .octicon,
 .steps li,
-.pagination .gap,
 .octicon-btn.disabled,
 .octicon-btn.disabled:hover,
 .branch-delete.disabled,
@@ -5587,6 +5601,11 @@ a.notifications-dropdown-see-all:hover {
 .awesome-autocomplete .aa-query-default em,
 .awesome-autocomplete .tt-suggestion .octicon {
     color: #4183c4 !important;
+}
+
+.issue-link.js-issue-link.tooltipped.tooltipped-ne,
+.issue-link.js-issue-link {
+	color: #4299fc !important;
 }
 
 .awesome-autocomplete .tt-suggestion .octicon-star {
@@ -7517,6 +7536,14 @@ a.btn,
     background-color: #bd4a29 !important;
 }
 
+.user-status-circle-badge {
+	background-color: #353535 !important;
+}
+
+.user-status-header g-emoji {
+     font-size: 1.23em;
+}
+
 .commits-listing:before,
 .profile-timeline.discussion-timeline:before,
 .discussion-timeline:before,
@@ -7578,7 +7605,7 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
 
 .TimelineItem-badge {
     background-color: #555555 !important;
-    color: #bbbbbb !important;
+    color: #fff !important;
 }
 
 .TimelineItem:before {
