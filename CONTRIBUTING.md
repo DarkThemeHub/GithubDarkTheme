@@ -7,9 +7,11 @@
 #### Editing style: 
 * Only file you need to modify is the Theme.scss file.
 * Run `npm Start` to automatically generate Theme.css on Theme.scss changed.
+* Execute `GenerateStylusTestFile.py` and commit the file on PR. You can install this test file by going to raw format just like the main theme file.
+  * If you edit the main theme file, your theme will no longer be auto updated until its refreshed via theme manager. This is why the test file generator exists.
 * Use Prettier as a css formatter with vscode.
    * Tab Width set to 4.
-* [Optional] Enable github action in forked repository to automaticly generate test files in the PR branch, which can be easily installed into stylus and speed up testing.
+* If your branch is a fork, dont worry about the pipeline failing, it is due to your fork not having the priviledge to run an action on this repo.
 
 #### Keep it simple and minimal: 
 * Changing a class style can cause unwanted changes in other places due to github's terrible css practices. Doing simple and minimal changes ensures changes can be easily tracked and identified when reviewing.
