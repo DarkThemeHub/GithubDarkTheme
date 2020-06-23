@@ -1,6 +1,7 @@
 $BackgroundColor-1: #222;
 $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
+$Blue-1: #4299fc;
 $MainContentBackgroundColor: $BackgroundColor-3;
 
 $IconHoverColor: white;
@@ -8,8 +9,8 @@ $NormalTextColor-1: white;
 $NavTextHoverColor-1: white;
 $NavTextColor: #bbb;
 $DescriptionTextColor-1: #bbb;
-$LinkColor: #4299fc;
-$BorderColor-1: #4299fc;
+$LinkColor: $Blue-1;
+$BorderColor-1: $Blue-1;
 $UserNameColor: white;
 
 $InputBackgroundColor: #25272a;
@@ -85,7 +86,6 @@ table.files td.icon .octicon-file-directory {
 table.files td.icon,
 table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
-.commit-ref,
 .js-add-project-description,
 .link-gray:hover,
 .link-gray-dark:hover,
@@ -2958,9 +2958,13 @@ article.full .alert a,
     color: #9daccc !important;
 }
 
-.RecentBranches-item,
-.commit-ref .user {
+.RecentBranches-item {
     color: #6d7c9c !important;
+}
+
+.commit-ref .user,
+.commit-ref {
+	color: $Blue-1 !important;
 }
 
 .timeline-comment.current-user,

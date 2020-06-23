@@ -57,7 +57,6 @@ table.files td.icon .octicon-file-directory {
 table.files td.icon,
 table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
-.commit-ref,
 .js-add-project-description,
 .link-gray:hover,
 .link-gray-dark:hover,
@@ -694,7 +693,7 @@ a.feed-icon,
 
 .js-selected-navigation-item.menu-item,
 .menu-item {
-    color: white !important; }
+  color: white !important; }
 
 /* remove background gradient */
 .big-notice,
@@ -1717,7 +1716,7 @@ a.card.bg-gray-light:hover,
 
 .pagination .gap,
 .pagination a:not(.next_page):not(.previous_page) {
-    color: white !important; }
+  color: white !important; }
 
 @media all {
   .page-responsive .pagehead,
@@ -2607,9 +2606,12 @@ article.full .alert a,
 .RecentBranches-item-link {
   color: #9daccc !important; }
 
-.RecentBranches-item,
-.commit-ref .user {
+.RecentBranches-item {
   color: #6d7c9c !important; }
+
+.commit-ref .user,
+.commit-ref {
+  color: #4299fc !important; }
 
 .timeline-comment.current-user,
 .github-jobs-promotion p,
@@ -6562,13 +6564,13 @@ a.btn,
   background-color: #bd4a29 !important; }
 
 .user-status-message-wrapper div {
-    color: black !important; }
+  color: black !important; }
 
 .user-status-message-wrapper div :hover {
-    color: #0000EE !important; }
+  color: #0000EE !important; }
 
 .user-status-header g-emoji {
-     font-size: 1.23em; }
+  font-size: 1.23em; }
 
 .commits-listing:before,
 .profile-timeline.discussion-timeline:before,
