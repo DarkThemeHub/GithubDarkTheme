@@ -688,6 +688,10 @@ a.feed-icon,
   background: none !important;
   background-color: unset !important; }
 
+.markdown-body table th {
+  background: #25272a !important;
+  color: unset !important; }
+
 .js-selected-navigation-item.menu-item,
 .menu-item {
     color: white !important; }
