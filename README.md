@@ -9,7 +9,7 @@ Support us by hitting that Star and showing your friends :P
 
 [How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
-[Regex Test](https://regex101.com/r/sEZPE5/8)
+[Regex Test](https://regex101.com/r/sEZPE5/9)
 <hr>
 
 ## Install the theme
