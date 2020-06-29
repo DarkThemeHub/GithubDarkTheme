@@ -3984,6 +3984,10 @@ a.text-gray-light {
     color: #7b7b7b !important;
 }
 
+.btn-link {
+	color: $LinkColor;
+}
+
 .branch-infobar .lightweight-actions > li .octicon,
 .manage-repo-access-icon .octicon,
 .wiki-wrapper .wiki-history .date,
