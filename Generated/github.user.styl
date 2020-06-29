@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.31.1
+@version      1.32.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -43,6 +43,9 @@ body {
 
 .graphs .selection .overlay {
   visibility: hidden !important; }
+
+.UnderlineNav {
+  box-shadow: none !important; }
 
 .UnderlineNav-item {
   color: #bbb !important; }
@@ -699,6 +702,10 @@ a.feed-icon,
   background: none !important;
   background-color: unset !important; }
 
+.review-comment-contents .timeline-comment-label {
+  border: 1px solid #bbb !important;
+  color: #bbb; }
+
 .markdown-body table th {
   background: #25272a !important;
   color: unset !important; }
@@ -823,54 +830,14 @@ details summary {
   position: relative !important;
   top: -1px; }
 
-/* GitHub Bug: Center counters vertically on the line */
-.boxed-group .counter,
-.reponav-item .counter,
-.boxed-group .Counter,
-.reponav-item .Counter {
-  position: relative !important;
-  top: -1px !important; }
-
 /* GitHub Bug: Fix image swipe handle misalignment */
 .swipe .swipe-frame .swipe-bar .top-handle,
 .swipe .swipe-frame .swipe-bar .bottom-handle {
   left: -6px !important; }
 
-/* GitHub Bug: Fix text selection not working on inline <code> bug in Firefox */
-.markdown-body code,
-.markdown-body tt {
-  padding: 0 0.3em !important;
-  display: inline-block !important;
-  max-width: 100% !important; }
-
 /* GitHub Bug: Stop commit message field from resizing horizontally */
 #commit-description-textarea {
   resize: vertical !important; }
-
-/* GitHub Bug: Fix broken position:sticky emulation in Firefox */
-@supports (position: sticky) {
-  .discussion-sidebar {
-    position: sticky !important;
-    top: 0 !important; }
-  .discussion-sidebar-sticky {
-    position: static !important;
-    width: auto !important; }
-  .discussion-sidebar .is-placeholder {
-    display: none !important; } }
-
-/* GitHub Bug: Fix org layout issue */
-/* https://github.com/isaacs/github/issues/934 */
-.user-profile-repo-filter {
-  width: 100% !important; }
-
-/* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
-#conversation_tab_counter,
-#commits_tab_counter,
-#files_tab_counter,
-.reponav-item .counter,
-.reponav-item .Counter {
-  border-radius: 2px !important;
-  padding: 2px 5px 3px !important; }
 
 /* invisible border */
 .gisttabs a:not(.selected),
@@ -1206,7 +1173,6 @@ input.subnav-search-input,
 .build-status-item,
 .pagehead-tabs-item.selected,
 .org-header,
-.pagehead,
 .branch-action-item + .mergeability-details,
 .migration-section,
 .migrate-org-roles,
@@ -2137,10 +2103,10 @@ ul.fieldpills li,
   border-color: #484848 !important; }
 
 /* contribution calendar and blame heats */
-.calendar-graph rect[fill="#c6e48b"],
-.calendar-graph rect[fill="#7bc96f"],
-.calendar-graph rect[fill="#239a3b"],
-.calendar-graph rect[fill="#196127"],
+.calendar-graph rect[fill="#9be9a8"],
+.calendar-graph rect[fill="#40c463"],
+.calendar-graph rect[fill="#30a14e"],
+.calendar-graph rect[fill="#216e39"],
 .heat,
 .contrib-legend li {
   background-color: #4183c4 !important;
@@ -2160,26 +2126,26 @@ ul.fieldpills li,
 
 .heat[data-heat="1"],
 .heat[data-heat="2"],
-.calendar-graph rect[fill="#c6e48b"],
-.contrib-legend li[style*="#c6e48b"] {
+.calendar-graph rect[fill="#9be9a8"],
+.contrib-legend li[style*="#9be9a8"] {
   opacity: 0.25 !important; }
 
 .heat[data-heat="3"],
 .heat[data-heat="4"],
-.calendar-graph rect[fill="#7bc96f"],
-.contrib-legend li[style*="#7bc96f"] {
+.calendar-graph rect[fill="#40c463"],
+.contrib-legend li[style*="#40c463"] {
   opacity: 0.5 !important; }
 
 .heat[data-heat="5"],
 .heat[data-heat="6"],
-.calendar-graph rect[fill="#239a3b"],
-.contrib-legend li[style*="#239a3b"] {
+.calendar-graph rect[fill="#30a14e"],
+.contrib-legend li[style*="#30a14e"] {
   opacity: 0.75 !important; }
 
 .heat[data-heat="7"],
 .heat[data-heat="8"],
-.calendar-graph rect[fill="#196127"],
-.contrib-legend li[style*="#196127"] {
+.calendar-graph rect[fill="#216e39"],
+.contrib-legend li[style*="#216e39"] {
   opacity: 1 !important; }
 
 /* contribution calendar - halloween colors */
@@ -3035,7 +3001,6 @@ a.team-mention,
 .pagehead-tabs-item.selected,
 .pagehead-tabs-item:hover,
 a.pagehead-tabs-item:hover,
-.tabnav-tab.selected,
 .leaflet-control-attribution,
 .leaflet-control-attribution a,
 .integrations-breadcrumb-link,
@@ -3132,7 +3097,6 @@ a.box-action,
 .list-group-item .list-group-item-meta a,
 .list-browser-sorts .sort-type,
 .select-menu-header .select-menu-title,
-#commits_tab_counter,
 .auto-search-group .search-filter,
 .usage-bar dt,
 .github-jobs-promotion p a,
@@ -3635,6 +3599,9 @@ a.commit-id,
 .text-gray-light,
 a.text-gray-light {
   color: #7b7b7b !important; }
+
+.btn-link {
+  color: #4299fc; }
 
 .branch-infobar .lightweight-actions > li .octicon,
 .manage-repo-access-icon .octicon,
@@ -6527,6 +6494,10 @@ a.btn:hover,
   background: #313338 !important;
   color: white !important; }
 
+nav .Counter,
+nav .counter {
+  color: inherit !important; }
+
 table.files tr.navigation-focus td {
   background: #313338 !important; }
 
@@ -6583,6 +6554,9 @@ a.btn,
 
 .user-status-header g-emoji {
   font-size: 1.23em; }
+
+.toggle-user-status-edit:hover .user-status-message-wrapper {
+  color: #4299fc !important; }
 
 .commits-listing:before,
 .profile-timeline.discussion-timeline:before,
@@ -6965,6 +6939,10 @@ h4 {
 .SelectMenu-divider {
   background-color: unset !important;
   background: none !important; }
+
+.SelectMenu-tabs {
+  box-shadow: inset 0 -1px 0 #343434 !important;
+  padding-bottom: 1px !important; }
 
 .select-menu-filters,
 .SelectMenu-modal,
