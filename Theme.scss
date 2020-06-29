@@ -7499,6 +7499,10 @@ a.btn,
      font-size: 1.23em;
 }
 
+.toggle-user-status-edit:hover .user-status-message-wrapper {
+	color: $LinkColor !important;
+}
+
 .commits-listing:before,
 .profile-timeline.discussion-timeline:before,
 .discussion-timeline:before,
