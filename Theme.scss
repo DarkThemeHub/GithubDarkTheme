@@ -970,16 +970,6 @@ details summary {
     top: -1px;
 }
 
-/* GitHub Bug: Center counters vertically on the line */
-
-.boxed-group .counter,
-.reponav-item .counter,
-.boxed-group .Counter,
-.reponav-item .Counter {
-    position: relative !important;
-    top: -1px !important;
-}
-
 /* GitHub Bug: Fix image swipe handle misalignment */
 
 .swipe .swipe-frame .swipe-bar .top-handle,
@@ -987,45 +977,10 @@ details summary {
     left: -6px !important;
 }
 
-/* GitHub Bug: Fix text selection not working on inline <code> bug in Firefox */
-
-.markdown-body code,
-.markdown-body tt {
-    padding: 0 0.3em !important;
-    display: inline-block !important;
-    max-width: 100% !important;
-}
-
 /* GitHub Bug: Stop commit message field from resizing horizontally */
 
 #commit-description-textarea {
     resize: vertical !important;
-}
-
-/* GitHub Bug: Fix broken position:sticky emulation in Firefox */
-
-@supports (position: sticky) {
-    .discussion-sidebar {
-        position: sticky !important;
-        top: 0 !important;
-    }
-
-    .discussion-sidebar-sticky {
-        position: static !important;
-        width: auto !important;
-    }
-
-    .discussion-sidebar .is-placeholder {
-        display: none !important;
-    }
-}
-
-/* GitHub Bug: Fix org layout issue */
-
-/* https://github.com/isaacs/github/issues/934 */
-
-.user-profile-repo-filter {
-    width: 100% !important;
 }
 
 /* invisible border */
