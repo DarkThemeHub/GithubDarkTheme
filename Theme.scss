@@ -3,16 +3,22 @@ $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
 $Blue-1: #4299fc;
 $MainContentBackgroundColor: $BackgroundColor-3;
+$Grey-1: #bbb;
+$Grey-2: #b5b5b5;
 
 $IconHoverColor: white;
 $NormalTextColor-1: white;
 $NavTextHoverColor-1: white;
-$NavTextColor: #bbb;
-$DescriptionTextColor-1: #bbb;
+$NavTextColor: $Grey-1;
+$DescriptionTextColor-1: $Grey-1;
 $LinkColor: $Blue-1;
-$BorderColor-1: $Blue-1;
-$UserNameColor: white;
 
+$BorderColor-1: $Blue-1;
+$SeparationBorderColor-1: #343434;
+
+$UserNameColor: white;
+$ReviewCommentLabelColor: $Grey-1;
+$ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: #25272a;
 
 html {
@@ -55,6 +61,11 @@ body {
 .graphs .selection .overlay {
     visibility: hidden !important;
 }
+
+.UnderlineNav {
+	box-shadow: none !important;
+}
+
 .UnderlineNav-item {
     color: $NavTextColor !important;
 }
@@ -815,6 +826,11 @@ a.feed-icon,
     background-color: unset !important;
 }
 
+.review-comment-contents .timeline-comment-label {
+    border: $ReviewCommentLabelBorder !important;
+    color: $ReviewCommentLabelColor;
+}
+
 .markdown-body table th {
     background: #25272a !important;
     color: unset !important;
@@ -970,16 +986,6 @@ details summary {
     top: -1px;
 }
 
-/* GitHub Bug: Center counters vertically on the line */
-
-.boxed-group .counter,
-.reponav-item .counter,
-.boxed-group .Counter,
-.reponav-item .Counter {
-    position: relative !important;
-    top: -1px !important;
-}
-
 /* GitHub Bug: Fix image swipe handle misalignment */
 
 .swipe .swipe-frame .swipe-bar .top-handle,
@@ -987,56 +993,10 @@ details summary {
     left: -6px !important;
 }
 
-/* GitHub Bug: Fix text selection not working on inline <code> bug in Firefox */
-
-.markdown-body code,
-.markdown-body tt {
-    padding: 0 0.3em !important;
-    display: inline-block !important;
-    max-width: 100% !important;
-}
-
 /* GitHub Bug: Stop commit message field from resizing horizontally */
 
 #commit-description-textarea {
     resize: vertical !important;
-}
-
-/* GitHub Bug: Fix broken position:sticky emulation in Firefox */
-
-@supports (position: sticky) {
-    .discussion-sidebar {
-        position: sticky !important;
-        top: 0 !important;
-    }
-
-    .discussion-sidebar-sticky {
-        position: static !important;
-        width: auto !important;
-    }
-
-    .discussion-sidebar .is-placeholder {
-        display: none !important;
-    }
-}
-
-/* GitHub Bug: Fix org layout issue */
-
-/* https://github.com/isaacs/github/issues/934 */
-
-.user-profile-repo-filter {
-    width: 100% !important;
-}
-
-/* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
-
-#conversation_tab_counter,
-#commits_tab_counter,
-#files_tab_counter,
-.reponav-item .counter,
-.reponav-item .Counter {
-    border-radius: 2px !important;
-    padding: 2px 5px 3px !important;
 }
 
 /* invisible border */
@@ -1378,7 +1338,6 @@ input.subnav-search-input,
 .build-status-item,
 .pagehead-tabs-item.selected,
 .org-header,
-.pagehead,
 .branch-action-item + .mergeability-details,
 .migration-section,
 .migrate-org-roles,
@@ -2387,10 +2346,10 @@ ul.fieldpills li,
 
 /* contribution calendar and blame heats */
 
-.calendar-graph rect[fill="#c6e48b"],
-.calendar-graph rect[fill="#7bc96f"],
-.calendar-graph rect[fill="#239a3b"],
-.calendar-graph rect[fill="#196127"],
+.calendar-graph rect[fill="#9be9a8"],
+.calendar-graph rect[fill="#40c463"],
+.calendar-graph rect[fill="#30a14e"],
+.calendar-graph rect[fill="#216e39"],
 .heat,
 .contrib-legend li {
     background-color: #4183c4 !important;
@@ -2415,29 +2374,29 @@ ul.fieldpills li,
 
 .heat[data-heat="1"],
 .heat[data-heat="2"],
-.calendar-graph rect[fill="#c6e48b"],
-.contrib-legend li[style*="#c6e48b"] {
+.calendar-graph rect[fill="#9be9a8"],
+.contrib-legend li[style*="#9be9a8"] {
     opacity: 0.25 !important;
 }
 
 .heat[data-heat="3"],
 .heat[data-heat="4"],
-.calendar-graph rect[fill="#7bc96f"],
-.contrib-legend li[style*="#7bc96f"] {
+.calendar-graph rect[fill="#40c463"],
+.contrib-legend li[style*="#40c463"] {
     opacity: 0.5 !important;
 }
 
 .heat[data-heat="5"],
 .heat[data-heat="6"],
-.calendar-graph rect[fill="#239a3b"],
-.contrib-legend li[style*="#239a3b"] {
+.calendar-graph rect[fill="#30a14e"],
+.contrib-legend li[style*="#30a14e"] {
     opacity: 0.75 !important;
 }
 
 .heat[data-heat="7"],
 .heat[data-heat="8"],
-.calendar-graph rect[fill="#196127"],
-.contrib-legend li[style*="#196127"] {
+.calendar-graph rect[fill="#216e39"],
+.contrib-legend li[style*="#216e39"] {
     opacity: 1 !important;
 }
 
@@ -3421,7 +3380,6 @@ a.team-mention,
 .pagehead-tabs-item.selected,
 .pagehead-tabs-item:hover,
 a.pagehead-tabs-item:hover,
-.tabnav-tab.selected,
 .leaflet-control-attribution,
 .leaflet-control-attribution a,
 .integrations-breadcrumb-link,
@@ -3519,7 +3477,6 @@ a.box-action,
 .list-group-item .list-group-item-meta a,
 .list-browser-sorts .sort-type,
 .select-menu-header .select-menu-title,
-#commits_tab_counter,
 .auto-search-group .search-filter,
 .usage-bar dt,
 .github-jobs-promotion p a,
@@ -4025,6 +3982,10 @@ a.commit-id,
 .text-gray-light,
 a.text-gray-light {
     color: #7b7b7b !important;
+}
+
+.btn-link {
+	color: $LinkColor;
 }
 
 .branch-infobar .lightweight-actions > li .octicon,
@@ -5738,7 +5699,7 @@ a.notifications-dropdown-see-all:hover {
 .select-menu-divider,
 .merge-status-item,
 .file-header {
-    border-bottom: 1px solid #343434 !important;
+    border-bottom: 1px solid $SeparationBorderColor-1 !important;
 }
 
 /* auto-generated rule for "border-left: 1px solid #e1e4e8" */
@@ -7474,6 +7435,11 @@ a.btn:hover,
     color: white !important;
 }
 
+nav .Counter,
+nav .counter {
+	color: inherit !important;
+}
+
 table.files tr.navigation-focus td {
     background: rgb(49, 51, 56) !important;
 }
@@ -7542,6 +7508,10 @@ a.btn,
 
 .user-status-header g-emoji {
      font-size: 1.23em;
+}
+
+.toggle-user-status-edit:hover .user-status-message-wrapper {
+	color: $LinkColor !important;
 }
 
 .commits-listing:before,
@@ -8025,11 +7995,18 @@ h4 {
     background: none !important;
 }
 
+.SelectMenu-tabs {
+	box-shadow: inset 0 -1px 0 $SeparationBorderColor-1 !important;
+	padding-bottom: 1px !important;
+}
+
 .select-menu-filters,
 .SelectMenu-modal,
 .select-menu-modal {
     background: $MainContentBackgroundColor !important;
 }
+
+
 
 .SelectMenu-modal,
 .select-menu-modal,
