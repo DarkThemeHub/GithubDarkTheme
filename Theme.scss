@@ -7424,11 +7424,8 @@ a.btn:hover,
     color: white !important;
 }
 
-#commits_tab_counter,
-#conversation_tab_counter,
-#checks_tab_counter,
-#files_tab_counter
-{
+nav .Counter,
+nav .counter {
 	color: inherit !important;
 }
 
