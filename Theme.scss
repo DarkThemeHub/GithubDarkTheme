@@ -3,6 +3,7 @@ $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
 $Blue-1: #4299fc;
 $MainContentBackgroundColor: $BackgroundColor-3;
+$Grey-2: #b5b5b5;
 
 $IconHoverColor: white;
 $NormalTextColor-1: white;
@@ -12,6 +13,7 @@ $DescriptionTextColor-1: #bbb;
 $LinkColor: $Blue-1;
 $BorderColor-1: $Blue-1;
 $UserNameColor: white;
+$ReviewCommentLabelColor: $Grey-2;
 
 $InputBackgroundColor: #25272a;
 
@@ -813,6 +815,11 @@ a.feed-icon,
 .MarketplaceSideNav {
     background: none !important;
     background-color: unset !important;
+}
+
+.review-comment-contents .timeline-comment-label {
+    border: 1px solid white !important;
+    color: $ReviewCommentLabelColor;
 }
 
 .markdown-body table th {
