@@ -12,7 +12,10 @@ $NavTextHoverColor-1: white;
 $NavTextColor: $Grey-1;
 $DescriptionTextColor-1: $Grey-1;
 $LinkColor: $Blue-1;
+
 $BorderColor-1: $Blue-1;
+$SeparationBorderColor-1: #343434;
+
 $UserNameColor: white;
 $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
@@ -58,6 +61,11 @@ body {
 .graphs .selection .overlay {
     visibility: hidden !important;
 }
+
+.UnderlineNav {
+	box-shadow: none !important;
+}
+
 .UnderlineNav-item {
     color: $NavTextColor !important;
 }
@@ -1330,7 +1338,6 @@ input.subnav-search-input,
 .build-status-item,
 .pagehead-tabs-item.selected,
 .org-header,
-.pagehead,
 .branch-action-item + .mergeability-details,
 .migration-section,
 .migrate-org-roles,
@@ -5688,7 +5695,7 @@ a.notifications-dropdown-see-all:hover {
 .select-menu-divider,
 .merge-status-item,
 .file-header {
-    border-bottom: 1px solid #343434 !important;
+    border-bottom: 1px solid $SeparationBorderColor-1 !important;
 }
 
 /* auto-generated rule for "border-left: 1px solid #e1e4e8" */
@@ -7984,11 +7991,18 @@ h4 {
     background: none !important;
 }
 
+.SelectMenu-tabs {
+	box-shadow: inset 0 -1px 0 $SeparationBorderColor-1 !important;
+	padding-bottom: 1px !important;
+}
+
 .select-menu-filters,
 .SelectMenu-modal,
 .select-menu-modal {
     background: $MainContentBackgroundColor !important;
 }
+
+
 
 .SelectMenu-modal,
 .select-menu-modal,
