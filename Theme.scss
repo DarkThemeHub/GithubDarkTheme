@@ -3373,7 +3373,6 @@ a.team-mention,
 .pagehead-tabs-item.selected,
 .pagehead-tabs-item:hover,
 a.pagehead-tabs-item:hover,
-.tabnav-tab.selected,
 .leaflet-control-attribution,
 .leaflet-control-attribution a,
 .integrations-breadcrumb-link,
@@ -3427,14 +3426,6 @@ a.state,
 a.State,
 .site-header-dark .site-header .site-header-link {
     color: #e2e2e2 !important;
-}
-
-#commits_tab_counter,
-#conversation_tab_counter,
-#checks_tab_counter,
-#files_tab_counter
-{
-	color: inherit;
 }
 
 pre,
@@ -7431,6 +7422,14 @@ a.btn:hover,
 .btn.btn-outline.selected {
     background: rgb(49, 51, 56) !important;
     color: white !important;
+}
+
+#commits_tab_counter,
+#conversation_tab_counter,
+#checks_tab_counter,
+#files_tab_counter
+{
+	color: inherit !important;
 }
 
 table.files tr.navigation-focus td {
