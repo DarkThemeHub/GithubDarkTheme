@@ -14,8 +14,8 @@ $DescriptionTextColor-1: $Grey-1;
 $LinkColor: $Blue-1;
 $BorderColor-1: $Blue-1;
 $UserNameColor: white;
-$ReviewCommentLabelColor: $Grey-2;
-
+$ReviewCommentLabelColor: $Grey-1;
+$ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: #25272a;
 
 html {
@@ -819,7 +819,7 @@ a.feed-icon,
 }
 
 .review-comment-contents .timeline-comment-label {
-    border: 1px solid white !important;
+    border: $ReviewCommentLabelBorder !important;
     color: $ReviewCommentLabelColor;
 }
 
