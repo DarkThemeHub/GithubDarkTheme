@@ -3429,6 +3429,14 @@ a.State,
     color: #e2e2e2 !important;
 }
 
+#commits_tab_counter,
+#conversation_tab_counter,
+#checks_tab_counter,
+#files_tab_counter
+{
+	color: inherit;
+}
+
 pre,
 body,
 a.social-count,
@@ -3471,7 +3479,6 @@ a.box-action,
 .list-group-item .list-group-item-meta a,
 .list-browser-sorts .sort-type,
 .select-menu-header .select-menu-title,
-#commits_tab_counter,
 .auto-search-group .search-filter,
 .usage-bar dt,
 .github-jobs-promotion p a,
