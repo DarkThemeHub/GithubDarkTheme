@@ -1,6 +1,5 @@
 [![image](https://img.shields.io/github/v/release/Darkthemehub/GithubDarktheme?style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/releases/latest)
 [![image](https://img.shields.io/github/release-date/darkthemehub/githubdarktheme?color=%23DD7A00&label=Last%20updated&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/releases)
-[![image](https://img.shields.io/github/contributors/DarkThemehub/GithubDarktheme?style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/graphs/contributors)
 [![image](https://img.shields.io/github/size/Darkthemehub/GithubDarkTheme/Generated/github.user.styl?color=purple&label=Theme%20size&style=flat-square)](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/Generated/github.user.styl)
 # GithubDarkTheme
 Support us by hitting that Star and showing your friends :P
