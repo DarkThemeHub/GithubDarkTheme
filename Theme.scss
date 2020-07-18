@@ -1,8 +1,8 @@
 $BackgroundColor-1: #222;
 $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
+$BackgroundColor-4: #39424a;
 $Blue-1: #4299fc;
-$MainContentBackgroundColor: $BackgroundColor-3;
 $Grey-1: #bbb;
 $Grey-2: #b5b5b5;
 
@@ -12,14 +12,18 @@ $NavTextHoverColor-1: white;
 $NavTextColor: $Grey-1;
 $DescriptionTextColor-1: $Grey-1;
 $LinkColor: $Blue-1;
-
 $BorderColor-1: $Blue-1;
 $SeparationBorderColor-1: #343434;
+
+$DropDownBackgroundColor: $BackgroundColor-3;
+$DropDownItemHoverBackgroundColor: $BackgroundColor-4;
+
+$MainContentBackgroundColor: $BackgroundColor-3;
 
 $UserNameColor: white;
 $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
-$InputBackgroundColor: #25272a;
+$InputBackgroundColor: $BackgroundColor-3;
 
 html {
     background-color: $BackgroundColor-1;
@@ -63,7 +67,7 @@ body {
 }
 
 .UnderlineNav {
-	box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .UnderlineNav-item {
@@ -98,10 +102,13 @@ table.files td.icon,
 table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
 .js-add-project-description,
-.link-gray:hover,
-.link-gray-dark:hover,
 .link-hover-blue:hover {
     color: $LinkColor !important;
+}
+
+.link-gray:hover,
+.link-gray-dark:hover {
+    color: inherit !important;
 }
 
 .commit-link:hover,
@@ -1648,11 +1655,6 @@ ul.comparison-list,
 .invitation-container,
 .orgs-help-shelf,
 .orgs-help-item-octicon,
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
 textarea,
 .dropdown-menu,
 .thread-subscription-status,
@@ -1925,7 +1927,7 @@ a.card.bg-gray-light:hover,
 }
 
 .discussion-timeline-actions [type="submit"] {
-    margin: 0px 8px 0px 0px !important;
+    margin: -10px 8px 0px 0px !important;
 }
 
 .timeline-new-comment .form-actions div {
@@ -2041,7 +2043,6 @@ ul.feature-tabs li.highlight,
 .commit_oneline,
 .filterbox,
 .conversation-list-heading .inner,
-.autocomplete-results,
 .new-comments .body,
 .display tr,
 .render-container,
@@ -2890,6 +2891,10 @@ article.full .alert,
     background: #273045 !important;
 }
 
+.muted-link:hover {
+    color: unset !important;
+}
+
 .bg-blue,
 .discussion-item-changes-marker.is-unread .discussion-item-icon {
     background: #4183c4 !important;
@@ -2918,7 +2923,7 @@ article.full .alert a,
 }
 
 .review-comment .pending-batched-suggestion-label {
-	background-color: #3a3301 !important;
+    background-color: #3a3301 !important;
 }
 
 .RecentBranches-item {
@@ -2927,7 +2932,7 @@ article.full .alert a,
 
 .commit-ref .user,
 .commit-ref {
-	color: $Blue-1 !important;
+    color: $Blue-1 !important;
 }
 
 .timeline-comment.current-user,
@@ -3985,7 +3990,7 @@ a.text-gray-light {
 }
 
 .btn-link {
-	color: $LinkColor;
+    color: $LinkColor;
 }
 
 .branch-infobar .lightweight-actions > li .octicon,
@@ -5147,8 +5152,16 @@ td.selected-line.blob-code {
     color: #ccc;
 }
 
-.enterprise .autocomplete-item {
-    color: #ccc;
+.autocomplete-item {
+    color: White !important;
+}
+
+.autocomplete-item:hover {
+    background-color: $DropDownItemHoverBackgroundColor !important;
+}
+
+.autocomplete-item {
+    background-color: $DropDownBackgroundColor !important;
 }
 
 .enterprise .repo-nav a:focus,
@@ -5566,7 +5579,7 @@ a.notifications-dropdown-see-all:hover {
 
 .issue-link.js-issue-link.tooltipped.tooltipped-ne,
 .issue-link.js-issue-link {
-	color: #4299fc !important;
+    color: #4299fc !important;
 }
 
 .awesome-autocomplete .tt-suggestion .octicon-star {
@@ -5993,7 +6006,6 @@ p.explain,
 .subnav-search-input,
 .text-gray,
 .link-gray,
-.muted-link,
 .lead,
 .Label--gray,
 .Label--outline,
@@ -7385,10 +7397,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
     border: 1px solid !important;
 }
 
-.flex-justify-end {
-    padding-bottom: 15px;
-}
-
 .Label--gray {
     background-color: transparent !important;
     border: 1px solid #484848 !important;
@@ -7437,7 +7445,7 @@ a.btn:hover,
 
 nav .Counter,
 nav .counter {
-	color: inherit !important;
+    color: inherit !important;
 }
 
 table.files tr.navigation-focus td {
@@ -7503,15 +7511,15 @@ a.btn,
 }
 
 .user-status-circle-badge {
-	background-color: #353535 !important;
+    background-color: #353535 !important;
 }
 
 .user-status-header g-emoji {
-     font-size: 1.23em;
+    font-size: 1.23em;
 }
 
 .toggle-user-status-edit:hover .user-status-message-wrapper {
-	color: $LinkColor !important;
+    color: $LinkColor !important;
 }
 
 .commits-listing:before,
@@ -7996,8 +8004,8 @@ h4 {
 }
 
 .SelectMenu-tabs {
-	box-shadow: inset 0 -1px 0 $SeparationBorderColor-1 !important;
-	padding-bottom: 1px !important;
+    box-shadow: inset 0 -1px 0 $SeparationBorderColor-1 !important;
+    padding-bottom: 1px !important;
 }
 
 .select-menu-filters,
@@ -8005,8 +8013,6 @@ h4 {
 .select-menu-modal {
     background: $MainContentBackgroundColor !important;
 }
-
-
 
 .SelectMenu-modal,
 .select-menu-modal,
