@@ -73,10 +73,12 @@ table.files td.icon,
 table.files tr.navigation-focus td table.files td.icon .octicon-file-directory,
 .commit-link,
 .js-add-project-description,
-.link-gray:hover,
-.link-gray-dark:hover,
 .link-hover-blue:hover {
   color: #4299fc !important; }
+
+.link-gray:hover,
+.link-gray-dark:hover {
+  color: inherit !important; }
 
 .commit-link:hover,
 .link-gray:hover,
@@ -1447,11 +1449,6 @@ ul.comparison-list,
 .invitation-container,
 .orgs-help-shelf,
 .orgs-help-item-octicon,
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
 textarea,
 .dropdown-menu,
 .thread-subscription-status,
@@ -1709,7 +1706,7 @@ a.card.bg-gray-light:hover,
   color: white !important; }
 
 .discussion-timeline-actions [type="submit"] {
-  margin: 0px 8px 0px 0px !important; }
+  margin: -10px 8px 0px 0px !important; }
 
 .timeline-new-comment .form-actions div {
   margin: 0 !important; }
@@ -1820,7 +1817,6 @@ ul.feature-tabs li.highlight,
 .commit_oneline,
 .filterbox,
 .conversation-list-heading .inner,
-.autocomplete-results,
 .new-comments .body,
 .display tr,
 .render-container,
@@ -2558,6 +2554,9 @@ article.full .alert,
 .topic-tag-link:hover,
 .delete-topic-button:hover {
   background: #273045 !important; }
+
+.muted-link:hover {
+  color: unset !important; }
 
 .bg-blue,
 .discussion-item-changes-marker.is-unread .discussion-item-icon {
@@ -4565,8 +4564,14 @@ td.blob-code-deletion:not(.line-age) {
   background: #222 !important;
   color: #ccc; }
 
-.enterprise .autocomplete-item {
-  color: #ccc; }
+.autocomplete-item {
+  color: White !important; }
+
+.autocomplete-item:hover {
+  background-color: #39424a !important; }
+
+.autocomplete-item {
+  background-color: #25272a !important; }
 
 .enterprise .repo-nav a:focus,
 .enterprise .repo-nav a:hover {
@@ -5299,7 +5304,6 @@ p.explain,
 .subnav-search-input,
 .text-gray,
 .link-gray,
-.muted-link,
 .lead,
 .Label--gray,
 .Label--outline,
@@ -6451,9 +6455,6 @@ header.container-xl.px-3.px-md-6.py-3.position-relative.d-flex.flex-justify-betw
 
 .Label--outline {
   border: 1px solid !important; }
-
-.flex-justify-end {
-  padding-bottom: 15px; }
 
 .Label--gray {
   background-color: transparent !important;
