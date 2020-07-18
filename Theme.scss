@@ -2891,6 +2891,10 @@ article.full .alert,
     background: #273045 !important;
 }
 
+.muted-link:hover {
+    color: unset !important;
+}
+
 .bg-blue,
 .discussion-item-changes-marker.is-unread .discussion-item-icon {
     background: #4183c4 !important;
