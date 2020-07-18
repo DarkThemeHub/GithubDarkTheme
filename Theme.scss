@@ -1,8 +1,8 @@
 $BackgroundColor-1: #222;
 $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
+$BackgroundColor-4: #39424a;
 $Blue-1: #4299fc;
-$MainContentBackgroundColor: $BackgroundColor-3;
 $Grey-1: #bbb;
 $Grey-2: #b5b5b5;
 
@@ -12,14 +12,18 @@ $NavTextHoverColor-1: white;
 $NavTextColor: $Grey-1;
 $DescriptionTextColor-1: $Grey-1;
 $LinkColor: $Blue-1;
-
 $BorderColor-1: $Blue-1;
 $SeparationBorderColor-1: #343434;
+
+$DropDownBackgroundColor: $BackgroundColor-3;
+$DropDownItemHoverBackgroundColor: $BackgroundColor-4;
+
+$MainContentBackgroundColor: $BackgroundColor-3;
 
 $UserNameColor: white;
 $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
-$InputBackgroundColor: #25272a;
+$InputBackgroundColor: $BackgroundColor-3;
 
 html {
     background-color: $BackgroundColor-1;
@@ -5144,8 +5148,16 @@ td.selected-line.blob-code {
     color: #ccc;
 }
 
-.enterprise .autocomplete-item {
-    color: #ccc;
+.autocomplete-item {
+    color: White !important;
+}
+
+.autocomplete-item:hover {
+    background-color: $DropDownItemHoverBackgroundColor !important;
+}
+
+.autocomplete-item {
+    background-color: $DropDownBackgroundColor !important;
 }
 
 .enterprise .repo-nav a:focus,
