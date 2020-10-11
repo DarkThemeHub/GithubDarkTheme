@@ -8,7 +8,7 @@ on:
         required: true
       releaseNotes:
         description: 'release notes'
-        required: true 
+        required: false 
 jobs:
   build:
     runs-on: ubuntu-latest
