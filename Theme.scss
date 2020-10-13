@@ -449,14 +449,8 @@ div[id^="contribution-joined-github"] img {
 
 /* PR toolbar tweaks */
 
-.diffbar {
-    padding-top: 10px !important;
-    padding-bottom: 40px !important;
-}
-
 .is-stuck .diffbar {
     background: $MainContentBackgroundColor !important;
-    height: 2.5em;
     pointer-events: all !important;
 }
 
@@ -865,6 +859,12 @@ a.feed-icon,
 #notebook .output_png img {
     background-color: transparent !important;
     background-image: none !important;
+}
+
+/* remove avatar background */
+
+.AvatarStack-body {
+    background: transparent !important
 }
 
 /* border-radius */
