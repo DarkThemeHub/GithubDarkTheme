@@ -861,6 +861,12 @@ a.feed-icon,
     background-image: none !important;
 }
 
+/* remove avatar background */
+
+.AvatarStack-body {
+    background: transparent !important
+}
+
 /* border-radius */
 
 #wrapper,
