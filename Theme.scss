@@ -449,14 +449,8 @@ div[id^="contribution-joined-github"] img {
 
 /* PR toolbar tweaks */
 
-.diffbar {
-    padding-top: 10px !important;
-    padding-bottom: 40px !important;
-}
-
 .is-stuck .diffbar {
     background: $MainContentBackgroundColor !important;
-    height: 2.5em;
     pointer-events: all !important;
 }
 
