@@ -1813,7 +1813,7 @@ body .bg-white,
 .protected-branch-orgs-and-repo-admins,
 .listgroup-overflow,
 .org-sso-panel {
-    background: #25272a !important;
+    background: $BackgroundColor-3 !important;
 }
 
 .sidebar-module,
@@ -1865,6 +1865,7 @@ body .bg-white,
 
 .table-list-header,
 .timeline-comment-header,
+.timeline-comment .color-bg-canvas,
 .boxed-group > h3,
 .boxed-group .heading,
 .file-header,
