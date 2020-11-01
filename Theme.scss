@@ -25,6 +25,10 @@ $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: $BackgroundColor-3;
 
+html {
+    background-color: $BackgroundColor-1;
+}
+
 body {
     background-color: $BackgroundColor-1 !important;
     background-clip: border-box !important;
