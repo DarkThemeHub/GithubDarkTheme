@@ -25,31 +25,6 @@ $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: $BackgroundColor-3;
 
-$Contribution-Calender-Color: #4183c4 !important;
-
-@mixin Calender-shades {
-    --color-calendar-graph-day-bgopacity: transparentize(
-        $Contribution-Calender-Color,
-        0
-    ) !important;
-    --color-calendar-graph-day-L1-bg: transparentize(
-        $Contribution-Calender-Color,
-        0.25
-    ) !important;
-    --color-calendar-graph-day-L2-bg: transparentize(
-        $Contribution-Calender-Color,
-        0.5
-    ) !important;
-    --color-calendar-graph-day-L3-bg: transparentize(
-        $Contribution-Calender-Color,
-        0.75
-    ) !important;
-    --color-calendar-graph-day-L4-bg: transparentize(
-        $Contribution-Calender-Color,
-        1
-    ) !important;
-}
-
 body {
     background-color: $BackgroundColor-1 !important;
     background-clip: border-box !important;
@@ -5144,7 +5119,11 @@ td.selected-line.blob-code {
 :root {
     scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
     scrollbar-width: thin !important;
-    @include Calender-shades;
+    --color-calendar-graph-day-bgopacity: #222 !important;
+    --color-calendar-graph-day-L1-bg: #2e3d4d !important;
+    --color-calendar-graph-day-L2-bg: #355575 !important;
+    --color-calendar-graph-day-L3-bg: #3c6b9c !important;
+    --color-calendar-graph-day-L4-bg: #4382c3 !important;
 }
 
 /* GitHub Enterprise Only
