@@ -25,8 +25,29 @@ $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: $BackgroundColor-3;
 
-html {
-    background-color: $BackgroundColor-1;
+$Contribution-Calender-Color: #4183c4 !important;
+
+@mixin Calender-shades {
+    --color-calendar-graph-day-bgopacity: transparentize(
+        $Contribution-Calender-Color,
+        0
+    ) !important;
+    --color-calendar-graph-day-L1-bg: transparentize(
+        $Contribution-Calender-Color,
+        0.25
+    ) !important;
+    --color-calendar-graph-day-L2-bg: transparentize(
+        $Contribution-Calender-Color,
+        0.5
+    ) !important;
+    --color-calendar-graph-day-L3-bg: transparentize(
+        $Contribution-Calender-Color,
+        0.75
+    ) !important;
+    --color-calendar-graph-day-L4-bg: transparentize(
+        $Contribution-Calender-Color,
+        1
+    ) !important;
 }
 
 body {
@@ -864,7 +885,7 @@ a.feed-icon,
 /* remove avatar background */
 
 .AvatarStack-body {
-    background: transparent !important
+    background: transparent !important;
 }
 
 /* border-radius */
@@ -1918,9 +1939,11 @@ a.card.bg-gray-light:hover,
     .reponav-wrapper {
         background: #333 !important;
     }
+
     .border-md-top {
         border-top: none !important;
     }
+
     .tabnav--responsive .tabnav-tab {
         background-color: $MainContentBackgroundColor !important;
     }
@@ -5121,7 +5144,7 @@ td.selected-line.blob-code {
 :root {
     scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
     scrollbar-width: thin !important;
-    --color-calendar-graph-day-bg: #353535 !important;
+    @include Calender-shades;
 }
 
 /* GitHub Enterprise Only
@@ -7751,6 +7774,7 @@ form[style="background: #ffeef8; border: 1px solid #ec6cb9 !important;"] {
     background: #3d4348 !important;
     color: white !important;
 }
+
 .SideNav-item[aria-current="page"] {
     background: $MainContentBackgroundColor !important;
 }
@@ -7771,6 +7795,7 @@ code[class="hljs language-shell"] {
 .lia-content .lia-component-quilt-header {
     background: unset !important;
 }
+
 .lia-panel .lia-panel-content,
 .MessageList > .t-data-grid {
     background: #1d1d1d !important;
