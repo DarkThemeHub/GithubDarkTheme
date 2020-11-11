@@ -1,9 +1,9 @@
-name: GenerateStylusFile
+name: UnpublishedOrDeleted
 
 on:
   release:
     branches: master
-    types: [published, unpublished, deleted]
+    types: [unpublished, deleted]
 jobs:
   build:
     runs-on: ubuntu-latest
