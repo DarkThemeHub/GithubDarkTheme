@@ -79,6 +79,11 @@ body {
     color: $NavTextHoverColor-1 !important;
 }
 
+.UnderlineNav-item.selected,
+.UnderlineNav-item[aria-current]:not([aria-current="false"]),
+.UnderlineNav-item[role="tab"][aria-selected="true"] {
+    border-bottom: 1px solid #f9826c !important;
+}
 .d-flex {
     color: white !important;
 }
