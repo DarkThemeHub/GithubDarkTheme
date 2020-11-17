@@ -5054,6 +5054,7 @@ td.selected-line.blob-code {
 :root {
     scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
     scrollbar-width: thin !important;
+    --color-text-primary: #bbb !important;
     --color-bg-canvas-inset: #25272a;
     --color-calendar-graph-day-bg: #222;
     --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
@@ -8160,4 +8161,16 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .signup-prompt-bg {
     background-image: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, #25272a),
         linear-gradient(70deg, #2f363d, 32%, #24292e);
+}
+
+.js-profile-timeline-year-list.bg-white.js-sticky.float-right.col-2.pl-5 {
+    background: transparent !important;
+}
+
+.activity-listing .color-bg-primary {
+    background: #2f2f2f !important;
+}
+
+.activity-listing .filter-list {
+    background: $BackgroundColor-3 !important;
 }
