@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.39.0
+@version      1.40.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -53,6 +53,11 @@ body {
 .UnderlineNav-item:focus,
 .UnderlineNav-item:hover {
   color: white !important; }
+
+.UnderlineNav-item.selected,
+.UnderlineNav-item[aria-current]:not([aria-current="false"]),
+.UnderlineNav-item[role="tab"][aria-selected="true"] {
+  border-bottom: 1px solid #f9826c !important; }
 
 .d-flex {
   color: white !important; }
@@ -3917,7 +3922,8 @@ a.bg-pending {
 
 .signed-commit-verified-label,
 .signed-commit-badge.verified {
-  color: #55a532 !important; }
+  color: #55a532 !important;
+  background-color: #39424a; }
 
 /* Green text */
 .text-open,
@@ -4475,6 +4481,7 @@ td.blob-code-deletion:not(.line-age) {
 :root {
   scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
   scrollbar-width: thin !important;
+  --color-text-primary: #bbb !important;
   --color-bg-canvas-inset: #25272a;
   --color-calendar-graph-day-bg: #222;
   --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
@@ -6657,7 +6664,8 @@ a.tabnav-extra:hover,
   color: white !important; }
 
 .timeline-comment {
-  color: #bbb !important; }
+  color: #bbb !important;
+  border: 1px solid transparent !important; }
 
 .file-commit-form--full {
   background: none !important; }
@@ -7058,5 +7066,14 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 
 .signup-prompt-bg {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #25272a), linear-gradient(70deg, #2f363d, 32%, #24292e); }
+
+.js-profile-timeline-year-list.bg-white.js-sticky.float-right.col-2.pl-5 {
+  background: transparent !important; }
+
+.activity-listing .color-bg-primary {
+  background: #2f2f2f !important; }
+
+.activity-listing .filter-list {
+  background: #25272a !important; }
 
 }
