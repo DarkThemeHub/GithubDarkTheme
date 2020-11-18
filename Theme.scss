@@ -8050,6 +8050,10 @@ a.select-menu-action,
     background: #00264c !important;
 }
 
+.notifications-list-item.notification-archived, .notifications-list-item.notification-read {
+    background: $BackgroundColor-2 !important;
+}
+
 .notifications-list-item:hover {
     background-color: #313338 !important;
 }
