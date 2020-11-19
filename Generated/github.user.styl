@@ -4488,7 +4488,9 @@ td.blob-code-deletion:not(.line-age) {
   --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);
   --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
   --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1);
-  --color-project-sidebar-bg: #25272a; }
+  --color-project-sidebar-bg: #25272a;
+  --color-notifications-row-read-bg: #25272a;
+  --color-notifications-button-hover-bg: transparent; }
 
 /* GitHub Enterprise Only
    *                                 _____..---========+*+==========---.._____
@@ -6983,6 +6985,9 @@ a.select-menu-action,
 
 .notifications-list-item:hover {
   background-color: #313338 !important; }
+
+.notifications-list-item:hover .notification-list-item-actions .btn {
+  background-color: transparent !important; }
 
 /* notification row type */
 span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
