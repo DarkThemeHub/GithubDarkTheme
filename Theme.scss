@@ -2,6 +2,9 @@ $BackgroundColor-1: #222;
 $BackgroundColor-2: #1d1d1d;
 $BackgroundColor-3: #25272a;
 $BackgroundColor-4: #39424a;
+
+$HoverBackgroundColor-1: #313338;
+
 $Blue-1: #4299fc;
 $Grey-1: #bbb;
 $Grey-2: #b5b5b5;
@@ -5062,6 +5065,8 @@ td.selected-line.blob-code {
     --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
     --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1);
     --color-project-sidebar-bg: #25272a;
+    --color-notifications-row-read-bg: #25272a;
+    --color-notifications-button-hover-bg: transparent;
 }
 
 /* GitHub Enterprise Only
@@ -8050,12 +8055,12 @@ a.select-menu-action,
     background: #00264c !important;
 }
 
-.notifications-list-item.notification-archived, .notifications-list-item.notification-read {
-    background: $BackgroundColor-2 !important;
+.notifications-list-item:hover {
+    background-color: $HoverBackgroundColor-1 !important;
 }
 
-.notifications-list-item:hover {
-    background-color: #313338 !important;
+.notifications-list-item:hover .notification-list-item-actions .btn {
+    background-color: transparent !important;
 }
 
 /* notification row type */
