@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.40.0
+@version      1.41.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -3251,6 +3251,7 @@ p.subtext,
 .team-grid .team-description,
 .orgs-nav .org-nav-item,
 .form-actions-protip .protip,
+.protip strong,
 .discussion-item .author,
 .inline-comments .comment-count,
 .sidebar-heading,
@@ -4482,8 +4483,10 @@ td.blob-code-deletion:not(.line-age) {
   scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
   scrollbar-width: thin !important;
   --color-text-primary: #bbb !important;
+  --color-text-secondary: #b5b5b5;
   --color-bg-canvas-inset: #25272a;
   --color-calendar-graph-day-bg: #222;
+  --color-project-card-bg: #222;
   --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
   --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);
   --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
@@ -7007,10 +7010,13 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
   filter: invert(0.9);
   z-index: unset; }
 
+.history-backpage {
+  background: #25272a !important; }
+
 .incident-container .incident-title::before {
-  background-color: #dbab09;
+  background-color: #e6ebf1;
   background: #dbab09 url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99999 2.3C10.14 2.3 12.7 4.86 12.7 8C12.7 11.14 10.14 13.7 6.99999 13.7C3.85999 13.7 1.29999 11.14 1.29999 8C1.29999 4.86 3.85999 2.3 6.99999 2.3ZM7 1C3.14 1 0 4.14 0 8C0 11.86 3.14 15 7 15C10.86 15 14 11.86 14 8C14 4.14 10.86 1 7 1ZM8 4H6V9H8V4ZM8 10H6V12H8V10Z' fill='%236a737d'/%3E%3C/svg%3e") no-repeat center center;
-  border: 2px solid #dbab09; }
+  border: 2px solid #f6f8fa; }
 
 .incident-container::before {
   background-color: #555555 !important; }
