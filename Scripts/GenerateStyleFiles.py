@@ -42,7 +42,7 @@ userScriptFile = re.sub("<Version>", newVersion, userScriptFile)
 userScriptFile = re.sub("<ThemeName>", themeName, userScriptFile)
 userScriptFile = re.sub("<Url_Regex>", urlRegex, userScriptFile)
 userScriptFile = re.sub("<Style>", userScriptStyle, userScriptFile)
-f = open(baseDir + "Generated/github_userscript.js", "w")
+f = open(baseDir + "Generated/github.user.js", "w")
 
 f.writelines(userScriptFile)
 f.close
