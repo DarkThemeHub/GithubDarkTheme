@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name         <ThemeName>
+@namespace    github.com/DarkThemeHub/GithubDarkTheme
+@version      <Version>
+@description  Dark theme for github.
+@author       DarkThemeHub
+@homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
+@supportURL   https://github.com/DarkThemeHub/GithubDarkTheme/issues
+@updateURL    https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.styl
+==/UserStyle== */
+
+@-moz-document regexp("<Url_Regex>") {
+<Style>
+}
