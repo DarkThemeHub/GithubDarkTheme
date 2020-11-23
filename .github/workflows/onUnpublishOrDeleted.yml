@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Generate-Stylus-File
       run: |
-        python Scripts/GenerateStylusFile.py
+        python Scripts/GenerateStyleFiles.py
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
