@@ -6,7 +6,7 @@
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
 // @supportURL	https://github.com/DarkThemeHub/GithubDarkTheme/issues
-// @updateURL   https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github_userscript.js
+// @updateURL   https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.js
 // @run-at	document-start
 // ==/UserScript==
 (function() {var css = "";
