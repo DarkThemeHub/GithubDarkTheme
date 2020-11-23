@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.41.0
+// @version	1.42.0
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
