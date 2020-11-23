@@ -4484,6 +4484,7 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		":root {",
 		"  scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;",
 		"  scrollbar-width: thin !important;",
+		"  --color-bg-primary: #25272a !important;",
 		"  --color-text-primary: #bbb !important;",
 		"  --color-text-secondary: #b5b5b5;",
 		"  --color-bg-canvas-inset: #25272a;",
