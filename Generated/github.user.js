@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.43.0
+// @version	1.44.0
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
@@ -6199,7 +6199,7 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  outline: #34373c !important; }",
 		"",
 		".border {",
-		"  border: 0px transparent !important; }",
+		"  border-color: transparent !important; }",
 		"",
 		".header {",
 		"  background: #34373c !important; }",
@@ -6593,9 +6593,8 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"button.btn-link.link-gray.js-details-target {",
 		"  color: white !important; }",
 		"",
-		"div[style=\"background-color: #fcfdfd;\"],",
-		".MarketplaceBackground-buffer {",
-		"  background: #25272a !important; }",
+		"div[style=\"background-color: #fcfdfd;\"] {",
+		"  background: #222 !important; }",
 		"",
 		".comment-reactions .user-has-reacted {",
 		"  color: #a8c4fd !important; }",
