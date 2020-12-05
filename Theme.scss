@@ -29,6 +29,29 @@ $ReviewCommentLabelColor: $Grey-1;
 $ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
 $InputBackgroundColor: $BackgroundColor-3;
 
+:root {
+    scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
+    scrollbar-width: thin !important;
+    --color-bg-primary: #25272a !important;
+    --color-bg-secondary: #25272a !important;
+    --color-menu-bg-active: #3e3e3e !important;
+    --color-sidenav-selected-bg: #3e3e3e !important;
+    --color-state-hover-primary-bg: #3d4348 !important;
+    --color-state-hover-secondary-bg: #3d4348 !important;
+    --color-text-primary: #bbb !important;
+    --color-text-secondary: #b5b5b5;
+    --color-bg-canvas-inset: #25272a;
+    --color-calendar-graph-day-bg: #222;
+    --color-project-card-bg: #222;
+    --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
+    --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);
+    --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
+    --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1);
+    --color-project-sidebar-bg: #25272a;
+    --color-notifications-row-read-bg: #25272a;
+    --color-notifications-button-hover-bg: transparent;
+}
+
 html {
     background-color: $BackgroundColor-1;
 }
@@ -5049,29 +5072,6 @@ td.selected-line.blob-code {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(65, 131, 196, 0.8) !important;
-}
-
-:root {
-    scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
-    scrollbar-width: thin !important;
-    --color-bg-primary: #25272a !important;
-    --color-bg-secondary: #25272a !important;
-    --color-menu-bg-active: #3e3e3e !important;
-    --color-sidenav-selected-bg: #3e3e3e !important;
-    --color-state-hover-primary-bg: #3d4348 !important;
-    --color-state-hover-secondary-bg: #3d4348 !important;
-    --color-text-primary: #bbb !important;
-    --color-text-secondary: #b5b5b5;
-    --color-bg-canvas-inset: #25272a;
-    --color-calendar-graph-day-bg: #222;
-    --color-project-card-bg: #222;
-    --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
-    --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);
-    --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
-    --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1);
-    --color-project-sidebar-bg: #25272a;
-    --color-notifications-row-read-bg: #25272a;
-    --color-notifications-button-hover-bg: transparent;
 }
 
 /* GitHub Enterprise Only
