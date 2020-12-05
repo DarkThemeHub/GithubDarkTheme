@@ -40,4 +40,4 @@ Requirements:
 
 
 
-![image](https://i.gyazo.com/2cff7e938ee0461570085fab6b20ac7a.png)
+![image](https://i.gyazo.com/7bcb5e7cd0769c0207b121e10ccd09d4.png)
