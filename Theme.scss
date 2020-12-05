@@ -7077,7 +7077,7 @@ span.cm-def {
 }
 
 .border {
-    border: 0px transparent !important;
+    border-color: transparent !important;
 }
 
 .header {
@@ -7576,9 +7576,8 @@ button.btn-link.link-gray.js-details-target {
     color: white !important;
 }
 
-div[style="background-color: #fcfdfd;"],
-.MarketplaceBackground-buffer {
-    background: $MainContentBackgroundColor !important;
+div[style="background-color: #fcfdfd;"] {
+    background: $BackgroundColor-1 !important;
 }
 
 .comment-reactions .user-has-reacted {
