@@ -15,7 +15,7 @@ Support this theme by hitting that :star: and showing your friends :P
 <hr>
 
 ## Install the theme
-### User Script
+### User Script (Sezure Warning! This can be a little slow sometimes, so might see theme flash in after the page has loaded)
 ##### Compatible with [ViolentMonkey](https://violentmonkey.github.io/)
 > [![image](https://img.shields.io/badge/Install/Update%20directly%20with-UserScript-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.js)
 
