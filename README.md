@@ -16,11 +16,11 @@ Support this theme by hitting that :star: and showing your friends :P
 
 ## Install the theme
 ### User Script 
-#### Sezure Warning! This can be a little slow sometimes, so might see theme flash in after the page has loaded
+#### Seizure Warning! This can be a little slow sometimes, so might see the theme flash in after the page has loaded already. I recommend using Stylus.
 ##### Compatible with [ViolentMonkey](https://violentmonkey.github.io/)
 > [![image](https://img.shields.io/badge/Install/Update%20directly%20with-UserScript-116b59.svg?longCache=true&amp;style=for-the-badge)](https://raw.githubusercontent.com/DarkThemeHub/GithubDarkTheme/master/Generated/github.user.js)
 
-### Stylus browser extension
+### Stylus browser extension (Recommended)
 > ##### Step 1 (if not already installed Stylus browser extension)
 > [![image](https://img.shields.io/badge/Install-Stylus%20Chrome%20Extension-116b59.svg?longCache=true&amp;style=for-the-badge)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne/)
 
