@@ -1752,7 +1752,6 @@ textarea,
 .header,
 .headers,
 #readme .markdown-body,
-.social-count,
 .file,
 .markdown-body table tr:nth-child(2n),
 .steps li,
@@ -2957,6 +2956,10 @@ a.branch-name,
 article.full .alert {
     border-color: #264c72 !important;
     color: #c8d0e1 !important;
+}
+
+.social-count {
+    background-color: $BackgroundColor-1;
 }
 
 .social-count:before {
