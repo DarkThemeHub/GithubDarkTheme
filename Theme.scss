@@ -45,6 +45,7 @@ $InputBackgroundColor: $BackgroundColor-3;
     --color-bg-tertiary: transparent !important;
     --color-calendar-graph-day-bg: #222;
     --color-project-card-bg: #222;
+    --color-workflow-card-bg: #222 !important;
     --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);
     --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);
     --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);
@@ -8185,4 +8186,9 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 
 .SideNav-item[aria-current]:not([aria-current="false"]) {
     cursor: default;
+}
+
+.WorkflowCard-heading,
+.WorkflowCard-heading::after {
+    box-shadow: none !important;
 }
