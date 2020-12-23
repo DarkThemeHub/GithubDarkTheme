@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.44.0
+// @version	1.45.0
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
@@ -25,8 +25,10 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  --color-text-secondary: #b5b5b5;",
 		"  --color-bg-canvas: transparent !important;",
 		"  --color-bg-canvas-inset: #25272a;",
+		"  --color-bg-tertiary: transparent !important;",
 		"  --color-calendar-graph-day-bg: #222;",
 		"  --color-project-card-bg: #222;",
+		"  --color-workflow-card-bg: #222 !important;",
 		"  --color-calendar-graph-day-L1-bg: rgba(67, 130, 195, 0.25);",
 		"  --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5);",
 		"  --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75);",
@@ -1537,7 +1539,6 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		".header,",
 		".headers,",
 		"#readme .markdown-body,",
-		".social-count,",
 		".file,",
 		".markdown-body table tr:nth-child(2n),",
 		".steps li,",
@@ -2614,6 +2615,9 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"article.full .alert {",
 		"  border-color: #264c72 !important;",
 		"  color: #c8d0e1 !important; }",
+		"",
+		".social-count {",
+		"  background-color: #222; }",
 		"",
 		".social-count:before {",
 		"  border-right-color: #333 !important;",
@@ -7083,6 +7087,13 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"",
 		".SideNav-item[aria-current]:not([aria-current=\"false\"]) {",
 		"  cursor: default; }",
+		"",
+		".WorkflowCard-heading,",
+		".WorkflowCard-heading::after {",
+		"  box-shadow: none !important; }",
+		"",
+		".components-container {",
+		"  background-color: transparent !important; }",
 
 	].join("\n");
 if (typeof GM_addStyle != "undefined") {
