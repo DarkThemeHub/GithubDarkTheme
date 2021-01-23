@@ -1,0 +1,56 @@
+$BackgroundColor-1: #222;
+$BackgroundColor-2: #1d1d1d;
+$BackgroundColor-3: #25272a;
+$BackgroundColor-4: #39424a;
+$BackgroundColor-5: #3d4348;
+$BackgroundColor-6: #333;
+$BackgroundColor-7: #313131;
+
+$TableHeaderBackground: $BackgroundColor-7;
+$HoverBackgroundColor-1: #313338;
+$MenuBackgroundActive:  #3e3e3e;
+$SideNavBackgroundSelected: #3e3e3e; 
+
+$Blue-1: #4299fc;
+$Grey-1: #bbb;
+$Grey-2: #b5b5b5;
+
+$PrimaryText: white;
+$SecondaryText: #bbb;
+$NormalTextColor-1: white;
+$NavTextHoverColor-1: white;
+$LinkColor: $Blue-1;
+$NavTextColor: $Grey-1;
+$DescriptionTextColor-1: $Grey-1;
+$IconHoverColor: white;
+$BorderColor-1: $Blue-1;
+$SeparationBorderColor-1: #343434;
+
+@mixin PrimaryButton {
+    color: $SecondaryText !important;
+    background-color: $BackgroundColor-6 !important;
+}
+
+@mixin SecondaryButton {
+    color: $SecondaryText !important;
+    background-color: $BackgroundColor-6 !important;
+}
+
+@mixin SideMenuItem {
+
+    background-color: $BackgroundColor-3 !important;
+
+    :hover {
+        background-color: var(--color-state-hover-secondary-bg);
+    }
+}
+
+$DropDownBackgroundColor: $BackgroundColor-3;
+$DropDownItemHoverBackgroundColor: $BackgroundColor-4;
+
+$MainContentBackgroundColor: $BackgroundColor-3;
+
+$UserNameColor: white;
+$ReviewCommentLabelColor: $Grey-1;
+$ReviewCommentLabelBorder: 1px solid $ReviewCommentLabelColor;
+$InputBackgroundColor: $BackgroundColor-3;
