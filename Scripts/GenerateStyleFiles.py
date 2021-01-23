@@ -1,6 +1,10 @@
 import os
 import re
 import shutil
+import sys
+
+newVersion = str(sys.argv[1])
+
 baseDir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 # normalize baseDir between github action or dev environment
 if baseDir.startswith("/home/runner/work"):
@@ -13,7 +17,6 @@ shutil.rmtree(baseDir + "Generated", ignore_errors=True)
 os.makedirs(baseDir + "Generated", exist_ok=True)
 
 themeName = open(baseDir + "Scripts/ThemeName.txt", "r").read().rstrip()
-newVersion = open(baseDir + "Scripts/Version.txt", "r").read().rstrip()
 urlRegex = open(baseDir + "UrlRegex.txt", "r").read().rstrip()
 themeCss = open(baseDir + "ScssOutput/Theme.css", "r",
                 encoding="ASCII", errors="ignore").read()
@@ -46,3 +49,7 @@ f = open(baseDir + "Generated/github.user.js", "w")
 
 f.writelines(userScriptFile)
 f.close
+
+versionFile = open(baseDir + "Scripts/version.txt", "w")
+versionFile.writelines(newVersion)
+versionFile.close
