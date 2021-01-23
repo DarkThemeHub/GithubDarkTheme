@@ -1,5 +1,8 @@
 @import "Variables";
 
+:root {
+    --zh-color-text: #{$Grey-1} !important;
+}
 
 .zhc-modal__body,
 .zhc-confirmation-modal {
