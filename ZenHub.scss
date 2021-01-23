@@ -3,11 +3,11 @@
 
 .zhc-modal__body,
 .zhc-confirmation-modal {
-    background-color: $BackgroundColor-1 !important;
+    background: $BackgroundColor-1 !important;
 }
 
 .zh-board-container {
-    background-color: $BackgroundColor-1 !important;
+    background: $BackgroundColor-1 !important;
 }
 
 .zhc-info-alert__content {
@@ -31,7 +31,7 @@
 .zhc-sidebar-profile__toggle,
 .zhc-sidebar__container__inner,
 .zh-inviteTeamButtonMain {
-    background-color: $BackgroundColor-3 !important;
+    background: $BackgroundColor-3 !important;
 }
 
 .zhc-sidebar-profile__name .zhc-sidebar-profile__name__text {
@@ -71,7 +71,7 @@
 
 
 .zhc-workspace-header:hover {
-    background-color: transparent !important;
+    background: transparent !important;
 }
 
 .zhc-issue-card__heading__main,
@@ -85,11 +85,11 @@
 }
 
 .zhc-sidebar-nav-item:hover {
-    background-color: $DropDownItemHoverBackgroundColor !important;
+    background: $DropDownItemHoverBackgroundColor !important;
 }
 
 .zhc-sidebar-nav-item--is-active {
-    background-color: $MenuBackgroundActive !important;
+    background: $MenuBackgroundActive !important;
 }
 
 .zhc-sidebar-active-pipeline__name {
@@ -106,7 +106,7 @@
 .zh-dependency-manager-container.TimelineItem .zhc-dependency,
 .zhc-grid-table,
 .zhc-grid-table__cell {
-    background-color: $BackgroundColor-3 !important;
+    background: $BackgroundColor-3 !important;
 }
 
 .zhc-grid-table__first-col {
@@ -114,7 +114,7 @@
 }
 
 .zhc-grid-table__cell__title {
-    background-color: $TableHeaderBackground !important;
+    background: $TableHeaderBackground !important;
 }
 
 .zhu-text-important {
@@ -140,7 +140,7 @@
 .zhc-selection-list__list .ReactVirtualized__List,
 .zhc-selection-list-deprecated__body,
 .zhc-selection-item {
-    background-color: $DropDownBackgroundColor !important;
+    background: $DropDownBackgroundColor !important;
 }
 
 .zhc-breadcrumbs__button--active,
@@ -154,7 +154,7 @@
 .zhc-options-dropdown-item,
 .zhc-selection-list-deprecated:not(.zhc-selection-list-deprecated--has-search) .zhc-selection-list-item:hover:not(.zhc-selection-item--is-disabled),
 .zhc-selection-list-deprecated:not(.zhc-selection-list-deprecated--has-search) .zhc-selectable-selection-item:hover:not(.zhc-selection-item--is-disabled) {
-    background-color: $DropDownItemHoverBackgroundColor !important;
+    background: $DropDownItemHoverBackgroundColor !important;
 }
 
 .zhc-options-dropdown-item,
