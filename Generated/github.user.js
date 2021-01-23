@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.47.0
+// @version	1.47.1
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
@@ -7047,6 +7047,9 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"",
 		".components-container {",
 		"  background-color: transparent !important; }",
+		"",
+		":root {",
+		"  --zh-color-text: #bbb !important; }",
 		"",
 		".zhc-modal__body,",
 		".zhc-confirmation-modal {",
