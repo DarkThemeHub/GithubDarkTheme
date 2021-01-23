@@ -12,6 +12,11 @@ Support this theme by hitting that :star: and showing your friends :P
 [How to Contribute](https://github.com/DarkThemeHub/GithubDarkTheme/blob/master/CONTRIBUTING.md)
 
 [Regex Test](https://regex101.com/r/sEZPE5/9)
+
+#### Supported third party extensions status:
+
+* ZenHub *Partialy
+
 <hr>
 
 ## Install the theme
