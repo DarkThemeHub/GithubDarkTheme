@@ -1,6 +1,4 @@
 @import "Variables";
-@import "Zenhub";
-
 
 :root {
     scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
@@ -8104,3 +8102,5 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .components-container {
     background-color: transparent !important;
 }
+
+@import "ZenHub";
