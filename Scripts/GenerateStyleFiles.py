@@ -50,6 +50,6 @@ f = open(baseDir + "Generated/github.user.js", "w")
 f.writelines(userScriptFile)
 f.close
 
-versionFile = open(baseDir + "Scripts/version.txt", "w")
+versionFile = open(baseDir + "Scripts/Version.txt", "w")
 versionFile.writelines(newVersion)
 versionFile.close
