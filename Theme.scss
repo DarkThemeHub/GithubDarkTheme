@@ -8103,4 +8103,9 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
     background-color: transparent !important;
 }
 
+.repo-actions-hero {
+    filter: invert(90%) hue-rotate(180deg);
+    box-shadow: 0 0 40px #FFF, 0 0 40px #F0F0F0 inset;
+}
+
 @import "ZenHub";
