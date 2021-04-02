@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GithubDarkTheme();
 @namespace    github.com/DarkThemeHub/GithubDarkTheme
-@version      1.48.0
+@version      1.49.0
 @description  Dark theme for github.
 @author       DarkThemeHub
 @homepageURL  https://github.com/DarkThemeHub/GithubDarkTheme
@@ -16,11 +16,13 @@
   --color-bg-primary: #25272a !important;
   --color-bg-secondary: #25272a !important;
   --color-menu-bg-active: #3e3e3e !important;
+  --color-state-selected-primary-bg: #3e3e3e !important;
   --color-sidenav-selected-bg: #3e3e3e !important;
   --color-state-hover-primary-bg: #3d4348 !important;
   --color-state-hover-secondary-bg: #3d4348 !important;
-  --color-text-primary: #bbb !important;
+  --color-text-primary: rgb(230, 230, 230) !important;
   --color-text-secondary: #b5b5b5 !important;
+  --color-text-tertiary: #b5b5b5 !important;
   --color-bg-canvas: transparent !important;
   --color-bg-canvas-inset: #25272a !important;
   --color-bg-tertiary: transparent !important;
@@ -34,7 +36,9 @@
   --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1) !important;
   --color-project-sidebar-bg: #25272a !important;
   --color-notifications-row-read-bg: #25272a !important;
-  --color-notifications-button-hover-bg: transparent !important; }
+  --color-notifications-button-hover-bg: transparent !important;
+  --color-current-user-tip-border: #4299fc !important;
+  --color-text-link: #4299fc !important; }
 
 html {
   background-color: #222; }
@@ -1665,7 +1669,6 @@ body .bg-white,
 .pagination a,
 .blob-num[colspan],
 .build-status-item,
-.js-upload-markdown-image.is-default,
 .write-content.js-reaction-suggestion,
 .more-branches,
 .plan-choice.open,
@@ -3726,7 +3729,6 @@ a.text-error,
 a:not(.octicon-btn).danger,
 .closed.mega-octicon,
 .deletions,
-.closed.octicon,
 .cdel,
 .gd .diff-line-num,
 .authors-and-code .deletions,
@@ -5619,6 +5621,7 @@ body.blog pre > code,
 .api code,
 .hook-delivery-details pre,
 .CodeMirror,
+.CodeMirror-gutter.CodeMirror-linenumbers,
 .highlight {
   background: #141414 !important;
   color: #ccc !important; }
@@ -6538,7 +6541,7 @@ div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,2
   color: #b5b5b5 !important; }
 
 .TimelineItem-badge {
-  background-color: #555555 !important;
+  background-color: #555555;
   color: #fff !important; }
 
 .TimelineItem:before {
@@ -7049,6 +7052,15 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .repo-actions-hero {
   filter: invert(87%) hue-rotate(180deg);
   box-shadow: 0 0 40px #FFF, 0 0 40px #FFF inset; }
+
+.timeline-comment--caret.current-user::after {
+  background: #182030 !important; }
+
+.timeline-comment--caret::after {
+  background-image: none !important; }
+
+.timeline-comment--caret::before {
+  background-color: none !important; }
 
 :root {
   --zh-color-text: #bbb !important; }
