@@ -11,6 +11,7 @@
     --color-state-hover-secondary-bg: #3d4348 !important;
     --color-text-primary: #bbb !important;
     --color-text-secondary: #b5b5b5 !important;
+    --color-text-tertiary: #b5b5b5 !important;
     --color-bg-canvas: transparent !important;
     --color-bg-canvas-inset: #25272a !important;
     --color-bg-tertiary: transparent !important;
@@ -4117,7 +4118,6 @@ ul.summary-stats li .octicon-issue-closed,
 .octicon-btn-danger:hover,
 .text-danger,
 a.text-danger,
-.color-text-danger,
 .type-icon-state-closed,
 a.type-icon-state-closed,
 .reverted.octicon,
