@@ -1855,7 +1855,6 @@ body .bg-white,
 .pagination a,
 .blob-num[colspan],
 .build-status-item,
-.js-upload-markdown-image.is-default,
 .write-content.js-reaction-suggestion,
 .more-branches,
 .plan-choice.open,
@@ -6291,6 +6290,7 @@ body.blog pre>code,
 .api code,
 .hook-delivery-details pre,
 .CodeMirror,
+.CodeMirror-gutter.CodeMirror-linenumbers,
 .highlight {
     background: #141414 !important;
     color: #ccc !important;
