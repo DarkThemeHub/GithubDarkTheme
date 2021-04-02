@@ -5,23 +5,27 @@ import sys
 
 newVersion = str(sys.argv[1])
 
-baseDir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+baseDir = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), os.pardir))
+
 # normalize baseDir between github action or dev environment
 if baseDir.startswith("/home/runner/work"):
     baseDir = ""
 else:
     baseDir = baseDir + "/"
 
+sourceDir = baseDir + "Source/"
+
 # empty generated Folder
 shutil.rmtree(baseDir + "Generated", ignore_errors=True)
 os.makedirs(baseDir + "Generated", exist_ok=True)
 
-themeName = open(baseDir + "Scripts/ThemeName.txt", "r").read().rstrip()
-urlRegex = open(baseDir + "UrlRegex.txt", "r").read().rstrip()
-themeCss = open(baseDir + "ScssOutput/Theme.css", "r",
+
+themeName = open(sourceDir + "Scripts/ThemeName.txt", "r").read().rstrip()
+urlRegex = open(sourceDir + "UrlRegex.txt", "r").read().rstrip()
+themeCss = open(sourceDir + "ScssOutput/Theme.css", "r",
                 encoding="ASCII", errors="ignore").read()
 
-stylusTemplate = open(baseDir + "Scripts/StylusTemplate.txt", "r")
+stylusTemplate = open(sourceDir + "Scripts/StylusTemplate.txt", "r")
 
 stylusFile = stylusTemplate.read()
 stylusFile = re.sub("<Version>", newVersion, stylusFile)
@@ -33,11 +37,11 @@ f = open(baseDir + "Generated/github.user.styl", "w")
 f.writelines(stylusFile)
 f.close
 
-userScriptTemplate = open(baseDir + "Scripts/UserScriptTemplate.txt", "r")
+userScriptTemplate = open(sourceDir + "Scripts/UserScriptTemplate.txt", "r")
 
 userScriptFile = userScriptTemplate.read()
 userScriptStyle = ""
-with open(baseDir + "ScssOutput/Theme.css", "r") as f:
+with open(sourceDir + "ScssOutput/Theme.css", "r") as f:
     for line in f:
         userScriptStyle += "\t\t\"" + re.sub("\"", "\\\"",line.rstrip()) + "\"," + "\n"
 
@@ -50,6 +54,6 @@ f = open(baseDir + "Generated/github.user.js", "w")
 f.writelines(userScriptFile)
 f.close
 
-versionFile = open(baseDir + "Scripts/Version.txt", "w")
+versionFile = open(sourceDir + "Scripts/Version.txt", "w")
 versionFile.writelines(newVersion)
 versionFile.close

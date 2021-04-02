@@ -4,51 +4,51 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'version'     
+        description: "version"
         required: true
       releaseNotes:
-        description: 'release notes'
-        required: false 
+        description: "release notes"
+        required: false
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - run: npm install
-    - run: npm run scss
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with: 
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-    - name: Generate-Stylus-File
-      run: |
-        python Scripts/GenerateStyleFiles.py ${{ github.event.inputs.version }}
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Generate Style Files" -a || echo "Nothing to update"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
-        tag_name: ${{ github.event.inputs.version }}
-        release_name: ${{ github.event.inputs.version }}
-        body: ${{ github.event.inputs.releaseNotes }}
-        draft: true
-        prerelease: false
+      - uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm install
+      - run: npm run scss
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Generate-Stylus-File
+        run: |
+          python Source/Scripts/GenerateStyleFiles.py ${{ github.event.inputs.version }}
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Generate Style Files" -a || echo "Nothing to update"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          release_name: ${{ github.event.inputs.version }}
+          body: ${{ github.event.inputs.releaseNotes }}
+          draft: true
+          prerelease: false
