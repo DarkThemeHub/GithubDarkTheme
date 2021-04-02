@@ -26,6 +26,7 @@
     --color-project-sidebar-bg: #25272a !important;
     --color-notifications-row-read-bg: #25272a !important;
     --color-notifications-button-hover-bg: transparent !important;
+    --color-current-user-tip-border: #{$BorderColor-1} !important;
 }
 
 html {
@@ -2805,7 +2806,7 @@ article.full .alert,
 .topic-tag-action .add-topic-button,
 .topic-tag-action .remove-topic-button,
 .RecentBranches {
-    background: #182030 !important;
+    background: $Blue-2 !important;
 }
 
 .repo-file-upload-progress .repo-file-upload-meter,
@@ -8106,6 +8107,18 @@ span.Label.flex-self-center.Label--outline.border-0.ml-2.bg-gray-2 {
 .repo-actions-hero {
     filter: invert(87%) hue-rotate(180deg);
     box-shadow: 0 0 40px #FFF, 0 0 40px #FFF inset;
+}
+
+.timeline-comment--caret.current-user::after {
+    background: $Blue-2 !important;
+}
+
+.timeline-comment--caret::after {
+    background-image: none !important;
+}
+
+.timeline-comment--caret::before {
+    background-color: none !important;
 }
 
 @import "ZenHub";
