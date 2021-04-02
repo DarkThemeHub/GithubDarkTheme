@@ -10,7 +10,7 @@
 * Execute `GenerateStylusTestFile.py` and commit the file on PR. You can install this test file by going to raw format just like the main theme file.
   * If you edit the main theme file, your theme will no longer be auto updated until its refreshed via theme manager. This is why the test file generator exists.
   * Make sure the test theme is uninstalled when a the new release arrives. (Your changes will be released soon after the merge, so you could even just do it on merge).
-* Please only commit `Theme.scss` and `githubTest.user.styl`
+* Please only commit `.scss` files
 * Use Prettier as a css formatter with vscode.
    * Tab Width set to 4.
 * If your branch is a fork, dont worry about the pipeline failing, it is due to your fork not having the priviledge to run an action on this repo.
