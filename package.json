@@ -1,11 +1,11 @@
 {
     "scripts": {
         "scss": "node-sass --include-path scss Source/Theme.scss Source/ScssOutput/Theme.css",
-        "start": "nodemon -e scss Source/Theme.scss -x \"npm run scss\""
+        "start": "nodemon -e scss Source/Theme.scss -x \"npm run scss && python Source/Scripts/GenerateStyleTestFiles.py 0.0.0\""
     },
     "dependencies": {},
     "devDependencies": {
-        "node-sass": "^5.0.0",
-        "nodemon": "^2.0.7"
+        "node-sass": "^6.0.1",
+        "nodemon": "^2.0.12"
     }
 }

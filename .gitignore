@@ -2,3 +2,4 @@ node_modules
 ScssOutput
 Extensions/Chrome/target/npmlist\.json
 Extensions/Chrome/.vscode/
+Generated/Test-*
