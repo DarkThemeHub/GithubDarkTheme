@@ -3,8 +3,6 @@ import re
 import shutil
 import sys
 
-newVersion = str(sys.argv[1])
-
 baseDir = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), os.pardir))
 
 # normalize baseDir between github action or dev environment
@@ -14,7 +12,7 @@ else:
     baseDir = baseDir + "/"
 
 sourceDir = baseDir + "Source/"
-
+version = open(sourceDir + "Scripts/Version.txt", "r").read()
 # empty generated Folder
 os.makedirs(baseDir + "Generated", exist_ok=True)
 
@@ -27,7 +25,7 @@ themeCss = open(sourceDir + "ScssOutput/Theme.css", "r",
 stylusTemplate = open(sourceDir + "Scripts/StylusTemplate.txt", "r")
 
 stylusFile = stylusTemplate.read()
-stylusFile = re.sub("<Version>", newVersion, stylusFile)
+stylusFile = re.sub("<Version>", version, stylusFile)
 stylusFile = re.sub("<ThemeName>", themeName, stylusFile)
 stylusFile = re.sub("<Url_Regex>", urlRegex, stylusFile)
 stylusFile = re.sub("<Style>", themeCss, stylusFile)
@@ -44,7 +42,9 @@ with open(sourceDir + "ScssOutput/Theme.css", "r") as f:
     for line in f:
         userScriptStyle += "\t\t\"" + re.sub("\"", "\\\"",line.rstrip()) + "\"," + "\n"
 
-userScriptFile = re.sub("<Version>", newVersion, userScriptFile)
+
+
+userScriptFile = re.sub("<Version>", version, userScriptFile)
 userScriptFile = re.sub("<ThemeName>", "Test-" + themeName, userScriptFile)
 userScriptFile = re.sub("<Url_Regex>", urlRegex, userScriptFile)
 userScriptFile = re.sub("<Style>", userScriptStyle, userScriptFile)
@@ -53,6 +53,3 @@ f = open(baseDir + "Generated/Test-github.user.js", "w")
 f.writelines(userScriptFile)
 f.close
 
-versionFile = open(sourceDir + "Scripts/Version.txt", "w")
-versionFile.writelines(newVersion)
-versionFile.close
