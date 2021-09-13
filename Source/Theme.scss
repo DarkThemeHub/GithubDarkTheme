@@ -3,8 +3,8 @@
 :root {
     scrollbar-color: rgba(175, 175, 175, 0.5) #1d1d1d !important;
     scrollbar-width: thin !important;
-    --color-bg-primary: #25272a !important;
-    --color-bg-secondary: #25272a !important;
+    --color-bg-primary: #{$BackgroundColor-3} !important;
+    --color-bg-secondary: #{$BackgroundColor-3} !important;
     --color-menu-bg-active: #{$MenuBackgroundActive} !important;
     --color-state-selected-primary-bg: #{$MenuBackgroundActive} !important;
     --color-sidenav-selected-bg: #{$SideNavBackgroundSelected} !important;
@@ -14,7 +14,7 @@
     --color-text-secondary: #b5b5b5 !important;
     --color-text-tertiary: #b5b5b5 !important;
     --color-bg-canvas: transparent !important;
-    --color-bg-canvas-inset: #25272a !important;
+    --color-bg-canvas-inset: #{$BackgroundColor-3} !important;
     --color-bg-tertiary: transparent !important;
     --color-calendar-graph-day-bg: #222 !important;
     --color-project-card-bg: #222 !important;
@@ -24,11 +24,15 @@
     --color-calendar-graph-day-L2-bg: rgba(67, 130, 195, 0.5) !important;
     --color-calendar-graph-day-L3-bg: rgba(67, 130, 195, 0.75) !important;
     --color-calendar-graph-day-L4-bg: rgba(67, 130, 195, 1) !important;
-    --color-project-sidebar-bg: #25272a !important;
-    --color-notifications-row-read-bg: #25272a !important;
+    --color-project-sidebar-bg: #{$BackgroundColor-3} !important;
+    --color-notifications-row-read-bg: #{$BackgroundColor-3} !important;
     --color-notifications-button-hover-bg: transparent !important;
     --color-current-user-tip-border: #{$BorderColor-1} !important;
     --color-text-link: #{$LinkColor} !important;
+    --color-fg-default: #{$LinkColor} !important;
+    --color-canvas-default: #{$BackgroundColor-3} !important;
+    --color-canvas-subtle: #{$BackgroundColor-3} !important;
+    --color-fg-muted: #{$SecondaryText} !important;
 }
 
 html {
