@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.50.0
+// @version	1.50.1
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
@@ -41,7 +41,7 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  --color-notifications-button-hover-bg: transparent !important;",
 		"  --color-current-user-tip-border: #4299fc !important;",
 		"  --color-text-link: #4299fc !important;",
-		"  --color-fg-default: #4299fc !important;",
+		"  --color-fg-default: white !important;",
 		"  --color-canvas-default: #25272a !important;",
 		"  --color-canvas-subtle: #25272a !important;",
 		"  --color-canvas-inset: #25272a !important;",
