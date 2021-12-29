@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	GithubDarkTheme();
 // @namespace	github.com/DarkThemeHub/GithubDarkTheme
-// @version	1.51.0
+// @version	1.51.1
 // @description	Dark theme for github
 // @author	DarkThemeHub
 // @homepage	https://github.com/DarkThemeHub/GithubDarkTheme
@@ -17,6 +17,8 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  scrollbar-width: thin !important;",
 		"  --color-bg-primary: #25272a !important;",
 		"  --color-bg-secondary: #25272a !important;",
+		"  --color-header-bg: #25272a !important;",
+		"  --color-page-header-bg: var(--color-header-bg) !important;",
 		"  --color-menu-bg-active: #3e3e3e !important;",
 		"  --color-state-selected-primary-bg: #3e3e3e !important;",
 		"  --color-sidenav-selected-bg: #3e3e3e !important;",
@@ -46,8 +48,7 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  --color-canvas-default: #25272a !important;",
 		"  --color-canvas-subtle: #25272a !important;",
 		"  --color-canvas-inset: #25272a !important;",
-		"  --color-fg-muted: #bbb !important;",
-		"  --color-page-header-bg: #24292f !important; }",
+		"  --color-fg-muted: #bbb !important; }",
 		"",
 		"html {",
 		"  background-color: #222; }",
