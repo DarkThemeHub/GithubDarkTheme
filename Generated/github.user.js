@@ -1738,7 +1738,7 @@ if (false || (new RegExp("^https?:\/\/(((?!desktop).*\.)?(githubusercontent|gith
 		"  .reponav-wrapper {",
 		"    background: #333 !important; }",
 		"  .page-responsive .pagehead {",
-		"    background: #24292f !important; }",
+		"    background: #25272a !important; }",
 		"  .border-md-top {",
 		"    border-top: none !important; }",
 		"  .tabnav--responsive .tabnav-tab {",
