@@ -5,6 +5,9 @@
     scrollbar-width: thin !important;
     --color-bg-primary: #{$BackgroundColor-3} !important;
     --color-bg-secondary: #{$BackgroundColor-3} !important;
+    --color-header-bg: #{$BackgroundColor-3} !important;
+    --color-page-header-bg: var(--color-header-bg) !important;
+
     --color-menu-bg-active: #{$MenuBackgroundActive} !important;
     --color-state-selected-primary-bg: #{$MenuBackgroundActive} !important;
     --color-sidenav-selected-bg: #{$SideNavBackgroundSelected} !important;
@@ -36,8 +39,6 @@
     --color-canvas-subtle: #{$BackgroundColor-3} !important;
     --color-canvas-inset: #{$BackgroundColor-3} !important;
     --color-fg-muted: #{$SecondaryText} !important;
-    --color-page-header-bg: #{$BackgroundColor-8} !important;
-
 }
 
 html {
