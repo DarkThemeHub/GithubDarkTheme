@@ -34,6 +34,7 @@
     --color-canvas-subtle: #{$BackgroundColor-3} !important;
     --color-canvas-inset: #{$BackgroundColor-3} !important;
     --color-fg-muted: #{$SecondaryText} !important;
+    --color-page-header-bg: #{$BackgroundColor-8} !important;
 }
 
 html {
@@ -1921,9 +1922,12 @@ a.card.bg-gray-light:hover,
 
 @media all {
 
-    .page-responsive .pagehead,
     .reponav-wrapper {
         background: #333 !important;
+    }
+
+    .page-responsive .pagehead {
+        background: $BackgroundColor-8 !important;
     }
 
     .border-md-top {
