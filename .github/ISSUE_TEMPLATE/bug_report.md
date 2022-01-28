@@ -16,10 +16,4 @@ assignees: ''
 ## Screenshots
 <!--- Add screenshot and illustrate the location of bug on the page.--->
 
-## Steps to Reproduce
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
-1.
-2.
-3.
-4.
+
